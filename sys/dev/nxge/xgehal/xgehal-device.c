@@ -5856,7 +5856,7 @@ xge_hal_device_pci_info_get(xge_hal_device_h devh, xge_hal_pci_mode_e *pci_mode,
  * xge_hal_reinitialize_hw
  * @hldev: private member of the device structure.
  *
- * This function will soft reset the NIC and re-initalize all the
+ * This function will soft reset the NIC and re-initialize all the
  * I/O registers to the values they had after it's initial initialization
  * through the probe function.
  */

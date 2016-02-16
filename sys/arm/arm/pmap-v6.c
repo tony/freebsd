@@ -706,7 +706,7 @@ pmap_preboot_get_pages(u_int num)
 }
 
 /*
- *	The fundamental initalization of PMAP stuff.
+ *	The fundamental initialization of PMAP stuff.
  *
  *  Some things already happened in locore.S and some things could happen
  *  before pmap_bootstrap_prepare() is called, so let's recall what is done:

@@ -612,7 +612,7 @@ init_inode(struct reiserfs_node *ip, struct path *path)
 		    SD_V2_SIZE));
 
 		/*
-		 * Read persistent inode attributes from sd and initalise
+		 * Read persistent inode attributes from sd and initialise
 		 * generic inode flags from them
 		 */
 		REISERFS_I(ip)->i_attrs = sd_v2_attrs(sd);

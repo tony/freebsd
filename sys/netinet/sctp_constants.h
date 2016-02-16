@@ -636,7 +636,7 @@ __FBSDID("$FreeBSD$");
 #define SCTP_DEF_PMTU_RAISE_SEC	600	/* 10 min between raise attempts */
 
 
-/* How many streams I request initally by default */
+/* How many streams I request initially by default */
 #define SCTP_OSTREAM_INITIAL 10
 #define SCTP_ISTREAM_INITIAL 2048
 

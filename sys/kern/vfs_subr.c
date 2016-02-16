@@ -3924,7 +3924,7 @@ destroy_vpollinfo(struct vpollinfo *vi)
 }
 
 /*
- * Initalize per-vnode helper structure to hold poll-related state.
+ * Initialize per-vnode helper structure to hold poll-related state.
  */
 void
 v_addpollinfo(struct vnode *vp)
