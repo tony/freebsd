@@ -359,7 +359,7 @@ ipsec_getpolicybysock(struct mbuf *m, u_int dir, struct inpcb *inp, int *error)
 	}
 	IPSEC_ASSERT(currsp != NULL, ("null currsp"));
 
-	if (pcbsp->priv) {			/* When privilieged socket. */
+	if (pcbsp->priv) {			/* When privileged socket. */
 		switch (currsp->policy) {
 		case IPSEC_POLICY_BYPASS:
 		case IPSEC_POLICY_IPSEC:
@@ -386,7 +386,7 @@ ipsec_getpolicybysock(struct mbuf *m, u_int dir, struct inpcb *inp, int *error)
 			switch (currsp->policy) {
 			case IPSEC_POLICY_BYPASS:
 				ipseclog((LOG_ERR, "%s: Illegal policy for "
-					"non-priviliged defined %d\n",
+					"non-privileged defined %d\n",
 					__func__, currsp->policy));
 				*error = EINVAL;
 				return (NULL);

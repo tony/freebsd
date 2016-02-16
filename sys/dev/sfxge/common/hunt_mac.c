@@ -214,7 +214,7 @@ ef10_mac_pdu_set(
 		/*
 		 * Fallback for older Huntington firmware, which always
 		 * configure all of the parameters to MC_CMD_SET_MAC. This isn't
-		 * suitable for setting the MTU on unpriviliged functions.
+		 * suitable for setting the MTU on unprivileged functions.
 		 */
 		if ((rc = ef10_mac_reconfigure(enp)) != 0)
 			goto fail2;

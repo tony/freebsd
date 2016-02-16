@@ -343,7 +343,7 @@ prot_addrf:
 
 /*
  * Fast syscall entry point.  We enter here with just our new %cs/%ss set,
- * and the new privilige level.  We are still running on the old user stack
+ * and the new privilege level.  We are still running on the old user stack
  * pointer.  We have to juggle a few things around to find our stack etc.
  * swapgs gives us access to our PCPU space only.
  *

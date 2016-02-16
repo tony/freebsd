@@ -280,7 +280,7 @@ typedef struct tdFWProfile
 } tdFWProfile_t;
 
 /************************************************/
-/**Definations for FW profile*/
+/**Definitions for FW profile*/
 #define FW_PROFILE_PROCESSOR_ID_IOP  0x00
 #define FW_PROFILE_PROCESSOR_ID_AAP1 0x02
 /* definitions for sub operation */
