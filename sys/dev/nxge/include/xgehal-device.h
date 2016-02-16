@@ -274,7 +274,7 @@ typedef struct lro {
 	/* In use */
 	u8          in_use;
 
-	/* Total length of the fragments clubbed with the inital frame */
+	/* Total length of the fragments clubbed with the initial frame */
 	u32         frags_len;
 
 	/* LRO frame contains time stamp, if (ts_off != -1) */

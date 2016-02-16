@@ -398,7 +398,7 @@ U32 scic_sds_request_get_max_timer_count(void);
 
 /**
  * This macro copys the SGL Element data from the host os to the hardware SGL
- * elment data
+ * element data
  */
 #define SCU_SGL_COPY(os_handle, scu_sge, os_sge) \
 { \

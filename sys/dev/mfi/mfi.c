@@ -1306,7 +1306,7 @@ restart:
 
 	sc->mfi_comms->hw_ci = ci;
 
-	/* Give defered I/O a chance to run */
+	/* Give deferred I/O a chance to run */
 	sc->mfi_flags &= ~MFI_FLAGS_QFRZN;
 	mfi_startio(sc);
 	mtx_unlock(&sc->mfi_io_lock);

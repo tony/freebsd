@@ -431,7 +431,7 @@ struct wi_apinfo {
  */
 
 /*
- * standard hermes recieve frame used by wavelan/prism2 cards
+ * standard hermes receive frame used by wavelan/prism2 cards
  */
 struct wi_rx_frame {
 	/*
@@ -464,7 +464,7 @@ struct wi_rx_frame {
 	u_int8_t	wi_addr4[6];
 	u_int16_t	wi_dat_len;
 	/*
-	 * another wierdity with the drivers. they append a 802.3 header which
+	 * another weirdity with the drivers. they append a 802.3 header which
 	 * is somewhat redundant, since all the same data is provided in the
 	 * 802.11 header.
 	 */

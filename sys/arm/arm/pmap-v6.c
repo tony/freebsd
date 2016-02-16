@@ -1211,7 +1211,7 @@ pmap_bootstrap(vm_offset_t firstaddr)
 
 	/*
 	 * Note that in very short time in initarm(), we are going to
-	 * initialize phys_avail[] array and no futher page allocation
+	 * initialize phys_avail[] array and no further page allocation
 	 * can happen after that until vm subsystem will be initialized.
 	 */
 	kernel_vm_end_new = kernel_vm_end;

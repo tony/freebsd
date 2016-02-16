@@ -540,7 +540,7 @@
 
 /*
  * Maximum scatter/gather segments per request.
- * This is carefully chosen so that sizeof(blkif_ring_t) <= PAGE_SIZE.
+ * This is carefuly chosen so that sizeof(blkif_ring_t) <= PAGE_SIZE.
  * NB. This could be 12 if the ring indexes weren't stored in the same page.
  */
 #define BLKIF_MAX_SEGMENTS_PER_REQUEST 11

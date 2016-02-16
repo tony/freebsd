@@ -144,7 +144,7 @@ at91_clock_init(void)
 	clk->pmc_mask  = PMC_SCER_UHP_SAM9;
 	at91_pmc_clock_deref(clk);
 
-	/* Each SOC has different PLL contraints */
+	/* Each SOC has different PLL constraints */
 	clk = at91_pmc_clock_ref("plla");
 	clk->pll_min_in    = SAM9G20_PLL_A_MIN_IN_FREQ;		/*   2 MHz */
 	clk->pll_max_in    = SAM9G20_PLL_A_MAX_IN_FREQ;		/*  32 MHz */

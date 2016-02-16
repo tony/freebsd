@@ -113,7 +113,7 @@ load_coff_section(struct vmspace *vmspace, struct vnode *vp, vm_offset_t offset,
 	}
 
 	/*
-	 * Now we have screwball stuff, to accomodate stupid COFF.
+	 * Now we have screwball stuff, to accommodate stupid COFF.
 	 * We have to map the remaining bit of the file into the kernel's
 	 * memory map, allocate some anonymous memory, copy that last
 	 * bit into it, and then we're done. *sigh*

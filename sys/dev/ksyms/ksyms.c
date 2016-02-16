@@ -412,7 +412,7 @@ ksyms_open(struct cdev *dev, int flags, int fmt __unused, struct thread *td)
 
 	/*
 	 * MOD_SLOCK doesn't work here (because of a lock reversal with 
-	 * KLD_SLOCK).  Therefore, simply try upto 3 times to get a "clean"
+	 * KLD_SLOCK).  Therefore, simply try up to 3 times to get a "clean"
 	 * snapshot of the kernel symbol table.  This should work fine in the
 	 * rare case of a kernel module being loaded/unloaded at the same
 	 * time. 

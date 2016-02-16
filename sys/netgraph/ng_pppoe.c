@@ -1729,7 +1729,7 @@ ng_pppoe_rcvdata_debug(hook_p hook, item_p item)
 
 /*
  * Do local shutdown processing..
- * If we are a persistant device, we might refuse to go away, and
+ * If we are a persistent device, we might refuse to go away, and
  * we'd only remove our links and reset ourself.
  */
 static int

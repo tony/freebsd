@@ -404,9 +404,9 @@ amrr_sysctlattach(struct ieee80211vap *vap,
 	    0, amrr_sysctl_interval, "I", "amrr operation interval (ms)");
 	/* XXX bounds check values */
 	SYSCTL_ADD_UINT(ctx, SYSCTL_CHILDREN(tree), OID_AUTO,
-	    "amrr_max_sucess_threshold", CTLFLAG_RW,
+	    "amrr_max_success_threshold", CTLFLAG_RW,
 	    &amrr->amrr_max_success_threshold, 0, "");
 	SYSCTL_ADD_UINT(ctx, SYSCTL_CHILDREN(tree), OID_AUTO,
-	    "amrr_min_sucess_threshold", CTLFLAG_RW,
+	    "amrr_min_success_threshold", CTLFLAG_RW,
 	    &amrr->amrr_min_success_threshold, 0, "");
 }

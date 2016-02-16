@@ -454,7 +454,7 @@ SCI_STATUS scic_sds_stp_packet_request_packet_phase_await_pio_setup_frame_handle
  * @brief This method processes the completions transport layer (TL) status
  *        to determine if the PACKET command data FIS was sent successfully.
  *        If successfully, then the state for the packet request
- *        transits to COMPLETE state. If not successfuly, the request transits
+ *        transits to COMPLETE state. If not successfully, the request transits
  *        to COMMAND_PHASE_AWAIT_D2H_FIS_SUBSTATE.
  *
  * @param[in] this_request This parameter specifies the request for which
@@ -559,7 +559,7 @@ SCI_STATUS scic_sds_stp_packet_request_command_phase_await_tc_completion_tc_comp
          status = this_request->sci_status;
       }
       else
-      {  //If receiving any non-sucess TC status, no UF received yet, then an UF for
+      {  //If receiving any non-success TC status, no UF received yet, then an UF for
          //the status fis is coming after.
          scic_sds_request_set_status(
             this_request,

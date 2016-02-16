@@ -231,7 +231,7 @@ extern "C" {
 #endif
 
 /* Unroll the inner loop, this sometimes helps, sometimes hinders.
- * Very mucy CPU dependant */
+ * Very mucy CPU dependent */
 #ifndef DES_UNROLL
 #define DES_UNROLL
 #endif

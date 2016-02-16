@@ -70,7 +70,7 @@ __FBSDID("$FreeBSD$");
 #define IRQUNK	-1
 #endif
 
-#define	TPM_ACCESS			0x0000	/* acess register */
+#define	TPM_ACCESS			0x0000	/* access register */
 #define	TPM_ACCESS_ESTABLISHMENT	0x01	/* establishment */
 #define	TPM_ACCESS_REQUEST_USE		0x02	/* request using locality */
 #define	TPM_ACCESS_REQUEST_PENDING	0x04	/* pending request */

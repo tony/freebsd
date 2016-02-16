@@ -124,7 +124,7 @@ extern "C" {
 /* Memory type to use on FreeBSD */
 MALLOC_DECLARE(M_SFXGE);
 
-/* Machine dependend prefetch wrappers */
+/* Machine dependent prefetch wrappers */
 #if defined(__i386__) || defined(__amd64__)
 static __inline void
 prefetch_read_many(void *addr)

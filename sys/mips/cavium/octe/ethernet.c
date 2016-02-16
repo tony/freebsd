@@ -71,7 +71,7 @@ int pow_receive_group = 15;
 TUNABLE_INT("hw.octe.pow_receive_group", &pow_receive_group);
 /*
 		 "\t\tPOW group to receive packets from. All ethernet hardware\n"
-		 "\t\twill be configured to send incomming packets to this POW\n"
+		 "\t\twill be configured to send incoming packets to this POW\n"
 		 "\t\tgroup. Also any other software can submit packets to this\n"
 		 "\t\tgroup for the kernel to process." */
 

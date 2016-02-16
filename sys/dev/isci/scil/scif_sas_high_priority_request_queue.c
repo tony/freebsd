@@ -150,7 +150,7 @@ void scif_sas_high_priority_request_queue_purge_domain(
 
             // The request was intended for a device in the domain.  Put it
             // back in the pool of freely available internal request memory
-            // objects. The internal IO's timer is to be destoyed.
+            // objects. The internal IO's timer is to be destroyed.
             scif_sas_internal_io_request_destruct(fw_domain->controller, fw_internal_io);
          }
       }

@@ -38,9 +38,9 @@ __FBSDID("$FreeBSD$");
 #include <mips/nlm/hal/iomap.h>
 #include <mips/nlm/hal/fmn.h>
 
-/* XLP can take upto 16K of FMN messages per hardware queue, as spill.
+/* XLP can take up to 16K of FMN messages per hardware queue, as spill.
 * But, configuring all 16K causes the total spill memory to required
-* to blow upto 192MB for single chip configuration, and 768MB in four
+* to blow up to 192MB for single chip configuration, and 768MB in four
 * chip configuration. Hence for now, we will setup the per queue spill
 * as 1K FMN messages. With this, the total spill memory needed for 1024
 * hardware queues (with 12bytes per single entry FMN message) becomes

@@ -618,7 +618,7 @@ _C_LABEL(x):
 /*
  * Description of the setjmp buffer
  *
- * word  0	magic number	(dependant on creator)
+ * word  0	magic number	(dependent on creator)
  *       1	RA
  *       2	S0
  *       3	S1
@@ -631,7 +631,7 @@ _C_LABEL(x):
  *       10	SP
  *       11	S8
  *       12	GP		(dependent on ABI)
- *       13	signal mask	(dependant on magic)
+ *       13	signal mask	(dependent on magic)
  *       14	(con't)
  *       15	(con't)
  *       16	(con't)

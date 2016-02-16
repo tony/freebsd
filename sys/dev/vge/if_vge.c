@@ -2735,7 +2735,7 @@ vge_intr_holdoff(struct vge_softc *sc)
 	VGE_LOCK_ASSERT(sc);
 
 	/*
-	 * Set Tx interrupt supression threshold.
+	 * Set Tx interrupt suppression threshold.
 	 * It's possible to use single-shot timer in VGE_CRS1 register
 	 * in Tx path such that driver can remove most of Tx completion
 	 * interrupts. However this requires additional access to

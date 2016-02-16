@@ -707,7 +707,7 @@ ti_sdma_start_xfer(unsigned int ch, unsigned int src_paddr,
  *		frmcnt = 1, elmcnt = 512, pktsize = 128
  *
  *	       Total transfer bytes = 1 * 512 = 512 elements or 2048 bytes
- *	       Packets transfered   = 128 / 512 = 4
+ *	       Packets transferred   = 128 / 512 = 4
  *
  *
  *	LOCKING:

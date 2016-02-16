@@ -101,7 +101,7 @@ typedef struct __hal_fifo_t {
  * carried by this TxDL.
  * @align_vaddr_start: Aligned virtual address start
  * @align_vaddr: Virtual address of the per-TxDL area in memory used for
- *		alignement. Used to place one or more mis-aligned fragments
+ *		alignment. Used to place one or more mis-aligned fragments
  *		(the maximum defined by configration variable
  *		@max_aligned_frags).
  * @align_dma_addr: DMA address translated from the @align_vaddr.

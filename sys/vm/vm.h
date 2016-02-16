@@ -126,8 +126,8 @@ struct vm_reserv;
 typedef struct vm_reserv *vm_reserv_t;
 
 /*
- * Information passed from the machine-independant VM initialization code
- * for use by machine-dependant code (mainly for MMU support)
+ * Information passed from the machine-independent VM initialization code
+ * for use by machine-dependent code (mainly for MMU support)
  */
 struct kva_md_info {
 	vm_offset_t	buffer_sva;

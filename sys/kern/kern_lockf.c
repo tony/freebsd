@@ -1137,7 +1137,7 @@ lf_wakeup_lock(struct lockf *state, struct lockf_entry *wakelock)
 }
 
 /*
- * Re-check all dependant locks and remove edges to locks that we no
+ * Re-check all dependent locks and remove edges to locks that we no
  * longer block. If 'all' is non-zero, the lock has been removed and
  * we must remove all the dependancies, otherwise it has simply been
  * reduced but remains active. Any pending locks which have been been

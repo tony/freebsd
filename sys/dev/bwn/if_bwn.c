@@ -10980,7 +10980,7 @@ bwn_phy_lp_calib(struct bwn_mac *mac)
 
 	bwn_mac_suspend(mac);
 
-	/* BlueTooth Coexistance Override */
+	/* BlueTooth Coexistence Override */
 	BWN_WRITE_2(mac, BWN_BTCOEX_CTL, 0x3);
 	BWN_WRITE_2(mac, BWN_BTCOEX_TXCTL, 0xff);
 

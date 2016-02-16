@@ -682,7 +682,7 @@ reiserfs_read_locked_inode(struct reiserfs_node *ip,
 	retval = search_item(ip->i_reiserfs, &key, &path_to_sd);
 	if (retval == IO_ERROR) {
 		reiserfs_log(LOG_ERR,
-		    "I/O failure occured trying to find stat"
+		    "I/O failure occurred trying to find stat"
 		    "data %u/%u\n",
 		    key.on_disk_key.k_dir_id, key.on_disk_key.k_objectid);
 		reiserfs_make_bad_inode(ip);

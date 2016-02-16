@@ -1802,7 +1802,7 @@ do_lock(struct file_lock *fl)
 		break;
 	case PFL_NFSRESERR:
 	case PFL_HWRESERR:
-		debuglog("PFL lock resource alocation fail\n");
+		debuglog("PFL lock resource allocation fail\n");
 		dump_filelock(fl);
 		retval = (fl->flags & LOCK_V4) ? nlm4_denied_nolocks : nlm_denied_nolocks;
 		break;

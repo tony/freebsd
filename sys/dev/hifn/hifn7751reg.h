@@ -401,7 +401,7 @@ typedef struct hifn_desc {
  * programmed according to the bus interface method used by the h/w.
  * Note that the parts require a stable clock.  Since the PCI clock
  * may vary the reference clock must usually be used.  To avoid
- * overclocking the core logic, setup must be done carefully, refer
+ * overclocking the core logic, setup must be done carefuly, refer
  * to the driver for details.  The exact multiplier required varies
  * by part and system configuration; refer to the Hifn documentation.
  */

@@ -1423,7 +1423,7 @@ tcp_ctloutput(struct socket *so, struct sockopt *sopt)
 			 * past the initial point, we can't
 			 * switch since we are down the road
 			 * and a new set of functions may
-			 * not be compatibile.
+			 * not be compatible.
 			 */
 			INP_WUNLOCK(inp);
 			return(EINVAL);

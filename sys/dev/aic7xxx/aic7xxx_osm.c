@@ -421,7 +421,7 @@ ahc_done(struct ahc_softc *ahc, struct scb *scb)
 		 *
 		 * Zero any sense not transferred by the
 		 * device.  The SCSI spec mandates that any
-		 * untransfered data should be assumed to be
+		 * untransferred data should be assumed to be
 		 * zero.  Complete the 'bounce' of sense information
 		 * through buffers accessible via bus-space by
 		 * copying it into the clients csio.

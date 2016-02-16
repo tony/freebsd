@@ -29,7 +29,7 @@
  * RMI_BSD */
 
 /*
- * The XLR device supports upto four 10/100/1000 Ethernet MACs and upto
+ * The XLR device supports up to four 10/100/1000 Ethernet MACs and up to
  * two 10G Ethernet MACs (of XGMII). Alternatively, each 10G port can used
  * as a SPI-4 interface, with 8 ports per such interface. The MACs are
  * encapsulated in another hardware block referred to as network accelerator,
@@ -37,7 +37,7 @@
  * the four 1G RGMII ports while one each of the others controls an XGMII port.
  * Enabling MACs requires configuring the corresponding network accelerator
  * and the individual port.
- * The XLS device supports upto 8 10/100/1000 Ethernet MACs or max 2 10G
+ * The XLS device supports up to 8 10/100/1000 Ethernet MACs or max 2 10G
  * Ethernet MACs. The 1G MACs are of SGMII and 10G MACs are of XAUI
  * interface. These ports are part of two network accelerators.
  * The nlge driver configures and initializes non-SPI4 Ethernet ports in the
@@ -798,7 +798,7 @@ nlge_rx(struct nlge_softc *sc, vm_paddr_t paddr, int len)
 
 	m = (struct mbuf *)(intptr_t)tm;
 	if (mag != 0xf00bad) {
-		/* somebody else's packet. Error - FIXME in intialization */
+		/* somebody else's packet. Error - FIXME in initialization */
 		printf("cpu %d: *ERROR* Not my packet paddr %jx\n",
 		    xlr_core_id(), (uintmax_t)paddr);
 		return;

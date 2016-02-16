@@ -65,7 +65,7 @@
  * __hal_device_event_queued
  * @data: pointer to xge_hal_device_t structure
  *
- * Will be called when new event succesfully queued.
+ * Will be called when new event successfully queued.
  */
 void
 __hal_device_event_queued(void *data, int event_type)
@@ -1387,7 +1387,7 @@ __hal_device_set_swapper(xge_hal_device_t *hldev)
 	 * The SWAPPER_CONTROL register determines how the adapter accesses
 	 * host memory as well as how it responds to read and write requests
 	 * from the host system. Writes to this register should be performed
-	 * carefully, since the byte swappers could reverse the order of bytes.
+	 * carefuly, since the byte swappers could reverse the order of bytes.
 	 * When configuring this register keep in mind that writes to the PIF
 	 * read and write swappers could reverse the order of the upper and
 	 * lower 32-bit words. This means that the driver may have to write
@@ -2859,7 +2859,7 @@ __hal_device_hw_initialize(xge_hal_device_t *hldev)
 	               &bar0->xgxs_int_mask);
 
 	/* set default MTU and steer based on length*/
-	__hal_ring_mtu_set(hldev, hldev->config.mtu+22); // Alway set 22 bytes extra for steering to work
+	__hal_ring_mtu_set(hldev, hldev->config.mtu+22); // Always set 22 bytes extra for steering to work
 
 	if (hldev->config.mac.rmac_bcast_en) {
 	    xge_hal_device_bcast_enable(hldev);
@@ -4095,7 +4095,7 @@ xge_hal_device_enable(xge_hal_device_t *hldev)
 	/* let link establish */
 	xge_os_mdelay(1);
 
-	/* set link down untill poll() routine will set it up (maybe) */
+	/* set link down until poll() routine will set it up (maybe) */
 	hldev->link_state = XGE_HAL_LINK_DOWN;
 
 	/* If link is UP (adpter is connected) then enable the adapter */
@@ -5443,7 +5443,7 @@ xge_hal_device_terminating(xge_hal_device_h devh)
 #endif
 
 	/*
-	 * go through each opened tx channel and aquire
+	 * go through each opened tx channel and acquire
 	 * lock, so it will serialize with HAL termination flag
 	 */
 	xge_list_for_each(item, &hldev->fifo_channels) {
@@ -5857,7 +5857,7 @@ xge_hal_device_pci_info_get(xge_hal_device_h devh, xge_hal_pci_mode_e *pci_mode,
  * @hldev: private member of the device structure.
  *
  * This function will soft reset the NIC and re-initalize all the
- * I/O registers to the values they had after it's inital initialization
+ * I/O registers to the values they had after it's initial initialization
  * through the probe function.
  */
 int xge_hal_reinitialize_hw(xge_hal_device_t * hldev)
@@ -5879,7 +5879,7 @@ int xge_hal_reinitialize_hw(xge_hal_device_t * hldev)
  * @spdm_entry: spdm entry of the spdm_line in the SPDM table.
  * @spdm_line_val: Contains the value stored in the spdm line.
  *
- * SPDM table contains upto a maximum of 256 spdm entries.
+ * SPDM table contains up to a maximum of 256 spdm entries.
  * Each spdm entry contains 8 lines and each line stores 8 bytes.
  * This function reads the spdm line(addressed by @spdm_line)
  * of the spdm entry(addressed by @spdm_entry) in
@@ -6348,8 +6348,8 @@ xge_hal_spdm_entry_remove(xge_hal_device_h devh, xge_hal_ipaddr_t *src_ip,
 	}
 
 	/*
-	 *  Retreive the L4 SP/DP, src/dst ip addresses from the SPDM
-	 *  table and do a comparision.
+	 *  Retrieve the L4 SP/DP, src/dst ip addresses from the SPDM
+	 *  table and do a comparison.
 	 */
 	spdm_is_tcp = (u8)((spdm_line_arr[0] & BIT(59)) >> 4);
 	spdm_is_ipv4 = (u8)(spdm_line_arr[0] & BIT(63));
@@ -7083,7 +7083,7 @@ xge_hal_rts_rth_itable_set(xge_hal_device_t *hldev, u8 *itable, u32 itable_size)
  *
  * @hldev: HAL device handle.
  * @KeySize: Number of 64-bit words
- * @Key: upto 40-byte array of 8-bit values
+ * @Key: up to 40-byte array of 8-bit values
  * This function configures the 40-byte secret which is used for hash
  * calculation.
  *

@@ -1110,7 +1110,7 @@ xs_identify(driver_t *driver, device_t parent)
 }
 
 /**
- * Probe for the existance of the XenStore.
+ * Probe for the existence of the XenStore.
  *
  * \param dev
  */

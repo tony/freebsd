@@ -78,9 +78,9 @@ static const struct {
 } hdac_devices[] = {
 	{ HDA_INTEL_OAK,     "Intel Oaktrail",	0, 0 },
 	{ HDA_INTEL_BAY,     "Intel BayTrail",	0, 0 },
-	{ HDA_INTEL_HSW1,    "Intel Haswell",	0, 0 },
-	{ HDA_INTEL_HSW2,    "Intel Haswell",	0, 0 },
-	{ HDA_INTEL_HSW3,    "Intel Haswell",	0, 0 },
+	{ HDA_INTEL_HSW1,    "Intel Has well",	0, 0 },
+	{ HDA_INTEL_HSW2,    "Intel Has well",	0, 0 },
+	{ HDA_INTEL_HSW3,    "Intel Has well",	0, 0 },
 	{ HDA_INTEL_BDW1,    "Intel Broadwell",	0, 0 },
 	{ HDA_INTEL_BDW2,    "Intel Broadwell",	0, 0 },
 	{ HDA_INTEL_CPT,     "Intel Cougar Point",	0, 0 },
@@ -435,7 +435,7 @@ hdac_reset(struct hdac_softc *sc, int wakeup)
 /****************************************************************************
  * int hdac_get_capabilities(struct hdac_softc *);
  *
- * Retreive the general capabilities of the hdac;
+ * Retrieve the general capabilities of the hdac;
  *	Number of Input Streams
  *	Number of Output Streams
  *	Number of bidirectional Streams

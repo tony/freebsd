@@ -611,7 +611,7 @@ at91_pmc_init_clock(void)
 
 	at91_master_clock = mck.hz;
 
-	/* These clocks refrenced by "special" names */
+	/* These clocks referenced by "special" names */
 	at91_pmc_clock_alias("ohci0", "ohci_clk");
 	at91_pmc_clock_alias("udp0",  "udp_clk");
 

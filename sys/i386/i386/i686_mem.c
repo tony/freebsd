@@ -125,7 +125,7 @@ i686_mtrr2mrt(int val)
 }
 
 /*
- * i686 MTRR conflicts. Writeback and uncachable may overlap.
+ * i686 MTRR conflicts. Writeback and uncacheable may overlap.
  */
 static int
 i686_mtrrconflict(int flag1, int flag2)

@@ -58,7 +58,7 @@ sctp_ss_default_init(struct sctp_tcb *stcb, struct sctp_association *asoc,
 	 * an existing association has been changed. We need to add all
 	 * stream queues to the wheel.
 	 */
-	for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+	for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 		stcb->asoc.ss_functions.sctp_ss_add_to_stream(stcb, &stcb->asoc,
 		    &stcb->asoc.strmout[i],
 		    NULL, holds_lock);
@@ -695,7 +695,7 @@ sctp_ss_fcfs_init(struct sctp_tcb *stcb, struct sctp_association *asoc,
 	 */
 	while (add_more) {
 		add_more = 0;
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			sp = TAILQ_FIRST(&stcb->asoc.strmout[i].outqueue);
 			x = 0;
 			/* Find n. message in current stream queue */

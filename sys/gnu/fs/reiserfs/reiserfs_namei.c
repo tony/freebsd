@@ -98,7 +98,7 @@ reiserfs_lookup(struct vop_cachedlookup_args *ap)
 		}
 
 		/*
-		 * Propogate the priv_object flag so we know we're in the
+		 * Propagate the priv_object flag so we know we're in the
 		 * priv tree
 		 */
 		/*if (is_reiserfs_priv_object(dir))

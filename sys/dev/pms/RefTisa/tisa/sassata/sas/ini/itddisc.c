@@ -5712,7 +5712,7 @@ tdsaReportPhySataRcvd(
 /*****************************************************************************
 *! \brief  tdsaSASExpanderUpStreamPhyAdd
 *
-*  Purpose:  This function adds upstream expander to a specfic phy.
+*  Purpose:  This function adds upstream expander to a specific phy.
 *
 *  \param   tiRoot: Pointer to the OS Specific module allocated tiRoot_t
 *                   instance.
@@ -5770,7 +5770,7 @@ tdsaSASExpanderUpStreamPhyAdd(
 /*****************************************************************************
 *! \brief  tdsaSASExpanderDownStreamPhyAdd
 *
-*  Purpose:  This function adds downstream expander to a specfic phy.
+*  Purpose:  This function adds downstream expander to a specific phy.
 *
 *  \param   tiRoot: Pointer to the OS Specific module allocated tiRoot_t
 *                   instance.
@@ -7076,7 +7076,7 @@ tdsaSATAIncrementalDiscover(
 *  \param   functionCode: SMP function code.
 *  \param   pSmpBody: Pointer to SMP payload.
 *  \param   smpBodySize: Size of SMP request without SMP header.
-*  \param   agRequestType: SPC-specfic request type
+*  \param   agRequestType: SPC-specific request type
 *
 *  \return:
 *           tiSuccess  SMP is sent successfully
@@ -7188,7 +7188,7 @@ tdSMPStart(
 
   agDevHandle = oneDeviceData->agDevHandle;
 
-  /* save the callback funtion */
+  /* save the callback function */
   tdSMPRequestBody->SMPCompletionFunc = itdssSMPCompleted; /* in itdcb.c */
 
   /* for simulate warm target reset */

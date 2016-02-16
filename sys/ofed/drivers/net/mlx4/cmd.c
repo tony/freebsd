@@ -2553,7 +2553,7 @@ int mlx4_set_vf_link_state(struct mlx4_dev *dev, int port, int vf, int link_stat
 
 	switch (link_state) {
 	case IFLA_VF_LINK_STATE_AUTO:
-		/* get link curent state */
+		/* get link current state */
 		if (!priv->sense.do_sense_port[port])
 			link_stat_event = MLX4_PORT_CHANGE_SUBTYPE_ACTIVE;
 		else

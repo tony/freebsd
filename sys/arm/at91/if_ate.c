@@ -919,7 +919,7 @@ ate_intr(void *xsc)
 				/*
 				 * Simulate SAM9 FIRST/LAST bits for RM9200.
 				 * RM9200 EMAC has only on Rx buffer per packet.
-				 * But sometime we are handed a zero lenght packet.
+				 * But sometime we are handed a zero length packet.
 				 */
 				if ((rxdhead->status & ETH_LEN_MASK) == 0)
 					rxdhead->status = 0; /* Mark error */
@@ -989,7 +989,7 @@ ate_intr(void *xsc)
 						count = MIN(remain, sc->rx_buf_size);
 
 						/* XXX Performance robbing copy. Could
-						 * recieve directly to mbufs if not an
+						 * receive directly to mbufs if not an
 						 * RM9200. And even then we could likely
 						 * copy just the protocol headers. XXX  */
 						m_append(mb, count, sc->rx_buf[sc->rxhead]);
@@ -1468,7 +1468,7 @@ ate_miibus_readreg(device_t dev, int phy, int reg)
 	int val;
 
 	/*
-	 * XXX if we implement agressive power savings, then we need
+	 * XXX if we implement aggressive power savings, then we need
 	 * XXX to make sure that the clock to the emac is on here
 	 */
 
@@ -1488,7 +1488,7 @@ ate_miibus_writereg(device_t dev, int phy, int reg, int data)
 	struct ate_softc *sc;
 
 	/*
-	 * XXX if we implement agressive power savings, then we need
+	 * XXX if we implement aggressive power savings, then we need
 	 * XXX to make sure that the clock to the emac is on here
 	 */
 

@@ -581,7 +581,7 @@ typedef struct smpRespReportGeneral2_s
     /* B0   : EXTERNALLY CONFIGURABLE ROUTE TABLE  */
   bit8   reserved1; /* byte11 */
   bit8   EnclosureLogicalID[8];
-  bit8   reserved2[8]; /* upto byte27; Spec 1.1 */
+  bit8   reserved2[8]; /* up to byte27; Spec 1.1 */
   bit8   reserved3[2];
   bit8   STPBusInactivityTimeLimit[2];
   bit8   STPMaxConnectTimeLimit[2]; /* byte33 */

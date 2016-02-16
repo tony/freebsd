@@ -394,7 +394,7 @@ void sati_self_test_log_header_construct(
 
 /**
  * @brief This method will construct the SCSI self test log page from
- *        the Extended SMART self-test log response recieved from the
+ *        the Extended SMART self-test log response received from the
  *        ATA device. The response is from a ATA_Read_Log_EXT command
  *        issued by SATI.
  *
@@ -427,7 +427,7 @@ void sati_extended_self_test_log_page_construct(
 
 /**
 * @brief This method will construct the SCSI self test log page from
-*        the SMART self-test log response recieved from the ATA device.
+*        the SMART self-test log response received from the ATA device.
 *        The response is from a ATA_SMART_Read_Log command issued by SATI.
 *
 * @return n/a
@@ -513,14 +513,14 @@ void sati_self_test_log_page_construct(
 
 /**
 * @brief This method will construct the SCSI information exception log page from
-*        the ATA SMART response recieved from the ATA device. The response is
+*        the ATA SMART response received from the ATA device. The response is
 *         from a ATA SMART return status command issued by SATI.
 *
 * @return n/a
 *
 */
 static
-void sati_information_exception_log_page_contruct(
+void sati_information_exception_log_page_construct(
    SATI_TRANSLATOR_SEQUENCE_T  * sequence,
    void                        * scsi_io,
    void                        * ata_io
@@ -780,7 +780,7 @@ SATI_STATUS sati_log_sense_translate_response(
 
          case SATI_SEQUENCE_LOG_SENSE_INFO_EXCEPTION_LOG_PAGE:
             //This function needs a d->h register fis, not ata data
-            sati_information_exception_log_page_contruct(
+            sati_information_exception_log_page_construct(
                                  sequence, scsi_io, ata_io
             );
 

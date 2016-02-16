@@ -1554,7 +1554,7 @@ GLOBAL bit32  satRead10(
 
   //  tdhexdump("satRead10 final fis", (bit8 *)fis, sizeof(agsaFisRegHostToDevice_t));
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -2265,7 +2265,7 @@ GLOBAL bit32  satRead12(
     satIOContext->ATACmd = SAT_READ_FPDMA_QUEUED;
   }
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -2712,7 +2712,7 @@ GLOBAL bit32  satRead16(
     satIOContext->ATACmd = SAT_READ_FPDMA_QUEUED;
   }
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -14278,7 +14278,7 @@ GLOBAL bit32  satWriteAndVerify10_1(
   }
   else
   {
-    /* can't fit in SAT_READ_VERIFY_SECTORS becasue of Sector Count and LBA */
+    /* can't fit in SAT_READ_VERIFY_SECTORS because of Sector Count and LBA */
     TI_DBG1(("satWriteAndVerify10_1: can't fit in SAT_READ_VERIFY_SECTORS\n"));
     return tiError;
   }
@@ -14776,7 +14776,7 @@ GLOBAL bit32  satNonChainedWriteNVerify_Verify(
   }
   else
   {
-    /* can't fit in SAT_READ_VERIFY_SECTORS becasue of Sector Count and LBA */
+    /* can't fit in SAT_READ_VERIFY_SECTORS because of Sector Count and LBA */
     TI_DBG1(("satNonChainedWriteNVerify_Verify: can't fit in SAT_READ_VERIFY_SECTORS\n"));
     return tiError;
   }
@@ -15383,7 +15383,7 @@ GLOBAL bit32  satWriteAndVerify16(
 {
   /*
     combination of write16 and verify16
-    since write16 has 8 bytes LBA -> problem ATA LBA(upto 6 bytes), no support
+    since write16 has 8 bytes LBA -> problem ATA LBA(up to 6 bytes), no support
   */
   bit32                     status;
   bit32                     agRequestType = AGSA_SATA_PROTOCOL_DMA_WRITE;
@@ -17959,7 +17959,7 @@ osGLOBAL void osSatIOCompleted(
 
        * 2. Because the HW/LL layer received Set Device Bit FIS, it can get the
        *    tag or I/O context for NCQ request, SATL would translate the ATA error
-       *    to SCSI status and return the original NCQ I/O with the appopriate
+       *    to SCSI status and return the original NCQ I/O with the appropriate
        *    SCSI status.
        *
        * 3. Prepare READ LOG EXT page 10h command. Set flag to indicate that
@@ -17976,7 +17976,7 @@ osGLOBAL void osSatIOCompleted(
        * 6. Check flag that indicates whether the failed I/O has been returned
        *    to the OS Layer. If not, search the I/O context in device data
        *    looking for a matched tag. Then return the completion of the failed
-       *    NCQ command with the appopriate/trasnlated SCSI status.
+       *    NCQ command with the appropriate/trasnlated SCSI status.
        *
        * 7. Issue abort to LL layer to all other pending I/Os for the same SATA
        *    drive.
@@ -18942,7 +18942,7 @@ GLOBAL void  osSatDefaultTranslation(
  *
  *  \param   tiRoot:      Pointer to TISA driver/port instance.
  *  \param   satDevData:  Pointer to SAT specific device data.
- *  \param   allocLength: Length in byte of the DMA mem to allocate, upto
+ *  \param   allocLength: Length in byte of the DMA mem to allocate, up to
  *                        one page size.
  *  \param   satIntIo:    Pointer (output) to context for SAT internally
  *                        generated I/O that is allocated by this routine.
@@ -19491,7 +19491,7 @@ GLOBAL bit32  satStartIDDev(
 /*****************************************************************************/
 /*! \brief satComputeCDB10LBA.
  *
- *  This fuctions computes LBA of CDB10.
+ *  This functions computes LBA of CDB10.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19518,7 +19518,7 @@ bit32 satComputeCDB10LBA(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeCDB10TL.
  *
- *  This fuctions computes transfer length of CDB10.
+ *  This functions computes transfer length of CDB10.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19544,7 +19544,7 @@ bit32 satComputeCDB10TL(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeCDB12LBA.
  *
- *  This fuctions computes LBA of CDB12.
+ *  This functions computes LBA of CDB12.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19571,7 +19571,7 @@ bit32 satComputeCDB12LBA(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeCDB12TL.
  *
- *  This fuctions computes transfer length of CDB12.
+ *  This functions computes transfer length of CDB12.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19599,7 +19599,7 @@ bit32 satComputeCDB12TL(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeCDB16LBA.
  *
- *  This fuctions computes LBA of CDB16.
+ *  This functions computes LBA of CDB16.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19631,7 +19631,7 @@ bit32 satComputeCDB16LBA(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeCDB16TL.
  *
- *  This fuctions computes transfer length of CDB16.
+ *  This functions computes transfer length of CDB16.
  *
  *  \param   satIOContext_t:   Pointer to the SAT IO Context
  *
@@ -19658,7 +19658,7 @@ bit32 satComputeCDB16TL(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*! \brief satComputeLoopNum.
  *
- *  This fuctions computes the number of interation needed for a transfer
+ *  This functions computes the number of interation needed for a transfer
  *  length with a specific number.
  *
  *  \param   a:   a numerator
@@ -19670,7 +19670,7 @@ bit32 satComputeCDB16TL(satIOContext_t            *satIOContext)
 /*****************************************************************************/
 /*
   (tl, denom)
-  tl can be upto bit32 because CDB16 has bit32 tl
+  tl can be up to bit32 because CDB16 has bit32 tl
   Therefore, fine
   either (tl, 0xFF) or (tl, 0xFFFF)
 */
@@ -20080,7 +20080,7 @@ GLOBAL bit32 satTagRelease(
  *  \e tiError:       Other errors that prevent the I/O request to be started.
  *
  *  \note:
- *        This funcion is triggered bottom up. Not yet in use.
+ *        This function is triggered bottom up. Not yet in use.
  *****************************************************************************/
 /* called for bottom up */
 osGLOBAL bit32 satSubTM(
@@ -22073,7 +22073,7 @@ void satAddSATAIDDevCB(
       status = satSetFeatures(tiRoot,
                      &satNewIntIo->satIntTiIORequest,
                      satNewIOContext->ptiDeviceHandle,
-                     &satNewIntIo->satIntTiScsiXchg, /* orginal from OS layer */
+                     &satNewIntIo->satIntTiScsiXchg, /* original from OS layer */
                      satNewIOContext,
                      agFALSE);
       if (status != tiSuccess)
@@ -22170,7 +22170,7 @@ void satAddSATAIDDevCB(
       status = satSetFeatures(tiRoot,
                      &satNewIntIo->satIntTiIORequest,
                      satNewIOContext->ptiDeviceHandle,
-                     &satNewIntIo->satIntTiScsiXchg, /* orginal from OS layer */
+                     &satNewIntIo->satIntTiScsiXchg, /* original from OS layer */
                      satNewIOContext,
                      agFALSE);
       if (status != tiSuccess)
@@ -23132,7 +23132,7 @@ void tdsaDiscoveryStartIDDevCB(
       retry_status = satSetFeatures(tiRoot,
                                  &satNewIntIo->satIntTiIORequest,
                                  satNewIOContext->ptiDeviceHandle,
-                                 &satNewIntIo->satIntTiScsiXchg, /* orginal from OS layer */
+                                 &satNewIntIo->satIntTiScsiXchg, /* original from OS layer */
                                  satNewIOContext,
                                  agFALSE);
       if (retry_status != tiSuccess)

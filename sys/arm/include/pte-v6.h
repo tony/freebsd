@@ -50,7 +50,7 @@
 #define	PRRR_NS1	(1 << 19) /* Shared bit for Normal, S = 1 */
 #define	PRRR_NOS_SHIFT	24 	/* base shif for Not Outer Shared bits */
 
-#define	NMRR_NC		0	/* Noncachable*/
+#define	NMRR_NC		0	/* Noncacheable*/
 #define	NMRR_WB_WA	1	/* Write Back, Write Allocate */
 #define	NMRR_WT		2	/* Write Through, Non-Write Allocate */
 #define	NMRR_WB		3	/* Write Back, Non-Write Allocate */

@@ -979,11 +979,11 @@ fail1:
 #endif
 
 /*
- * Falcon/Siena psuedo-header
+ * Falcon/Siena pseudo-header
  * --------------------------
  *
  * Receive packets are prefixed by an optional 16 byte pseudo-header.
- * The psuedo-header is a byte array of one of the forms:
+ * The pseudo-header is a byte array of one of the forms:
  *
  *  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
  * xx.xx.xx.xx.xx.xx.xx.xx.xx.xx.xx.xx.TT.TT.TT.TT

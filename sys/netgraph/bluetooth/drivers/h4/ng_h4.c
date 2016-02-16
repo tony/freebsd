@@ -479,10 +479,10 @@ ng_h4_input(int c, struct tty *tp)
 			 *
 			 * XXX I'm *really* confused here. It turns out
 			 * that Xircom card sends us packets with length
-			 * greater then 512 bytes! This is greater then
+			 * greater than 512 bytes! This is greater than
 			 * our old receive buffer (ibuf) size. In the same
 			 * time the card demands from us *not* to send 
-			 * packets greater then 192 bytes. Weird! How the 
+			 * packets greater than 192 bytes. Weird! How the 
 			 * hell i should know how big *receive* buffer 
 			 * should be? For now increase receiving buffer 
 			 * size to 1K and add the following check.

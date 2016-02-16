@@ -355,7 +355,7 @@ bi_load(char *args, vm_offset_t *modulep, vm_offset_t *kernendp)
 	vm_offset_t vaddr;
 	size_t i;
 	/*
-	 * These metadata addreses must be converted for kernel after
+	 * These metadata addresses must be converted for kernel after
 	 * relocation.
 	 */
 	uint32_t		mdt[] = {

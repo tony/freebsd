@@ -1283,7 +1283,7 @@ tac_get_av_value(struct tac_handle *h, const char *attribute)
 	const char *ch, *end;
 	const char *candidate;
 	int   candidate_len;
-	int   found_seperator;
+	int   found_separator;
 	struct srvr_str srvr;
 
 	if (attribute == NULL || ((len = strlen(attribute)) == 0))
@@ -1311,11 +1311,11 @@ tac_get_av_value(struct tac_handle *h, const char *attribute)
 			 * Sift out the white space between A and V (should not
 			 * be any, but don't trust implementation of server...)
 			 */
-			found_seperator = 0;
+			found_separator = 0;
 			while ((*ch == '=' || *ch == '*' || *ch == ' ' ||
 				*ch == '\t') && ch != end) {
 				if (*ch == '=' || *ch == '*')
-					found_seperator++;
+					found_separator++;
 				ch++;
 			}
 
@@ -1331,7 +1331,7 @@ tac_get_av_value(struct tac_handle *h, const char *attribute)
 			 * against unset values.
 			 * dup_str() will handle srvr.len == 0 correctly.
 			 */
-			if (found_seperator == 1) {
+			if (found_separator == 1) {
 				srvr.len = end - ch;
 				srvr.data = ch;
 				return dup_str(h, &srvr, NULL);

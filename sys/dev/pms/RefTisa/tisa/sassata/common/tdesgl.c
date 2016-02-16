@@ -371,7 +371,7 @@ tdsaGetEsglPages(
     }
     else 
     {
-      /* in case of muliple pages, first and later, except one page only or last page */
+      /* in case of multiple pages, first and later, except one page only or last page */
       for (j=0; j <numEntriesPerPage - 1; j++) /* else */
       {
         /* do this till (last - 1) */

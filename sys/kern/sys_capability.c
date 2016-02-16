@@ -49,7 +49,7 @@
  * strict subset of the rights on the original capability.
  *
  * System calls permitted in capability mode are defined in capabilities.conf;
- * calls must be carefully audited for safety to ensure that they don't allow
+ * calls must be carefuly audited for safety to ensure that they don't allow
  * escape from a sandbox.  Some calls permit only a subset of operations in
  * capability mode -- for example, shm_open(2) is limited to creating
  * anonymous, rather than named, POSIX shared memory objects.

@@ -301,7 +301,7 @@ aha_probe(struct aha_softc* aha)
 	 * This really should be replaced with the esetup command, since
 	 * that appears to be more reliable.  This becomes more and more
 	 * true over time as we discover more cards that don't read the
-	 * geometry register consistantly.
+	 * geometry register consistently.
 	 */
 	if (aha->boardid <= 0x42) {
 		/* Wait 10ms before reading */
@@ -1161,7 +1161,7 @@ ahadone(struct aha_softc *aha, struct aha_ccb *accb, aha_mbi_comp_code_t comp_co
 		struct ccb_hdr *ccb_h;
 		cam_status error;
 
-		/* Notify all clients that a BDR occured */
+		/* Notify all clients that a BDR occurred */
 		error = xpt_create_path(&path, /*periph*/NULL,
 		    cam_sim_path(aha->sim), accb->hccb.target,
 		    CAM_LUN_WILDCARD);
@@ -1204,7 +1204,7 @@ ahadone(struct aha_softc *aha, struct aha_ccb *accb, aha_mbi_comp_code_t comp_co
 		break;
 	case AMBI_ABORT:
 	case AMBI_ERROR:
-		/* An error occured */
+		/* An error occurred */
 		if (accb->hccb.opcode < INITIATOR_CCB_WRESID)
 			csio->resid = 0;
 		else

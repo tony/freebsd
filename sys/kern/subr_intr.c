@@ -695,7 +695,7 @@ intr_isrc_assign_cpu(void *arg, int cpu)
 	 * In NOCPU case, it's up to PIC to either leave ISRC on same CPU or
 	 * re-balance it to another CPU or enable it on more CPUs. However,
 	 * PIC is expected to change isrc_cpu appropriately to keep us well
-	 * informed if the call is successfull.
+	 * informed if the call is successful.
 	 */
 	if (irq_assign_cpu) {
 		error = PIC_BIND(isrc->isrc_dev, isrc);

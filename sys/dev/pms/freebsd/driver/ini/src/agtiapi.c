@@ -2592,7 +2592,7 @@ agtiapi_PrepareSGListCB()
 
 Purpose:
   Callback function for bus_dmamap_load()
-  This fuctions sends IO to LL layer.
+  This functions sends IO to LL layer.
 Parameters:
   void *arg (IN)                Pointer to the HBA data structure
   bus_dma_segment_t *segs (IN)  Pointer to dma segment
@@ -2746,7 +2746,7 @@ static void agtiapi_PrepareSGListCB( void *arg,
   switch (CDB[0])
   {
   case REQUEST_SENSE:  /* requires different buffer */
-    /* This code should not be excercised because SAS support auto sense 
+    /* This code should not be exercised because SAS support auto sense 
        For the completeness, vtophys() is still used here.
      */
     AGTIAPI_PRINTK("agtiapi_PrepareSGListCB: QueueCmnd - REQUEST SENSE new\n");
@@ -3658,7 +3658,7 @@ agtiapi_PrepareSMPSGListCB()
 
 Purpose:
   Callback function for bus_dmamap_load()
-  This fuctions sends IO to LL layer.
+  This functions sends IO to LL layer.
 Parameters:
   void *arg (IN)                Pointer to the HBA data structure
   bus_dma_segment_t *segs (IN)  Pointer to dma segment
@@ -4259,7 +4259,7 @@ STATIC void agtiapi_Retry(struct agtiapi_softc *pmcsc, ccb_t *pccb)
 agtiapi_DumpCCB()
 
 Purpose:
-  Dump CCB for debuging
+  Dump CCB for debugging
 Parameters:
   ccb_t *pccb (IN)  A pointer to the driver's own CCB, not CAM's CCB
 Return:

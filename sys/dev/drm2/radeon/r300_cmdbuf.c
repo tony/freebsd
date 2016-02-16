@@ -479,7 +479,7 @@ static __inline__ int r300_emit_3d_load_vbpntr(drm_radeon_private_t *dev_priv,
 			  count);
 		return -EINVAL;
 	}
-	/* carefully check packet contents */
+	/* carefuly check packet contents */
 
 	/* We have already read the header so advance the buffer. */
 	drm_buffer_advance(cmdbuf->buffer, 4);

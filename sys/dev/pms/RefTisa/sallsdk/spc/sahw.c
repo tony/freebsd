@@ -79,7 +79,7 @@ LOCAL bit32 siBar4Cpy(agsaRoot_t  *agRoot, bit32 offset, bit8 *parray, bit32 arr
  *
  *  \param agRoot       Handles for this instance of SAS/SATA hardware
  *  \param resetType    The reset type
- *  \param resetParm    The paramter passed for reset operation
+ *  \param resetParm    The parameter passed for reset operation
  *
  *  \return -void-
  */

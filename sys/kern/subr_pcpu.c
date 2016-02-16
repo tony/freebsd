@@ -62,7 +62,7 @@ __FBSDID("$FreeBSD$");
 #include <vm/uma.h>
 #include <ddb/ddb.h>
 
-static MALLOC_DEFINE(M_PCPU, "Per-cpu", "Per-cpu resource accouting.");
+static MALLOC_DEFINE(M_PCPU, "Per-cpu", "Per-cpu resource accounting.");
 
 struct dpcpu_free {
 	uintptr_t	df_start;

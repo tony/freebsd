@@ -58,7 +58,7 @@ __FBSDID("$FreeBSD$");
 /*
  * Currently there is only one service_connection per service.
  * In the future we may want multiple connections from multiple clients
- * per one service instance, but it has to be carefully designed.
+ * per one service instance, but it has to be carefuly designed.
  * The problem is that we may restrict/sandbox service instance according
  * to the limits provided. When new connection comes in with different
  * limits we won't be able to access requested resources.

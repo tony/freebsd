@@ -137,7 +137,7 @@ visibility_work(struct wtap_plugin *plugin, struct packet *p)
 	/* This is O(n*n) which is not optimal for large
 	 * number of nodes. Another way of doing it is
 	 * creating groups of nodes that hear each other.
-	 * Atleast for this simple static node plugin.
+	 * At least for this simple static node plugin.
 	 */
 	for(int i=0; i<ARRAY_SIZE; ++i){
 		uint32_t index = map->map[i];
@@ -230,7 +230,7 @@ vis_ioctl(struct cdev *sdev, u_long cmd, caddr_t data,
 #endif
 		break;
 	default:
-		DWTAP_PRINTF("Unkown WTAP IOCTL\n");
+		DWTAP_PRINTF("Unknown WTAP IOCTL\n");
 		error = EINVAL;
 	}
 

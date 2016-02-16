@@ -36,7 +36,7 @@ struct accentmap;
 struct fkeytab;
 struct cdevsw;
 
-/* call back funcion */
+/* call back function */
 typedef int		kbd_callback_func_t(keyboard_t *kbd, int event,
 					    void *arg);
 /* event types */

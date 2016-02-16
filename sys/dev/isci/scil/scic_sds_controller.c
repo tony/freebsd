@@ -297,7 +297,7 @@ void scic_sds_controller_build_memory_descriptor_table(
    );
 
    // The UF buffer address table size must be programmed to a power
-   // of 2.  Find the first power of 2 that is equal to or greater then
+   // of 2.  Find the first power of 2 that is equal to or greater than
    // the number of unsolicited frame buffers to be utilized.
    scic_sds_unsolicited_frame_control_set_address_table_count(
       &this_controller->uf_control
@@ -2270,7 +2270,7 @@ void scic_sds_controller_event_completion(
    switch (scu_get_event_type(completion_entry))
    {
    case SCU_EVENT_TYPE_SMU_COMMAND_ERROR:
-      /// @todo The driver did something wrong and we need to fix the condtion.
+      /// @todo The driver did something wrong and we need to fix the condition.
       SCIC_LOG_ERROR((
          sci_base_object_get_logger(this_controller),
          SCIC_LOG_OBJECT_CONTROLLER,
@@ -2429,7 +2429,7 @@ void scic_sds_controller_process_completions(
    SCIC_LOG_TRACE((
       sci_base_object_get_logger(this_controller),
       SCIC_LOG_OBJECT_COMPLETION_QUEUE,
-      "completion queue begining get : 0x%08x\n",
+      "completion queue beginning get : 0x%08x\n",
       this_controller->completion_queue_get
    ));
 
@@ -2544,7 +2544,7 @@ void scic_sds_controller_transitioned_process_completions(
    SCIC_LOG_TRACE((
       sci_base_object_get_logger(this_controller),
       SCIC_LOG_OBJECT_COMPLETION_QUEUE,
-      "completion queue begining get : 0x%08x\n",
+      "completion queue beginning get : 0x%08x\n",
       this_controller->completion_queue_get
    ));
 
@@ -2972,7 +2972,7 @@ void scic_sds_controller_single_vector_completion_handler(
          "SCIC Controller has encountered a fatal error.\n"
       ));
 
-      // We have a fatal condtion and must reset the controller
+      // We have a fatal condition and must reset the controller
       // Leave the interrupt mask in place and get the controller reset
       sci_base_state_machine_change_state(
          scic_sds_controller_get_base_state_machine(this_controller),
@@ -3730,7 +3730,7 @@ void scic_sds_controller_set_default_config_parameters(
 
       // Previous Vitesse based expanders had a arbitration issue that
       // is worked around by having the upper 32-bits of SAS address
-      // with a value greater then the Vitesse company identifier.
+      // with a value greater than the Vitesse company identifier.
       // Hence, usage of 0x5FCFFFFF.
       this_controller->oem_parameters.sds1.phys[index].sas_address.sci_format.high
          = 0x5FCFFFFF;

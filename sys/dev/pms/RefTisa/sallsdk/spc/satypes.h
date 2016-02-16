@@ -51,8 +51,8 @@ typedef struct agsaTimerDesc_s
   bit32           valid;  /**< the valid bit of the timer descriptor */
   bit32           timeoutTick; /**< the timeout tick of the timer */
   agsaCallback_t  pfnTimeout; /**< the callback function fo the timer */
-  bit32           Event; /**< the event paramter of the timer callback function */
-  void *          pParm; /**< the point to the paramter passed to callback function */
+  bit32           Event; /**< the event parameter of the timer callback function */
+  void *          pParm; /**< the point to the parameter passed to callback function */
 } agsaTimerDesc_t;
 
 /** \brief the port
@@ -264,9 +264,9 @@ typedef struct agsaLLRoot_s
   bit32           numInterruptVectors; /**< Number of Interrupt Vectors configured from OS */
   bit32           Use64bit;            /**< Only write upper bits if needed */
 
-  EnadDisabHandler_t DisableInterrupts;              /*Interrupt type dependant function pointer to disable interrupts */
-  EnadDisabHandler_t ReEnableInterrupts;             /*Interrupt type dependant reenable  */
-  InterruptOurs_t OurInterrupt;                      /*Interrupt type dependant check for our interrupt */
+  EnadDisabHandler_t DisableInterrupts;              /*Interrupt type dependent function pointer to disable interrupts */
+  EnadDisabHandler_t ReEnableInterrupts;             /*Interrupt type dependent reenable  */
+  InterruptOurs_t OurInterrupt;                      /*Interrupt type dependent check for our interrupt */
 
 #ifdef SA_FW_TEST_BUNCH_STARTS
   /**

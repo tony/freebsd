@@ -801,7 +801,7 @@ static void ecore_ilt_client_init_op_ilt(struct bxe_softc *sc,
 	for (i = ilt_cli->start; i <= ilt_cli->end; i++)
 		ecore_ilt_line_init_op(sc, ilt, i, initop);
 
-	/* init/clear the ILT boundries */
+	/* init/clear the ILT boundaries */
 	ecore_ilt_boundry_init_op(sc, ilt_cli, ilt->start_line, initop);
 }
 

@@ -143,7 +143,7 @@ GLOBAL bit32 saSMPStart(
     }
   }
 
-  /* If free IOMB avaliable */
+  /* If free IOMB available */
   /* Remove the request from free list */
   if( using_reserved )
   {
@@ -179,7 +179,7 @@ GLOBAL bit32 saSMPStart(
   ossaSingleThreadedEnter(agRoot, LL_IOREQ_IBQ0_LOCK + inq);
 #endif /* SA_LL_IBQ_PROTECT */
 
-  /* If LL IO request entry avaliable */
+  /* If LL IO request entry available */
   /* Get a free inbound queue entry */
   circularQ = &saRoot->inboundQueue[inq];
   retVal    = mpiMsgFreeGet(circularQ, IOMB_SIZE64, &pMessage);
@@ -313,7 +313,7 @@ GLOBAL bit32 saSMPStart(
           /* Direct payload length */
           IR_IP_OV_res_phyId_DPdLen_res |= (((pSMPFrame->outFrameLen) & 0xff) << SHIFT16);
 
-          /* copy payload - upto 48 bytes */
+          /* copy payload - up to 48 bytes */
           si_memcpy(&(payload.SMPCmd[0]),pSMPFrame->outFrameBuf,pSMPFrame->outFrameLen);
           for ( i = 0; i < pSMPFrame->outFrameLen / sizeof(bit32)+1; i ++ )
           {
@@ -613,7 +613,7 @@ GLOBAL bit32 saSMPAbort(
     }
   }
 
-  /* If free IOMB avaliable */
+  /* If free IOMB available */
   /* Remove the request from free list */
   if( using_reserved )
   {

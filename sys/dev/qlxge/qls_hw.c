@@ -28,7 +28,7 @@
 /*
  * File: qls_hw.c
  * Author : David C Somayajulu, Qlogic Corporation, Aliso Viejo, CA 92656.
- * Content: Contains Hardware dependant functions
+ * Content: Contains Hardware dependent functions
  */
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");

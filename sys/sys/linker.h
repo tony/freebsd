@@ -199,7 +199,7 @@ void *linker_hwpmc_list_objects(void);
 #define MODINFO_SIZE		0x0004		/* Size of module */
 #define MODINFO_EMPTY		0x0005		/* Has been deleted */
 #define MODINFO_ARGS		0x0006		/* Parameters string */
-#define MODINFO_METADATA	0x8000		/* Module-specfic */
+#define MODINFO_METADATA	0x8000		/* Module-specific */
 
 #define MODINFOMD_AOUTEXEC	0x0001		/* a.out exec header */
 #define MODINFOMD_ELFHDR	0x0002		/* ELF header */

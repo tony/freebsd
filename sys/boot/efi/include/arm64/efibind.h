@@ -161,7 +161,7 @@ typedef uint64_t   UINTN;
     #ifdef _MSC_EXTENSIONS
         #define EFIAPI __cdecl  // Force C calling convention for Microsoft C compiler 
     #else
-        #define EFIAPI          // Substitute expresion to force C calling convention 
+        #define EFIAPI          // Substitute expression to force C calling convention 
     #endif
 #endif
 
@@ -176,7 +176,7 @@ typedef uint64_t   UINTN;
 #define VOLATILE    volatile
 
 //
-// BugBug: Need to find out if this is portable accross compliers.
+// BugBug: Need to find out if this is portable across compliers.
 //
 void __mfa (void);                       
 #define MEMORY_FENCE()    __mfa()

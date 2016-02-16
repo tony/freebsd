@@ -46,7 +46,7 @@ report_init(nolog)
 
 /*
  * This routine reports errors and such via stderr and syslog() if
- * appopriate.  It just helps avoid a lot of "#ifdef SYSLOG" constructs
+ * appropriate.  It just helps avoid a lot of "#ifdef SYSLOG" constructs
  * from being scattered throughout the code.
  *
  * The syntax is identical to syslog(3), but %m is not considered special

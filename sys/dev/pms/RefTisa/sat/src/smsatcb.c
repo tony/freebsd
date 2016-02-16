@@ -930,7 +930,7 @@ smsatTranslateATAPIErrorsToSCSIErrors(
 {
     if (pSenseKey == agNULL || pSenseCodeInfo == agNULL)
     {
-        SM_DBG1(("TranslateATAErrorsToSCSIErros: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
+        SM_DBG1(("TranslateATAErrorsToSCSIErrors: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
         return;
     }
     if (bATAStatus & ERR_ATA_STATUS_MASK )
@@ -994,11 +994,11 @@ smsatTranslateATAErrorsToSCSIErrors(
     )
 {
 
-  SM_DBG1(("TranslateATAErrorsToSCSIErros: bATAStatus=%d  bATAError= %d \n",bATAStatus,bATAError));
+  SM_DBG1(("TranslateATAErrorsToSCSIErrors: bATAStatus=%d  bATAError= %d \n",bATAStatus,bATAError));
 
   if (pSenseKey == agNULL || pSenseCodeInfo == agNULL)
   {
-    SM_DBG1(("TranslateATAErrorsToSCSIErros: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
+    SM_DBG1(("TranslateATAErrorsToSCSIErrors: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
     return;
   }
 	
@@ -1997,7 +1997,7 @@ smsatTestUnitReadyCB(
   {
     SM_DBG5(("smsatTestUnitReadyCB: yes internal smSatInternalIo_t satIntIoContext\n"));
 
-    /* orginal smIOContext */
+    /* original smIOContext */
     smOrgIORequest         = (smIORequest_t *)satIOContext->satIntIoContext->satOrgSmIORequest;
     smOrgIORequestBody     = (smIORequestBody_t *)smOrgIORequest->tdData;
     satOrgIOContext        = &(smOrgIORequestBody->transport.SATA.satIOContext);
@@ -2171,7 +2171,7 @@ smsatTestUnitReadyCB(
     return;
   }/* end error */
 
-  /* ATA command completes sucessfully */
+  /* ATA command completes successfully */
   switch (hostToDevFis->h.command)
   {
   case SAT_GET_MEDIA_STATUS:
@@ -3732,7 +3732,7 @@ smsatStartStopUnitCB(
   } /* error check */
   }
 
-  /* ATA command completes sucessfully */
+  /* ATA command completes successfully */
   switch (hostToDevFis->h.command)
   {
   case SAT_FLUSH_CACHE: /* fall through */
@@ -4355,7 +4355,7 @@ smsatWriteSame10CB(
     else
     {
       status = tiError;
-      SM_DBG1(("smsatWriteSame10CB: sucess but error in command 0x%x!!!\n", hostToDevFis->h.command));
+      SM_DBG1(("smsatWriteSame10CB: success but error in command 0x%x!!!\n", hostToDevFis->h.command));
     }
 
     if (status != SM_RC_SUCCESS)
@@ -4629,7 +4629,7 @@ smsatLogSenseCB(
 
     /* SPC-4, Table 217 */
     LogPage[4] = 0;    /* Parameter Code */
-    LogPage[5] = 0x01; /* Parameter Code,  unspecfied but ... */
+    LogPage[5] = 0x01; /* Parameter Code,  unspecified but ... */
     LogPage[6] = 3;    /* unspecified but ... */
     LogPage[7] = 0x10; /* Parameter Length */
     LogPage[8] = (bit8)(0 | ((virtAddr1->byte[5] & 0xF0) >> 4)); /* Self Test Code and Self-Test Result */
@@ -4799,7 +4799,7 @@ smsatLogSenseCB(
 
       /* SPC-4, Table 217 */
       LogPage[4] = 0;    /* Parameter Code */
-      LogPage[5] = 0x01; /* Parameter Code unspecfied but ... */
+      LogPage[5] = 0x01; /* Parameter Code unspecified but ... */
       LogPage[6] = 3;    /* unspecified but ... */
       LogPage[7] = 0x10; /* Parameter Length */
       LogPage[8] = (bit8)(0 | ((virtAddr2->byte[3] & 0xF0) >> 4)); /* Self Test Code and Self-Test Result */
@@ -4961,7 +4961,7 @@ smsatLogSenseCB(
         no vendor specific field
        */
       LogPage[4] = 0;    /* Parameter Code */
-      LogPage[5] = 0;    /* Parameter Code unspecfied but to do: */
+      LogPage[5] = 0;    /* Parameter Code unspecified but to do: */
       LogPage[6] = 0;    /* unspecified */
       LogPage[7] = 0x03; /* Parameter length, unspecified */
 
@@ -5485,7 +5485,7 @@ smsatModeSelect6n10CB(
       status = smsatModeSelect6n10_1( smRoot,
                                       &satNewIntIo->satIntSmIORequest,
                                       satNewIOContext->psmDeviceHandle,
-                                      smScsiRequest, /* orginal from OS layer */
+                                      smScsiRequest, /* original from OS layer */
                                       satNewIOContext
                                     );
 
@@ -6298,7 +6298,7 @@ smsatNonChainedWriteNVerifyCB(
   status = smsatNonChainedWriteNVerify_Verify(smRoot,
                                               &satNewIntIo->satIntSmIORequest,
                                               satNewIOContext->psmDeviceHandle,
-                                              smScsiRequest, /* orginal from OS layer */
+                                              smScsiRequest, /* original from OS layer */
                                               satNewIOContext
                                              );
 
@@ -7556,7 +7556,7 @@ smsatReassignBlocksCB(
                                      smRoot,
                                      &satNewIntIo->satIntSmIORequest,
                                      satNewIOContext->psmDeviceHandle,
-                                     smScsiRequest, /* orginal from OS layer */
+                                     smScsiRequest, /* original from OS layer */
                                      satNewIOContext,
                                      satOrgIOContext
                                      );
@@ -8992,7 +8992,7 @@ smsatIDStartCB(
   status = smsatSetFeaturesPIO(smRoot,
                      &satNewIntIo->satIntSmIORequest,
                      satNewIOContext->psmDeviceHandle,
-                     &satNewIntIo->satIntSmScsiXchg, /* orginal from OS layer */
+                     &satNewIntIo->satIntSmScsiXchg, /* original from OS layer */
                      satNewIOContext
                      );
 
@@ -9147,7 +9147,7 @@ smsatIOCompleted(
 
        * 2. Because the HW/LL layer received Set Device Bit FIS, it can get the
        *    tag or I/O context for NCQ request, SATL would translate the ATA error
-       *    to SCSI status and return the original NCQ I/O with the appopriate
+       *    to SCSI status and return the original NCQ I/O with the appropriate
        *    SCSI status.
        *
        * 3. Prepare READ LOG EXT page 10h command. Set flag to indicate that
@@ -9164,7 +9164,7 @@ smsatIOCompleted(
        * 6. Check flag that indicates whether the failed I/O has been returned
        *    to the OS Layer. If not, search the I/O context in device data
        *    looking for a matched tag. Then return the completion of the failed
-       *    NCQ command with the appopriate/trasnlated SCSI status.
+       *    NCQ command with the appropriate/trasnlated SCSI status.
        *
        * 7. Issue abort to LL layer to all other pending I/Os for the same SATA
        *    drive.
@@ -10614,7 +10614,7 @@ ossaSATAEvent(
      * 5. Check flag that indicates whether the failed I/O has been returned
      *    to the OS Layer. If not, search the I/O context in device data
      *    looking for a matched tag. Then return the completion of the failed
-     *    NCQ command with the appopriate/trasnlated SCSI status.
+     *    NCQ command with the appropriate/trasnlated SCSI status.
      *
      * 6. Issue abort to LL layer to all other pending I/Os for the same SATA
      *    drive.
@@ -10833,7 +10833,7 @@ ossaSATAEvent(
 
     if (smAllShared->FCA)
     {
-      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only upto one time */
+      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only up to one time */
       {
         SM_DBG1(("ossaSATAEvent: OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY; sending HARD_RESET\n"));
         oneDeviceData->SMNumOfFCA++;
@@ -12546,7 +12546,7 @@ smsatSetFeaturesDMACB(
         status = smsatSetFeaturesAA(smRoot,
                                     &satNewIntIo->satIntSmIORequest,
                                     satNewIOContext->psmDeviceHandle,
-                                    &satNewIntIo->satIntSmScsiXchg, /* orginal from OS layer */
+                                    &satNewIntIo->satIntSmScsiXchg, /* original from OS layer */
                                     satNewIOContext);
         if (status != SM_RC_SUCCESS)
         {
@@ -12739,7 +12739,7 @@ smsatSetFeaturesReadLookAheadCB(
         status = smsatSetFeaturesAA(smRoot,
                                     &satNewIntIo->satIntSmIORequest,
                                     satNewIOContext->psmDeviceHandle,
-                                    &satNewIntIo->satIntSmScsiXchg, /* orginal from OS layer */
+                                    &satNewIntIo->satIntSmScsiXchg, /* original from OS layer */
                                     satNewIOContext);
 
         if (status != SM_RC_SUCCESS)
@@ -12906,7 +12906,7 @@ smsatSetFeaturesVolatileWriteCacheCB(
         status = smsatSetFeaturesAA(smRoot,
                                     &satNewIntIo->satIntSmIORequest,
                                     satNewIOContext->psmDeviceHandle,
-                                    &satNewIntIo->satIntSmScsiXchg, /* orginal from OS layer */
+                                    &satNewIntIo->satIntSmScsiXchg, /* original from OS layer */
                                     satNewIOContext);
         if (status != SM_RC_SUCCESS)
         {

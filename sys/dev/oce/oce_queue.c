@@ -1112,7 +1112,7 @@ oce_drain_mq_cq(void *arg)
 
 
 /**
- * @brief		function to process a Recieve queue
+ * @brief		function to process a Receive queue
  * @param arg		pointer to the RQ to charge
  * @return		number of cqes processed
  */

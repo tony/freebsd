@@ -39,7 +39,7 @@
  * As the reset functionality differs between the Amiga boards (using the
  * 90c26 chip) and middle-aged ISA boards (using the 90c56 chip), we have
  * a sc_reset callback function in the softc, which does a stop function
- * (reset and leave dead) or a reset function depending on wether the 2nd
+ * (reset and leave dead) or a reset function depending on whether the 2nd
  * parameter is 0 or 1.
  */
 

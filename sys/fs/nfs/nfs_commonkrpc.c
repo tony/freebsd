@@ -174,7 +174,7 @@ newnfs_connect(struct nfsmount *nmp, struct nfssockreq *nrp,
 	/*
 	 * We need to establish the socket using the credentials of
 	 * the mountpoint.  Some parts of this process (such as
-	 * sobind() and soconnect()) will use the curent thread's
+	 * sobind() and soconnect()) will use the current thread's
 	 * credential instead of the socket credential.  To work
 	 * around this, temporarily change the current thread's
 	 * credential to that of the mountpoint.

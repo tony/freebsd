@@ -1373,7 +1373,7 @@ nlm_xlpge_release_mbuf(uint64_t paddr)
 	mbuf = nlm_paddr_ld(paddr + 2 * sizeof(uint64_t));
 
 	if (mag != 0xf00bad) {
-		/* somebody else packet Error - FIXME in intialization */
+		/* somebody else packet Error - FIXME in initialization */
 		printf("cpu %d: ERR Tx packet paddr %jx, mag %jx, desc %jx mbuf %jx\n",
 		    nlm_cpuid(), (uintmax_t)paddr, (uintmax_t)mag,
 		    (intmax_t)desc, (uintmax_t)mbuf);
@@ -1398,7 +1398,7 @@ nlm_xlpge_rx(struct nlm_xlpge_softc *sc, int port, vm_paddr_t paddr, int len)
 
 	m = (struct mbuf *)(intptr_t)temp;
 	if (mag != 0xf00bad) {
-		/* somebody else packet Error - FIXME in intialization */
+		/* somebody else packet Error - FIXME in initialization */
 		printf("cpu %d: ERR Rx packet paddr %jx, temp %p, mag %lx\n",
 		    nlm_cpuid(), (uintmax_t)paddr, (void *)temp, mag);
 		return;
@@ -1515,7 +1515,7 @@ nlm_xlpge_msgring_handler(int vc, int size, int code, int src_id,
 
 		if_inc_counter(ifp, IFCOUNTER_OPACKETS, 1);
 
-	} else if (size > 1) { /* Recieve packet */
+	} else if (size > 1) { /* Receive packet */
 		phys_addr = msg->msg[1] & 0xffffffffc0ULL;
 		length = (msg->msg[1] >> 40) & 0x3fff;
 		length -= MAC_CRC_LEN;

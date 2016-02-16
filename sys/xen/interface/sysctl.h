@@ -605,7 +605,7 @@ DEFINE_XEN_GUEST_HANDLE(xen_sysctl_credit_schedule_t);
 #define XEN_SYSCTL_SCHEDOP_putinfo 0
 #define XEN_SYSCTL_SCHEDOP_getinfo 1
 struct xen_sysctl_scheduler_op {
-    uint32_t cpupool_id; /* Cpupool whose scheduler is to be targetted. */
+    uint32_t cpupool_id; /* Cpupool whose scheduler is to be targeted. */
     uint32_t sched_id;   /* XEN_SCHEDULER_* (domctl.h) */
     uint32_t cmd;        /* XEN_SYSCTL_SCHEDOP_* */
     union {

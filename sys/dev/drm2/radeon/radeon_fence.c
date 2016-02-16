@@ -613,7 +613,7 @@ int radeon_fence_wait_any(struct radeon_device *rdev,
 		}
 
 		if (fences[i]->seq == RADEON_FENCE_SIGNALED_SEQ) {
-			/* something was allready signaled */
+			/* something was already signaled */
 			return 0;
 		}
 

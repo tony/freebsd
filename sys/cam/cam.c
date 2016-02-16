@@ -495,7 +495,7 @@ cam_error_print(struct cam_device *device, union ccb *ccb,
 #endif /* _KERNEL/!_KERNEL */
 
 /*
- * Common calculate geometry fuction
+ * Common calculate geometry function
  *
  * Caller should set ccg->volume_size and block_size.
  * The extended parameter should be zero if extended translation

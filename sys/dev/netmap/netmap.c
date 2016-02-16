@@ -186,7 +186,7 @@ ports attached to the switch)
  * 	      This is a persistent or ephemeral VALE port. Ephemeral ports
  * 	      are created on the fly if they don't already exist, and are
  * 	      always attached to a bridge.
- * 	      Persistent VALE ports must must be created seperately, and i
+ * 	      Persistent VALE ports must must be created separately, and i
  * 	      then attached like normal NICs. The NIOCREGIF we are examining
  * 	      will find them only if they had previosly been created and
  * 	      attached (see VALE_CTL below).

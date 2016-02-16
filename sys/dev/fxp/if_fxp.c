@@ -1263,7 +1263,7 @@ fxp_eeprom_putword(struct fxp_softc *sc, int offset, uint16_t data)
  *
  * 559's can have either 64-word or 256-word EEPROMs, the 558
  * datasheet only talks about 64-word EEPROMs, and the 557 datasheet
- * talks about the existance of 16 to 256 word EEPROMs.
+ * talks about the existence of 16 to 256 word EEPROMs.
  *
  * The only known sizes are 64 and 256, where the 256 version is used
  * by CardBus cards to store CIS information.
@@ -2090,7 +2090,7 @@ fxp_update_stats(struct fxp_softc *sc)
 		    le32toh(sp->rx_rnr_errors) +
 		    le32toh(sp->rx_overrun_errors));
 		/*
-		 * If any transmit underruns occured, bump up the transmit
+		 * If any transmit underruns occurred, bump up the transmit
 		 * threshold by another 512 bytes (64 * 8).
 		 */
 		if (sp->tx_underruns) {
@@ -2131,7 +2131,7 @@ fxp_tick(void *xsc)
 	 * Release any xmit buffers that have completed DMA. This isn't
 	 * strictly necessary to do here, but it's advantagous for mbufs
 	 * with external storage to be released in a timely manner rather
-	 * than being defered for a potentially long time. This limits
+	 * than being deferred for a potentially long time. This limits
 	 * the delay to a maximum of one second.
 	 */
 	fxp_txeof(sc);

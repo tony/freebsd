@@ -106,7 +106,7 @@ static char	db_static_buffer[DB_MAXSCRIPTLEN];
 
 /*
  * Synchronization is not required from within the debugger, as it is
- * singe-threaded (although reentrance must be carefully considered).
+ * singe-threaded (although reentrance must be carefuly considered).
  * However, it is required when interacting with scripts from user space
  * processes.  Sysctl procedures acquire db_script_mtx before accessing the
  * global script data structures.

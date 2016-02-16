@@ -360,7 +360,7 @@ ipcomp_output(struct mbuf *m, struct ipsecrequest *isr, struct mbuf **mp,
 	/*
 	 * Do not touch the packet in case our payload to compress
 	 * is lower than the minimal threshold of the compression
-	 * alogrithm.  We will just send out the data uncompressed.
+	 * algorithm.  We will just send out the data uncompressed.
 	 * See RFC 3173, 2.2. Non-Expansion Policy.
 	 */
 	if (m->m_pkthdr.len <= ipcompx->minlen) {

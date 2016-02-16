@@ -162,7 +162,7 @@
 #define DINGO_SFILR	(DINGO_2ND+18)	/* 2nd Function I/O Limit Register */
 
 /* DINGO_SFCOR bits */
-#define DINGO_SFCOR_SF_ENABLE	0x01	/* 1 = Enable second fuction */
+#define DINGO_SFCOR_SF_ENABLE	0x01	/* 1 = Enable second function */
 #define DINGO_SFCOR_IOB_ENABLE	0x02	/* 1 = Enable SFBAR, else use COM_SELECT bits */
 #define DINGO_SFCOR_INT_ENABLE	0x04	/* 1 = Enable second function interrupts */
 #define DINGO_SFCOR_COM_SELECT	0x18	/* 00 = 0x3f8; 01 = 0x2f8; 10 = 0x3e8; 11 = 0x2e8 */

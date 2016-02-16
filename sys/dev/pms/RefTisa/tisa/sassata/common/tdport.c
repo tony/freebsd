@@ -4794,7 +4794,7 @@ tiCOMPortStart(
    */
   if (tdsaAllShared->Ports[portID].flags.portInitialized == agFALSE)
   {
-    TI_DBG1(("tiCOMPortStart: not intialized error\n"));
+    TI_DBG1(("tiCOMPortStart: not initialized error\n"));
     return tiError;
   }
 
@@ -6459,7 +6459,7 @@ tdssRemoveSASSATAFromSharedcontextByReset(
     TDLIST_DEQUEUE_THIS(&(oneDeviceData->MainLink));
     TDLIST_ENQUEUE_AT_TAIL(&(oneDeviceData->FreeLink), &(tdsaAllShared->FreeDeviceList));
     tdsaSingleThreadedLeave(tiRoot, TD_DEVICE_LOCK);
-    /* no dequeue from Mainlink for consistant ordering of devices */
+    /* no dequeue from Mainlink for consistent ordering of devices */
   }
 
 
@@ -7982,7 +7982,7 @@ tdsaRotateQnumber1(tiRoot_t                *tiRoot,
     return 0;
   }
 
-/* alway use highest Q number */
+/* always use highest Q number */
   ret = ((tdsaAllShared->QueueConfig.numOutboundQueues-1) << 16) | (tdsaAllShared->QueueConfig.numInboundQueues-1);
 
   return(ret);

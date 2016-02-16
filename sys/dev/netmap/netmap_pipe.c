@@ -237,7 +237,7 @@ netmap_pipe_rxsync(struct netmap_kring *rxkring, int flags)
 	uint32_t oldhwcur = rxkring->nr_hwcur;
 
         ND("%s %x <- %s", rxkring->name, flags, txkring->name);
-        rxkring->nr_hwcur = rxkring->rhead; /* recover user-relased slots */
+        rxkring->nr_hwcur = rxkring->rhead; /* recover user-released slots */
         ND(5, "hwcur %d hwtail %d cur %d head %d tail %d", rxkring->nr_hwcur, rxkring->nr_hwtail,
                 rxkring->rcur, rxkring->rhead, rxkring->rtail);
         mb(); /* paired with the first mb() in txsync */

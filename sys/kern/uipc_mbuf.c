@@ -102,7 +102,7 @@ CTASSERT(offsetof(struct mbuf, m_pktdat) % 8 == 0);
 
 /*
  * While the specific values here don't matter too much (i.e., +/- a few
- * words), we do want to ensure that changes to these values are carefully
+ * words), we do want to ensure that changes to these values are carefuly
  * reasoned about and properly documented.  This is especially the case as
  * network-protocol and device-driver modules encode these layouts, and must
  * be recompiled if the structures change.  Check these values at compile time

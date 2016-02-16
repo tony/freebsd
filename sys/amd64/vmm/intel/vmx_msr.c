@@ -299,7 +299,7 @@ vmx_msr_init(void)
 	 * [47:40] Maximum Efficiency Ratio
 	 *
 	 * The other bits can be safely set to 0 on all
-	 * micro-architectures up to Haswell.
+	 * micro-architectures up to Has well.
 	 */
 	platform_info = (ratio << 8) | (ratio << 40);
 

@@ -351,7 +351,7 @@ devfs_rule_applyde_recursive(struct devfs_krule *dk, struct devfs_mount *dm,
 }
 
 /*
- * Apply dk to all entires in dm.
+ * Apply dk to all entries in dm.
  */
 static void
 devfs_rule_applydm(struct devfs_krule *dk, struct devfs_mount *dm)
@@ -655,7 +655,7 @@ devfs_ruleset_applyde(struct devfs_ruleset *ds, struct devfs_mount *dm,
 }
 
 /*
- * Apply all the rules in ds to all the entires in dm.
+ * Apply all the rules in ds to all the entries in dm.
  */
 static void
 devfs_ruleset_applydm(struct devfs_ruleset *ds, struct devfs_mount *dm)

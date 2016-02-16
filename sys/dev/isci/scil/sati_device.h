@@ -56,7 +56,7 @@
 
 /**
  * @file
- * @brief This file contains all of the defintions for the SATI remote
+ * @brief This file contains all of the definitions for the SATI remote
  *        device object.  Some translations require information to be
  *        remembered on a per device basis.  This information is stored
  *        in the object defined in this file.

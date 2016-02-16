@@ -1261,7 +1261,7 @@ smPhyControlSend(
 
 //  agDevHandle = oneDeviceData->agDevHandle;
 
-  /* save the callback funtion */
+  /* save the callback function */
   smSMPRequestBody->SMPCompletionFunc = smSMPCompleted; /* in satcb.c */
 
   /* for simulate warm target reset */
@@ -5151,7 +5151,7 @@ smsatRead10(
   }
   //  smhexdump("satRead10 final fis", (bit8 *)fis, sizeof(agsaFisRegHostToDevice_t));
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -5615,7 +5615,7 @@ smsatRead12(
     satIOContext->ATACmd = SAT_READ_FPDMA_QUEUED;
   }
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -6067,7 +6067,7 @@ smsatRead16(
     satIOContext->ATACmd = SAT_READ_FPDMA_QUEUED;
   }
 
-  /* saves the current LBA and orginal TL */
+  /* saves the current LBA and original TL */
   satIOContext->currentLBA = lba;
   satIOContext->OrgTL = tl;
 
@@ -15830,7 +15830,7 @@ smsatWriteAndVerify16(
 {
   /*
     combination of write16 and verify16
-    since write16 has 8 bytes LBA -> problem ATA LBA(upto 6 bytes), no support
+    since write16 has 8 bytes LBA -> problem ATA LBA(up to 6 bytes), no support
   */
   bit32                     status;
   bit32                     agRequestType = AGSA_SATA_PROTOCOL_DMA_WRITE;
@@ -17890,7 +17890,7 @@ smsatNonChainedWriteNVerify_Verify(
   }
   else
   {
-    /* can't fit in SAT_READ_VERIFY_SECTORS becasue of Sector Count and LBA */
+    /* can't fit in SAT_READ_VERIFY_SECTORS because of Sector Count and LBA */
     SM_DBG1(("smsatNonChainedWriteNVerify_Verify: can't fit in SAT_READ_VERIFY_SECTORS!!!\n"));
     return SM_RC_FAILURE;
   }
@@ -20317,7 +20317,7 @@ smsatComputeCDB16TL(smSatIOContext_t            *satIOContext)
 
 /*
   (tl, denom)
-  tl can be upto bit32 because CDB16 has bit32 tl
+  tl can be up to bit32 because CDB16 has bit32 tl
   Therefore, fine
   either (tl, 0xFF) or (tl, 0xFFFF)
 */
@@ -20778,7 +20778,7 @@ smsatSplitSGL(
       smScsiRequest->smSgl1.len =  splitIdx;
       /* expected data lent adjustment */
       scsiCmnd->expDataLength = 0x20000;
-      /* remeber for the next round */
+      /* remember for the next round */
       satIOContext->UpperAddr = UpperAddr;
       satIOContext->LowerAddr = tmpLowerAddr;
       satIOContext->SplitIdx = splitIdx;

@@ -67,7 +67,7 @@ MALLOC_DEFINE(M_XENBUS, "xenbus", "XenBus Support");
  *
  * \param dev  The XenBus device for which we are constructing an error path.
  *
- * \return  On success, the contructed error path.  Otherwise NULL.
+ * \return  On success, the constructed error path.  Otherwise NULL.
  *
  * It is the caller's responsibility to free any returned error path
  * node using the M_XENBUS malloc type.

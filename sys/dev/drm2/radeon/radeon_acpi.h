@@ -57,7 +57,7 @@ void radeon_atif_handler(struct radeon_device *rdev, UINT32 type);
  * ARG0: (ACPI_INTEGER) offset of vbios rom data
  * ARG1: (ACPI_BUFFER) size of the buffer to fill (up to 4K).
  * OUTPUT: (ACPI_BUFFER) output buffer
- * ATRM provides an interfacess to access the discrete GPU vbios image on
+ * ATRM provides an interfaces to access the discrete GPU vbios image on
  * PowerXpress systems with multiple GPUs.
  *
  * 4. ATCS

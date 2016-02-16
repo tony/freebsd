@@ -52,7 +52,7 @@
  * devices which doesn't have any notion of channel numbering. The use of
  * channel numbering in a clone device is simply to provide uniqueness among
  * allocated clones. This also means that the maximum allowable clonable
- * device is largely dependant and dynamically tuned depending on
+ * device is largely dependent and dynamically tuned depending on
  * hw.snd.maxunit.
  */
 

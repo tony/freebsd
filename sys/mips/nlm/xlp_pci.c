@@ -320,7 +320,7 @@ xlp_pcib_attach(device_t dev)
 }
 
 /*
- * XLS PCIe can have upto 4 links, and each link has its on IRQ
+ * XLS PCIe can have up to 4 links, and each link has its on IRQ
  * Find the link on which the device is on
  */
 static int

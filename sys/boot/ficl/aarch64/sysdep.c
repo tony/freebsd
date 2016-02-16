@@ -88,7 +88,7 @@ void  ficlFree   (void *p)
 ** ficlLockDictionary(FALSE);
 **
 ** Returns zero if successful, nonzero if unable to acquire lock
-** befor timeout (optional - could also block forever)
+** before timeout (optional - could also block forever)
 */
 #if FICL_MULTITHREAD
 int ficlLockDictionary(short fLock)

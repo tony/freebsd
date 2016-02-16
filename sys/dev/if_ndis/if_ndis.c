@@ -2048,7 +2048,7 @@ ndis_init(void *xsc)
 	int			i, len, error;
 
 	/*
-	 * Avoid reintializing the link unnecessarily.
+	 * Avoid reinitializing the link unnecessarily.
 	 * This should be dealt with in a better way by
 	 * fixing the upper layer modules so they don't
 	 * call ifp->if_init() quite as often.

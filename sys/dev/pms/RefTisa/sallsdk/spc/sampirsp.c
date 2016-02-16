@@ -671,7 +671,7 @@ mpiParseOBIomb(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -739,7 +739,7 @@ GLOBAL bit32 mpiEchoRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -2678,7 +2678,7 @@ GLOBAL bit32 mpiDeregDevHandleRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Message
  *
- *  \return sucess or fail
+ *  \return success or fail
  *  SPC  only
  */
 /*******************************************************************************/
@@ -3081,7 +3081,7 @@ GLOBAL bit32 mpiSetPhyProfileRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Message
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -3313,7 +3313,7 @@ GLOBAL bit32 mpiGetDevInfoRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Message
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -3532,7 +3532,7 @@ GLOBAL bit32 mpiGetDevInfoRspSpc(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Message
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4357,7 +4357,7 @@ GLOBAL bit32 mpiSATAEvent(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4608,7 +4608,7 @@ GLOBAL bit32 mpiSATAAbortRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4697,7 +4697,7 @@ GLOBAL bit32 mpiGPIORsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4728,7 +4728,7 @@ GLOBAL bit32 mpiGPIOEventRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4824,7 +4824,7 @@ GLOBAL bit32 mpiSASDiagStartEndRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -4929,7 +4929,7 @@ GLOBAL bit32 mpiSASDiagExecuteRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -5579,7 +5579,7 @@ GLOBAL bit32 mpiDeviceHandleArrived(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -5650,7 +5650,7 @@ GLOBAL bit32 mpiGetTimeStampRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -5744,7 +5744,7 @@ GLOBAL bit32 mpiSASHwEventAckRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6077,7 +6077,7 @@ GLOBAL bit32 mpiDeviceHandleRemoval(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6195,7 +6195,7 @@ GLOBAL bit32 mpiSetDeviceStateRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6314,7 +6314,7 @@ GLOBAL bit32 mpiGetDeviceStateRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6395,7 +6395,7 @@ GLOBAL bit32 mpiSasReInitializeRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6460,7 +6460,7 @@ GLOBAL bit32 mpiSGpioRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6600,7 +6600,7 @@ GLOBAL bit32 mpiPCIeDiagExecuteRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6711,7 +6711,7 @@ GLOBAL bit32 mpiGetDFEDataRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -6900,7 +6900,7 @@ GLOBAL bit32 mpiSetControllerConfigRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7037,7 +7037,7 @@ GLOBAL bit32 mpiGetControllerConfigRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7180,7 +7180,7 @@ GLOBAL bit32 mpiKekManagementRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7279,7 +7279,7 @@ GLOBAL bit32 mpiDekManagementRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7463,7 +7463,7 @@ GLOBAL bit32 mpiBistRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7536,7 +7536,7 @@ GLOBAL bit32 mpiSetOperatorRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/
@@ -7760,7 +7760,7 @@ GLOBAL bit32 mpiGetVHistRsp(
  *  \param agRoot       Handles for this instance of SAS/SATA LLL
  *  \param pIomb        Pointer of IOMB Mesage
  *
- *  \return sucess or fail
+ *  \return success or fail
  *
  */
 /*******************************************************************************/

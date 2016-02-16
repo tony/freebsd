@@ -948,13 +948,13 @@ probe_adapters(void)
 
     /* 
      * Locate display adapters. 
-     * The AT architecture supports upto two adapters. `syscons' allows
+     * The AT architecture supports up to two adapters. `syscons' allows
      * the following combinations of adapters: 
      *     1) MDA + CGA
      *     2) MDA + EGA/VGA color 
      *     3) CGA + EGA/VGA mono
      * Note that `syscons' doesn't bother with MCGA as it is only
-     * avaiable for low end PS/2 models which has 80286 or earlier CPUs,
+     * available for low end PS/2 models which has 80286 or earlier CPUs,
      * thus, they are not running FreeBSD!
      * When there are two adapaters in the system, one becomes `primary'
      * and the other `secondary'. The EGA adapter has a set of DIP 
@@ -1134,7 +1134,7 @@ probe_adapters(void)
 		case COMP_DIFFERENT:
 		default:
 		    /*
-		     * Don't use the paramter table in BIOS. It doesn't
+		     * Don't use the parameter table in BIOS. It doesn't
 		     * look familiar to us. Video mode switching is allowed
 		     * only if the new mode is the same as or based on
 		     * the initial mode. 
@@ -2695,7 +2695,7 @@ direct_fill_rect16(video_adapter_t *adp, int val, int x, int y, int cx, int cy)
     int end;
 
     /*
-     * XXX: the function assumes that banksize is a muliple of
+     * XXX: the function assumes that banksize is a multiple of
      * sizeof(u_int16_t).
      */
     banksize = adp->va_window_size;
@@ -2777,7 +2777,7 @@ direct_fill_rect32(video_adapter_t *adp, int val, int x, int y, int cx, int cy)
     int end;
 
     /*
-     * XXX: the function assumes that banksize is a muliple of
+     * XXX: the function assumes that banksize is a multiple of
      * sizeof(u_int32_t).
      */
     banksize = adp->va_window_size;

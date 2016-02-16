@@ -642,7 +642,7 @@ void scif_sas_domain_terminate_requests(
       while (element != NULL)
       {
          request = (SCIF_SAS_REQUEST_T*) sci_fast_list_get_object(element);
-         // The current element may be deleted from the list becasue of
+         // The current element may be deleted from the list because of
          // IO completion so advance to the next element early
          element = sci_fast_list_get_next(element);
 
@@ -1280,7 +1280,7 @@ U8 scif_sas_domain_get_smp_request_count(
    while (element != NULL)
    {
       request = (SCIF_SAS_REQUEST_T*) sci_fast_list_get_object(element);
-      // The current element may be deleted from the list becasue of
+      // The current element may be deleted from the list because of
       // IO completion so advance to the next element early
       element = sci_fast_list_get_next(element);
 

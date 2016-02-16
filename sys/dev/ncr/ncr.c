@@ -737,7 +737,7 @@ struct head {
 **
 **	The last four bytes are used inside the script by "COPY" commands.
 **	Because source and destination must have the same alignment
-**	in a longword, the fields HAVE to be at the choosen offsets.
+**	in a longword, the fields HAVE to be at the chosen offsets.
 **		xerr_st	(4)	0	(0x34)	scratcha
 **		sync_st	(5)	1	(0x05)	sxfer
 **		wide_st	(7)	3	(0x03)	scntl3
@@ -786,7 +786,7 @@ struct head {
 **	the DSA (data structure address) register points
 **	to this substructure of the nccb.
 **	This substructure contains the header with
-**	the script-processor-changable data and
+**	the script-processor-changeable data and
 **	data blocks for the indirect move commands.
 **
 **----------------------------------------------------------
@@ -826,7 +826,7 @@ struct dsb {
 **	the DSA (data structure address) register points
 **	to this substructure of the nccb.
 **	This substructure contains the header with
-**	the script-processor-changable data and then
+**	the script-processor-changeable data and then
 **	data blocks for the indirect move commands.
 **
 **----------------------------------------------------------
@@ -3128,7 +3128,7 @@ static void ncr_script_copy_and_bind (ncb_p np, ncrcmd *src, ncrcmd *dst, int le
 **	Reduce the transfer length to the max value
 **	we can transfer safely.
 **
-**      Reading a block greater then MAX_SIZE from the
+**      Reading a block greater than MAX_SIZE from the
 **	raw (character) device exercises a memory leak
 **	in the vm subsystem. This is common to ALL devices.
 **	We have submitted a description of this bug to
@@ -5614,7 +5614,7 @@ static void ncr_int_ma (ncb_p np, u_char dstat)
 
 
 	/*
-	**	The data in the dma fifo has not been transfered to
+	**	The data in the dma fifo has not been transferred to
 	**	the target -> add the amount to the rest
 	**	and clear the data.
 	**	Check the sstat2 register in case of wide transfer.
@@ -5913,7 +5913,7 @@ static void ncr_int_sir (ncb_p np)
 **	Was Sie schon immer ueber transfermode negotiation wissen wollten ...
 **
 **	We try to negotiate sync and wide transfer only after
-**	a successfull inquire command. We look at byte 7 of the
+**	a successful inquire command. We look at byte 7 of the
 **	inquire data to determine the capabilities if the target.
 **
 **	When we try to negotiate, we append the negotiation message
@@ -6348,7 +6348,7 @@ out:
 /*==========================================================
 **
 **
-**	Aquire a control block
+**	Acquire a control block
 **
 **
 **==========================================================

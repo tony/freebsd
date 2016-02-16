@@ -36,7 +36,7 @@
 #ifndef	_SCSI_DVCFG_H_
 #define	_SCSI_DVCFG_H_
 
-/* common dvcfg flags defitions for bs, ncv, stg */
+/* common dvcfg flags definitions for bs, ncv, stg */
 
 #define	DVF_SCSI_SYNC		0x01
 #define	DVF_SCSI_DISC		0x02

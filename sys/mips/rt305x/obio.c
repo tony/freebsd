@@ -65,7 +65,7 @@ int irq_priorities[NIRQS] = {
 	INTR_IRQ,	/* GPIO */
 	INTR_FIQ,	/* GDMA */
 	INTR_IRQ,	/* NAND */
-	INTR_IRQ,	/* Perfomance Counter */
+	INTR_IRQ,	/* Performance Counter */
 	INTR_IRQ,	/* I2S */
 	INTR_IRQ,	/* unknown */
 	INTR_IRQ,	/* UARTLITE */

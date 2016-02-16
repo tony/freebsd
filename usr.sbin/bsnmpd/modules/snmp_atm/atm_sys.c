@@ -84,7 +84,7 @@ atm_if2node(struct atmif *pub)
 }
 
 /*
- * Destroy system dependend stuff.
+ * Destroy system dependent stuff.
  */
 void
 atmif_sys_destroy(struct atmif_priv *aif)

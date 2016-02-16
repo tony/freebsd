@@ -139,7 +139,7 @@ T2 =  0.1659;				/* ~30.625/128 * log(2) */
  * Domain [-0.1659, 0.1659], range ~[-2.6155e-22, 2.5507e-23]:
  * |(exp(x)-1-x-x**2/2)/x - p(x)| < 2**-71.6
  *
- * XXX the coeffs aren't very carefully rounded, and I get 2.8 more bits,
+ * XXX the coeffs aren't very carefuly rounded, and I get 2.8 more bits,
  * but unlike for ld128 we can't drop any terms.
  */
 static const union IEEEl2bits

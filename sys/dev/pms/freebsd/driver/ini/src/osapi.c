@@ -172,7 +172,7 @@ void ostiInitiatorEvent( tiRoot_t *ptiRoot,
                ccbIO = pccb->pccbIO;               
                if (ccbIO->startTime == 0) /* IO has been completed. */
                {
-                   AGTIAPI_PRINTK("tiIntrEventTypeTaskManagement: TM failed becasue IO has been completed! pTMccb %p flag %x \n",
+                   AGTIAPI_PRINTK("tiIntrEventTypeTaskManagement: TM failed because IO has been completed! pTMccb %p flag %x \n",
                                    pccb, pccb->flags);
                }
                else

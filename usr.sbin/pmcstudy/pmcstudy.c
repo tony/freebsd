@@ -1769,8 +1769,8 @@ static struct cpu_entry ivy_bridge[IVY_BRIDGE_COUNT] = {
 	  otherassistsse, 2 },
 };
 
-#define HASWELL_COUNT 20
-static struct cpu_entry haswell[HASWELL_COUNT] = {
+#define HAS WELL_COUNT 20
+static struct cpu_entry has well[HAS WELL_COUNT] = {
 /*1*/	{ "eff1", "thresh < .75", 
 	  "pmcstat -s UOPS_RETIRED.RETIRE_SLOTS -s CPU_CLK_UNHALTED.THREAD_P -w 1",
 	  efficiency1, 2 },
@@ -1980,11 +1980,11 @@ set_ivybridge(void)
 
 
 static void
-set_haswell(void)
+set_has well(void)
 {
-	strcpy(the_cpu.cputype, "HASWELL PMC");
-	the_cpu.number = HASWELL_COUNT;
-	the_cpu.ents = haswell;
+	strcpy(the_cpu.cputype, "HAS WELL PMC");
+	the_cpu.number = HAS WELL_COUNT;
+	the_cpu.ents = has well;
 	the_cpu.explain = explain_name_has;
 }
 
@@ -1992,7 +1992,7 @@ set_haswell(void)
 static void
 set_broadwell(void)
 {
-	strcpy(the_cpu.cputype, "HASWELL PMC");
+	strcpy(the_cpu.cputype, "HAS WELL PMC");
 	the_cpu.number = BROADWELL_COUNT;
 	the_cpu.ents = broadwell;
 	the_cpu.explain = explain_name_broad;
@@ -2446,14 +2446,14 @@ get_cpuid_set(void)
 			set_ivybridge();
 			break;
 		case 0x3F:	/* Per Intel document 325462-045US 09/2014. */
-			printf("Intel HASWELL (Xeon)\n");
-			set_haswell();
+			printf("Intel HAS WELL (Xeon)\n");
+			set_has well();
 			break;
 		case 0x3C:	/* Per Intel document 325462-045US 01/2013. */
 		case 0x45:
 		case 0x46:
-			printf("Intel HASWELL\n");
-			set_haswell();
+			printf("Intel HAS WELL\n");
+			set_has well();
 			break;
 
 		case 0x4e:
@@ -2864,7 +2864,7 @@ main(int argc, char **argv)
 			       argv[0]);
 			printf("-i inputfile -- use source as inputfile not stdin (if stdin collect)\n");
 			printf("-v -- verbose dump debug type things -- you don't want this\n");
-			printf("-m N -- maximum to collect is N measurments\n");
+			printf("-m N -- maximum to collect is N measurements\n");
 			printf("-e expr-name -- Do expression expr-name\n");
 			printf("-E 'your expression' -- Do your expression\n");
 			printf("-h -- Don't do the expression I put in -e xxx just explain what it does and exit\n");

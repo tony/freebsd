@@ -346,7 +346,7 @@ fdesc_lookup(ap)
 		VOP_UNLOCK(dvp, 0);
 		fdrop(fp, td);
 
-		/* Re-aquire the lock afterwards. */
+		/* Re-acquire the lock afterwards. */
 		vn_lock(dvp, LK_RETRY | LK_EXCLUSIVE);
 		vdrop(dvp);
 		fvp = dvp;

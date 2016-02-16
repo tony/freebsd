@@ -209,7 +209,7 @@
 #define BFE_TX_MCOLS        0x00000548 /* MIB TX Multiple Collisions */
 #define BFE_TX_ECOLS        0x0000054C /* MIB TX Excessive Collisions */
 #define BFE_TX_LCOLS        0x00000550 /* MIB TX Late Collisions */
-#define BFE_TX_DEFERED      0x00000554 /* MIB TX Defered Packets */
+#define BFE_TX_DEFERED      0x00000554 /* MIB TX Deferred Packets */
 #define BFE_TX_CLOST        0x00000558 /* MIB TX Carrier Lost */
 #define BFE_TX_PAUSE        0x0000055C /* MIB TX Pause Packets */
 #define BFE_RX_GOOD_O       0x00000580 /* MIB RX Good Octets */

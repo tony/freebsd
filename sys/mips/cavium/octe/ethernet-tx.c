@@ -257,7 +257,7 @@ int cvm_oct_xmit(struct mbuf *m, struct ifnet *ifp)
 
 
 /**
- * This function frees all mbufs that are currenty queued for TX.
+ * This function frees all mbufs that are currently queued for TX.
  *
  * @param dev    Device being shutdown
  */

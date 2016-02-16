@@ -5185,7 +5185,7 @@ static void sym_sir_task_recovery(hcb_p np, int num)
 
 		/*
 		 *  Otherwise, check for the LUN and TASK(s)
-		 *  concerned by the cancelation.
+		 *  concerned by the cancellation.
 		 *  If it is not ABORT_TAG then it is CLEAR_QUEUE
 		 *  or an ABORT message :-)
 		 */

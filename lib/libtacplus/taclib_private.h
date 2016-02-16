@@ -52,7 +52,7 @@
 /* Protocol packet types */
 #define TAC_AUTHEN		0x01		/* Authentication */
 #define TAC_AUTHOR		0x02		/* Authorization */
-#define TAC_ACCT		0x03		/* Accouting */
+#define TAC_ACCT		0x03		/* Accounting */
 
 /* Protocol header flags */
 #define TAC_UNENCRYPTED		0x01

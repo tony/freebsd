@@ -80,7 +80,7 @@ gettable(const char *name, char *buf)
 		 */
 		for (sp = gettystrs; sp->field; sp++)
 			if (sp->value != NULL) {
-				/* handle these ones more carefully */
+				/* handle these ones more carefuly */
 				if (sp >= &gettystrs[4] && sp <= &gettystrs[6])
 					l = 2;
 				else

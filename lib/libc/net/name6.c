@@ -239,7 +239,7 @@ getipnodebyname(const char *name, int af, int flags, int *errp)
 		/*
 		 * TODO:
 		 * Note that implementation dependent test for address
-		 * configuration should be done everytime called
+		 * configuration should be done every time called
 		 * (or apropriate interval),
 		 * because addresses will be dynamically assigned or deleted.
 		 */

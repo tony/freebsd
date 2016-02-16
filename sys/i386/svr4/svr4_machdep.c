@@ -181,7 +181,7 @@ svr4_getcontext(td, uc, mask, oonstack)
  * Set to ucontext specified. Reset signal mask and
  * stack state from context.
  * Return to previous pc and psl as specified by
- * context left by sendsig. Check carefully to
+ * context left by sendsig. Check carefuly to
  * make sure that the user has not modified the
  * psl to gain improper privileges or to cause
  * a machine fault.

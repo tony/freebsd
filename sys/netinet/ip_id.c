@@ -259,7 +259,7 @@ ip_fillid(struct ip *ip)
 		 * 1) We can migrate between counter_u64_add() and next
 		 *    line, and grab counter from other CPU, resulting in too
 		 *    quick ID reuse. This is tolerable in our particular case,
-		 *    since probability of such event is much lower then reuse
+		 *    since probability of such event is much lower than reuse
 		 *    of ID due to legitimate overflow, that at modern Internet
 		 *    speeds happens all the time.
 		 * 2) We are relying on the fact that counter(9) is based on

@@ -507,7 +507,7 @@ ixpnpe_load_firmware(struct ixpnpe_softc *sc, const char *imageName,
 
 	/*
 	 * If download was successful, store image Id in list of
-	 * currently loaded images. If a critical error occured
+	 * currently loaded images. If a critical error occurred
 	 * during download, record that the NPE has an invalid image
 	 */
 	mtx_lock(&sc->sc_mtx);

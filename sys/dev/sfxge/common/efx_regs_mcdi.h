@@ -97,8 +97,8 @@
  *               \------------------------------ Resync (always set)
  *
  * The client writes it's request into MC shared memory, and rings the
- * doorbell. Each request is completed by either by the MC writting
- * back into shared memory, or by writting out an event.
+ * doorbell. Each request is completed by either by the MC writing
+ * back into shared memory, or by writing out an event.
  *
  * All MCDI commands support completion by shared memory response. Each
  * request may also contain additional data (accounted for by HEADER.LEN),
@@ -8465,7 +8465,7 @@
 /* MC_CMD_PROXY_CMD
  * Execute an arbitrary MCDI command on behalf of a different function, subject
  * to security restrictions. The command to be proxied follows immediately
- * afterward in the host buffer (or on the UART). This command supercedes
+ * afterward in the host buffer (or on the UART). This command supersedes
  * MC_CMD_SET_FUNC, which remains available for Siena but now deprecated.
  */
 #define	MC_CMD_PROXY_CMD 0x5b
@@ -13381,7 +13381,7 @@
 
 /***********************************/
 /* MC_CMD_GET_SNAPSHOT_LENGTH
- * Obtain the curent range of allowable values for the SNAPSHOT_LENGTH
+ * Obtain the current range of allowable values for the SNAPSHOT_LENGTH
  * parameter to MC_CMD_INIT_RXQ.
  */
 #define	MC_CMD_GET_SNAPSHOT_LENGTH 0x101

@@ -367,7 +367,7 @@ attach_et(struct arm_tmr_softc *sc)
  *	globally and registers both the timecount and eventtimer objects.
  *
  *	RETURNS
- *	Zero on sucess or ENXIO if an error occuried.
+ *	Zero on success or ENXIO if an error occuried.
  */
 static int
 arm_tmr_attach(device_t dev)

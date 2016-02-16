@@ -64,7 +64,7 @@ __FBSDID("$FreeBSD$");
  *
  * IMPS/2 emulation       - Emulates the IntelliMouse protocol.
  *
- * Jitter supression      - Implements 2-pixel hysteresis with memory.
+ * Jitter suppression      - Implements 2-pixel hysteresis with memory.
  *
  * Jump detecion          - Detect jumps caused by touchpad.
  *

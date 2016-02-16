@@ -414,7 +414,7 @@ typedef enum {
 						/* Allow all mcast/bcast frames */
 
 	/*
-	 * Magic RX filter flags that aren't targetting hardware bits
+	 * Magic RX filter flags that aren't targeting hardware bits
 	 * but instead the HAL sets individual bits - eg PHYERR will result
 	 * in OFDM/CCK timing error frames being received.
 	 */

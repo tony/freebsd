@@ -115,7 +115,7 @@ struct ieee80211_key {
 #define	IEEE80211_KEYIX_NONE	((ieee80211_keyix) -1)
 
 /*
- * NB: these values are ordered carefully; there are lots of
+ * NB: these values are ordered carefuly; there are lots of
  * of implications in any reordering.  Beware that 4 is used
  * only to indicate h/w TKIP MIC support in driver capabilities;
  * there is no separate cipher support (it's rolled into the

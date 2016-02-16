@@ -330,7 +330,7 @@ typedef struct {
 	PXENV_STATUS_t	Status;
 	uint16_t	FuncFlag;		/* PXENV_UNDI_ISR_OUT_xxx */
 	uint16_t	BufferLength;		/* Length of Frame */
-	uint16_t	FrameLength;		/* Total length of reciever frame */
+	uint16_t	FrameLength;		/* Total length of receiver frame */
 	uint16_t	FrameHeaderLength;	/* Length of the media header in Frame */
 	SEGOFF16_t	Frame;			/* receive buffer */
 	uint8_t		ProtType;		/* Protocol type */
@@ -349,7 +349,7 @@ typedef struct {
 	 */
 #	define PXENV_UNDI_ISR_OUT_DONE		0
 #	define PXENV_UNDI_ISR_OUT_TRANSMIT	2
-#	define PXENV_UNDI_ISR_OUT_RECIEVE	3
+#	define PXENV_UNDI_ISR_OUT_RECEIVE	3
 #	define PXENV_UNDI_ISR_OUT_BUSY		4
 } PACKED t_PXENV_UNDI_ISR;
 

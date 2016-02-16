@@ -55,7 +55,7 @@
 #define MLX4_NUM_TC			8
 #define MLX4_MAX_100M_UNITS_VAL		255	/*
 						 * work around: can't set values
-						 * greater then this value when
+						 * greater than this value when
 						 * using 100 Mbps units.
 						 */
 #define MLX4_RATELIMIT_100M_UNITS	3	/* 100 Mbps */

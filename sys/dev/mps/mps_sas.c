@@ -1911,7 +1911,7 @@ mps_response_code(struct mps_softc *sc, u8 response_code)
                 response_code, desc);
 }
 /**
- * mps_sc_failed_io_info - translated non-succesfull SCSI_IO request
+ * mps_sc_failed_io_info - translated non-successful SCSI_IO request
  */
 static void
 mps_sc_failed_io_info(struct mps_softc *sc, struct ccb_scsiio *csio,

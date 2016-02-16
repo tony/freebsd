@@ -2113,7 +2113,7 @@ tdsaRegDumpGetIoctl(
         osti_memset((void *)buffer, 0, RequestLength);
         regDumpInfo.indirectLen = RequestLength;
 
-        // use FW control place in shared structure to keep the neccesary information
+        // use FW control place in shared structure to keep the necessary information
         tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
         tdsaAllShared->tdFWControlEx.virtAddr = buffer;
         tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -2142,7 +2142,7 @@ tdsaRegDumpGetIoctl(
         osti_memset((void *)buffer, 0, RequestLength);
         regDumpInfo.indirectLen = RequestLength;
 
-        // use FW control place in shared structure to keep the neccesary information
+        // use FW control place in shared structure to keep the necessary information
         tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
         tdsaAllShared->tdFWControlEx.virtAddr = buffer;
         tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -2179,7 +2179,7 @@ tdsaRegDumpGetIoctl(
       osti_memset((void *)buffer, 0, RequestLength);
       regDumpInfo.indirectLen = RequestLength;
 
-      // use FW control place in shared structure to keep the neccesary information
+      // use FW control place in shared structure to keep the necessary information
       tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
       tdsaAllShared->tdFWControlEx.virtAddr = buffer;
       tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -2215,7 +2215,7 @@ tdsaRegDumpGetIoctl(
       osti_memset((void *)buffer, 0, RequestLength);
       regDumpInfo.indirectLen = RequestLength;
 
-      // use FW control place in shared structure to keep the neccesary information
+      // use FW control place in shared structure to keep the necessary information
       tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
       tdsaAllShared->tdFWControlEx.virtAddr = buffer;
       tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -2358,7 +2358,7 @@ tdsaNVMDSetIoctl(
 
       nvmdInfo.indirectAddrLower32 = bufAddrLower;
       nvmdInfo.indirectAddrUpper32 = bufAddrUpper;
-      // use FW control place in shared structure to keep the neccesary information
+      // use FW control place in shared structure to keep the necessary information
       tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
       tdsaAllShared->tdFWControlEx.virtAddr = buffer;
       tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -2491,7 +2491,7 @@ tdsaNVMDGetIoctl(
       }
       osti_memset((void *)buffer, 0, RequestLength);
 
-      // use FW control place in shared structure to keep the neccesary information
+      // use FW control place in shared structure to keep the necessary information
       tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
       tdsaAllShared->tdFWControlEx.virtAddr = buffer;
       tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)&agIOCTLPayload->FunctionSpecificArea[0];
@@ -3214,7 +3214,7 @@ tdsaSendSMPIoctl(
 
 	osti_memset((void *)respBuffer, 0, smp_pass_through_req->smp_resp_len);
 	
-		// use FW control place in shared structure to keep the neccesary information
+		// use FW control place in shared structure to keep the necessary information
 	tdsaAllShared->tdFWControlEx.buffer = osMemHandle;
 	tdsaAllShared->tdFWControlEx.virtAddr = respBuffer;
 	tdsaAllShared->tdFWControlEx.usrAddr = (bit8*)smp_pass_through_req->smp_req_resp + smp_pass_through_req->smp_req_len;
@@ -3626,7 +3626,7 @@ tdsaGetNumOfLUNIOCTL(
 *
 * ostiNumOfLUNIOCTLRsp
 *
-* Purpose:  This routine is called when a Report LUN SSP command response id recieved.
+* Purpose:  This routine is called when a Report LUN SSP command response id received.
 *
 * Parameters:
 *   tiRoot:         Pointer to driver instance

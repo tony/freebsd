@@ -30,7 +30,7 @@
  */
 
 /*
- * Ioctl-related defintions for the Wireless TAP plugins.
+ * Ioctl-related definitions for the Wireless TAP plugins.
  */
 
 #ifndef _VISIBILITY_IOCTL_H

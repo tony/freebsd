@@ -8727,7 +8727,7 @@ tdIDStartTimerCB(
             );
     oneDeviceData->satDevData.IDDeviceValid = agFALSE;
 
-    if (oneDeviceData->SMNumOfID <= 0) /* does SMP HARD RESET only upto one time */
+    if (oneDeviceData->SMNumOfID <= 0) /* does SMP HARD RESET only up to one time */
     {
       TI_DBG1(("tdIDStartTimerCB: fail; sending HARD_RESET\n"));
       oneDeviceData->SMNumOfID++;

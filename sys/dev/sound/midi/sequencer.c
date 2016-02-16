@@ -1654,7 +1654,7 @@ restart:
 }
 
 /*
- * Writting to the sequencer buffer never blocks and drops
+ * Writing to the sequencer buffer never blocks and drops
  * input which cannot be queued
  */
 void

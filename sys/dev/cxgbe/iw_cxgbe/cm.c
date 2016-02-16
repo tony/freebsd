@@ -1705,7 +1705,7 @@ abort:
 		abort_connection(ep);
 		return;
 	}
-	KASSERT(uio.uio_offset > 0, ("%s: sorecieve on so %p read no data",
+	KASSERT(uio.uio_offset > 0, ("%s: soreceive on so %p read no data",
 	    __func__, ep->com.so));
 	ep->mpa_pkt_len += uio.uio_offset;
 

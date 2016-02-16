@@ -279,7 +279,7 @@ am335x_ehrpwm_sysctl_duty(SYSCTL_HANDLER_ARGS)
 		return (error);
 
 	if (duty > sc->sc_pwm_period) {
-		device_printf(sc->sc_dev, "Duty cycle can't be greater then period\n");
+		device_printf(sc->sc_dev, "Duty cycle can't be greater than period\n");
 		return (EINVAL);
 	}
 

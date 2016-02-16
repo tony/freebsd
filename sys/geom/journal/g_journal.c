@@ -126,7 +126,7 @@ g_journal_record_entries_sysctl(SYSCTL_HANDLER_ARGS)
 }
 SYSCTL_PROC(_kern_geom_journal, OID_AUTO, record_entries,
     CTLTYPE_UINT | CTLFLAG_RW, NULL, 0, g_journal_record_entries_sysctl, "I",
-    "Maximum number of entires in one journal record");
+    "Maximum number of entries in one journal record");
 SYSCTL_UINT(_kern_geom_journal, OID_AUTO, optimize, CTLFLAG_RW,
     &g_journal_do_optimize, 0, "Try to combine bios on flush and copy");
 
@@ -244,7 +244,7 @@ struct meminfo {
 #endif
 
 /*
- * We use our own malloc/realloc/free funtions, so we can collect statistics
+ * We use our own malloc/realloc/free functions, so we can collect statistics
  * and force journal switch when we're running out of cache.
  */
 static void *
@@ -1846,7 +1846,7 @@ g_journal_sync(struct g_journal_softc *sc)
 	for (;;) {
 		/*
 		 * If the biggest record won't fit, look for a record header or
-		 * journal header from the begining.
+		 * journal header from the beginning.
 		 */
 		GJ_VALIDATE_OFFSET(offset, sc);
 		error = g_journal_sync_read(cp, bp, offset, buf);
@@ -2478,7 +2478,7 @@ g_journal_destroy(struct g_journal_softc *sc)
 		if (cp->acr + cp->acw + cp->ace > 0)
 			g_access(cp, -1, -1, -1);
 		/*
-		 * We keep all consumers open for writting, so if I'll detach
+		 * We keep all consumers open for writing, so if I'll detach
 		 * and destroy consumer here, I'll get providers for taste, so
 		 * journal will be started again.
 		 * Sending an event here, prevents this from happening.

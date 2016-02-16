@@ -630,7 +630,7 @@ camperiphfree(struct cam_periph *periph)
 			break;
 	}
 	if (*p_drv == NULL) {
-		printf("camperiphfree: attempt to free non-existant periph\n");
+		printf("camperiphfree: attempt to free non-existent periph\n");
 		return;
 	}
 

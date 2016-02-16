@@ -204,7 +204,7 @@ hatm_alloc_dmamem(struct hatm_softc *sc, const char *what, struct dmamem *mem)
 	mem->base = NULL;
 
 	/*
-	 * Alignement does not work in the bus_dmamem_alloc function below
+	 * Alignment does not work in the bus_dmamem_alloc function below
 	 * on FreeBSD. malloc seems to align objects at least to the object
 	 * size so increase the size to the alignment if the size is lesser
 	 * than the alignemnt.
@@ -2064,7 +2064,7 @@ hatm_initialize(struct hatm_softc *sc)
 	    sc->r0_numbuffs, sc->r1_numbuffs, sc->tx_numbuffs));
 
 	/*
-	 * 5.1.2 Configure Hardware dependend registers
+	 * 5.1.2 Configure Hardware dependent registers
 	 */
 	if (sc->he622) {
 		WRITE4(sc, HE_REGO_LBARB,

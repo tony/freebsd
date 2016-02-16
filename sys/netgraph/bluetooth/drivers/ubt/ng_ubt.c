@@ -1463,7 +1463,7 @@ ng_ubt_shutdown(node_p node)
 	if (node->nd_flags & NGF_REALLY_DIE) {
 		/*
                  * We came here because the USB device is being
-		 * detached, so stop being persistant.
+		 * detached, so stop being persistent.
                  */
 		NG_NODE_SET_PRIVATE(node, NULL);
 		NG_NODE_UNREF(node);

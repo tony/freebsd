@@ -170,7 +170,7 @@ DEFINE_CLASS(midisynth, midisynth_methods, 0);
  * int midi_in(struct snd_midi *, char *buf, int count)
  * int midi_out(struct snd_midi *, char *buf, int count)
  *
- * midi_{in,out} return actual size transfered
+ * midi_{in,out} return actual size transferred
  *
  */
 

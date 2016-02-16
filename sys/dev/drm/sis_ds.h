@@ -143,7 +143,7 @@ int mmBlockInHeap(PMemBlock heap, PMemBlock b);
  */
 int mmFreeMem(PMemBlock b);
 
-/* For debuging purpose. */
+/* For debugging purpose. */
 void mmDumpMemInfo(memHeap_t * mmInit);
 
 #endif				/* __SIS_DS_H__ */

@@ -397,7 +397,7 @@ at91_mci_attach(device_t dev)
 	 * bytes aligned to a 4096 byte boundary.
 	 *
 	 * Do not use DMA_COHERENT for these buffers because that maps the
-	 * memory as non-cachable, which prevents cache line burst fills/writes,
+	 * memory as non-cacheable, which prevents cache line burst fills/writes,
 	 * which is something we need since we're trying to overlap the
 	 * byte-swapping with the DMA operations.
 	 */

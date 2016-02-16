@@ -1617,7 +1617,7 @@ smsc_fdt_find_mac(unsigned char *mac)
  *	smsc_attach_post - Called after the driver attached to the USB interface
  *	@ue: the USB ethernet device
  *
- *	This is where the chip is intialised for the first time.  This is different
+ *	This is where the chip is initialised for the first time.  This is different
  *	from the smsc_init() function in that that one is designed to setup the
  *	H/W to match the UE settings and can be called after a reset.
  *

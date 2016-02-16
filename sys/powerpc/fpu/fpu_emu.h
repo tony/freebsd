@@ -121,7 +121,7 @@ struct fpn {
  *	If only one is QNaN: the QNaN operand
  *
  * In addition, in operations with an Inf operand, the result is usually
- * Inf.  The class numbers are carefully arranged so that if
+ * Inf.  The class numbers are carefuly arranged so that if
  *	(unsigned)class(op1) > (unsigned)class(op2)
  * then op1 is the one we want; otherwise op2 is the one we want.
  */

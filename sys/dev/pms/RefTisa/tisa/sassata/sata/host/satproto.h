@@ -2175,7 +2175,7 @@ GLOBAL void  osSatDefaultTranslation(
  *
  *  \param   tiRoot:      Pointer to TISA driver/port instance.
  *  \param   satDevData:  Pointer to SAT specific device data.
- *  \param   allocLength: Length in byte of the DMA mem to allocate, upto
+ *  \param   allocLength: Length in byte of the DMA mem to allocate, up to
  *                        one page size.
  *  \param   satIntIo:    Pointer (output) to context for SAT internally
  *                        generated I/O that is allocated by this routine.

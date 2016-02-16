@@ -305,7 +305,7 @@ __EXTERN_BEGIN_DECLS
  * gets a Start control character, but the start frame delimiter is not found in
  * the correct location.
  * @rmac_xgmii_ctrl_err_cnt: Maintains a count of unexpected or
- * misplaced control characters occuring outside of normal data transmission
+ * misplaced control characters occurring outside of normal data transmission
  * (i.e. not included in RMAC_XGMII_DATA_ERR_CNT).
  *
  * @rmac_accepted_ip: Count of received IP datagrams that were passed to the
@@ -1151,7 +1151,7 @@ typedef struct xge_hal_stats_device_info_t {
  * @rx_xgmii_data_err_cnt: Count of unexpected control characters
  * during normal data transmission for mac the link.
  * @rx_xgmii_ctrl_err_cnt: Count of unexpected or misplaced control
- * characters occuring between times of normal data transmission for mac
+ * characters occurring between times of normal data transmission for mac
  * the link.
  * @rx_xgmii_err_sym: Count of the number of symbol errors in the
  * received XGMII data for mac the link.

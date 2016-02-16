@@ -136,7 +136,7 @@ extern struct fs_ops pkgfs_fsops;
  */
 struct devsw {
     const char	dv_name[8];
-    int		dv_type;		/* opaque type constant, arch-dependant */
+    int		dv_type;		/* opaque type constant, arch-dependent */
     int		(*dv_init)(void);	/* early probe call */
     int		(*dv_strategy)(void *devdata, int rw, daddr_t blk, size_t size,
 			       char *buf, size_t *rsize);

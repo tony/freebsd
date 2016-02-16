@@ -218,11 +218,11 @@ ep_isa_identify(driver_t * driver, device_t parent)
 				    "unknown ID 0x%08x\n", isa_id);
 			continue;
 		}
-		/* Retreive IRQ */
+		/* Retrieve IRQ */
 		data = get_eeprom_data(ELINK_ID_PORT, EEPROM_RESOURCE_CFG);
 		irq = (data >> 12);
 
-		/* Retreive IOPORT */
+		/* Retrieve IOPORT */
 		data = get_eeprom_data(ELINK_ID_PORT, EEPROM_ADDR_CFG);
 #ifdef PC98
 		ioport = (((data & ADDR_CFG_MASK) * 0x100) + 0x40d0);

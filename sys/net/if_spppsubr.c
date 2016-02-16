@@ -4295,7 +4295,7 @@ sppp_chap_tlu(struct sppp *sp)
 		if ((sp->hisauth.flags & AUTHFLAG_NORECHALLENGE) == 0)
 			log(-1, "next re-challenge in %d seconds\n", i);
 		else
-			log(-1, "re-challenging supressed\n");
+			log(-1, "re-challenging suppressed\n");
 	}
 
 	SPPP_LOCK(sp);

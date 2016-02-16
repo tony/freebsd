@@ -3428,7 +3428,7 @@ init_pte_prot(vm_page_t m, vm_prot_t access, vm_prot_t prot)
  *
  * On SMP, update just the local TLB, other CPUs will update their
  * TLBs from PTE lazily, if they get the exception.
- * Returns 0 in case of sucess, 1 if the page is read only and we
+ * Returns 0 in case of success, 1 if the page is read only and we
  * need to fault.
  */
 int

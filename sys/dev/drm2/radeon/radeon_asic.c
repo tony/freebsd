@@ -89,7 +89,7 @@ static void radeon_register_accessor_init(struct radeon_device *rdev)
 	rdev->pciep_rreg = &radeon_invalid_rreg;
 	rdev->pciep_wreg = &radeon_invalid_wreg;
 
-	/* Don't change order as we are overridding accessor. */
+	/* Don't change order as we are overriding accessor. */
 	if (rdev->family < CHIP_RV515) {
 		rdev->pcie_reg_mask = 0xff;
 	} else {

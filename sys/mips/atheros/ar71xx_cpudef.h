@@ -155,7 +155,7 @@ static inline void ar71xx_reset_nfc(int active)
 		ar71xx_cpu_ops->ar71xx_chip_reset_nfc(active);
 }
 
-static inline void ar71xx_gpio_ouput_configure(int gpio, uint8_t func)
+static inline void ar71xx_gpio_output_configure(int gpio, uint8_t func)
 {
 	if (ar71xx_cpu_ops->ar71xx_chip_gpio_out_configure)
 		ar71xx_cpu_ops->ar71xx_chip_gpio_out_configure(gpio, func);

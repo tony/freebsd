@@ -146,7 +146,7 @@ struct slccb {
 	 *****************************************/
 	struct sc_p ccb_scp;		/* given */
 	struct sc_p ccb_sscp;		/* saved scsi data pointer */
-	int ccb_datalen;		/* transfered data counter */
+	int ccb_datalen;		/* transferred data counter */
 
 	/*****************************************
 	 * Msgout 

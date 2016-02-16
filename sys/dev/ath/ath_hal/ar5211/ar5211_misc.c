@@ -580,7 +580,7 @@ ar5211MibEvent(struct ath_hal *ah, const HAL_NODE_STATS *stats)
 }
 
 /*
- * Get the rssi of frame curently being received.
+ * Get the rssi of frame currently being received.
  */
 uint32_t
 ar5211GetCurRssi(struct ath_hal *ah)

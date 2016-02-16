@@ -129,7 +129,7 @@ struct hookinfo ertt_hooks[] = {
 #define	FORCED_MEASUREMENT	0X08 /* Force an RTT measurement. */
 
 /*
- * This fuction measures the RTT of a particular segment/ack pair, or the next
+ * This function measures the RTT of a particular segment/ack pair, or the next
  * closest if this will yield an inaccurate result due to delayed acking or
  * other issues.
  */

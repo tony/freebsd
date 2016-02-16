@@ -1835,7 +1835,7 @@ fuse_vnop_getpages(struct vop_getpages_args *ap)
 			    ("fuse_getpages: page %p is dirty", m));
 		} else {
 			/*
-			 * Read operation was short.  If no error occured
+			 * Read operation was short.  If no error occurred
 			 * we may have hit a zero-fill section.   We simply
 			 * leave valid set to 0.
 			 */

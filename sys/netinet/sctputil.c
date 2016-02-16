@@ -478,7 +478,7 @@ sctp_wakeup_log(struct sctp_tcb *stcb, uint32_t wake_cnt, int from)
 		sctp_clog.x.wake.chunks_on_oque = 0xff;
 
 	sctp_clog.x.wake.sctpflags = 0;
-	/* set in the defered mode stuff */
+	/* set in the deferred mode stuff */
 	if (stcb->sctp_ep->sctp_flags & SCTP_PCB_FLAGS_DONT_WAKE)
 		sctp_clog.x.wake.sctpflags |= 1;
 	if (stcb->sctp_ep->sctp_flags & SCTP_PCB_FLAGS_WAKEOUTPUT)
@@ -1099,21 +1099,21 @@ sctp_init_asoc(struct sctp_inpcb *inp, struct sctp_tcb *stcb,
 	 * Now the stream parameters, here we allocate space for all streams
 	 * that we request by default.
 	 */
-	asoc->strm_realoutsize = asoc->streamoutcnt = asoc->pre_open_streams =
+	asoc->strm_realoutsize = asoc->streamountcnt = asoc->pre_open_streams =
 	    o_strms;
 	SCTP_MALLOC(asoc->strmout, struct sctp_stream_out *,
-	    asoc->streamoutcnt * sizeof(struct sctp_stream_out),
+	    asoc->streamountcnt * sizeof(struct sctp_stream_out),
 	    SCTP_M_STRMO);
 	if (asoc->strmout == NULL) {
 		/* big trouble no memory */
 		SCTP_LTRACE_ERR_RET(NULL, stcb, NULL, SCTP_FROM_SCTPUTIL, ENOMEM);
 		return (ENOMEM);
 	}
-	for (i = 0; i < asoc->streamoutcnt; i++) {
+	for (i = 0; i < asoc->streamountcnt; i++) {
 		/*
 		 * inbound side must be set to 0xffff, also NOTE when we get
 		 * the INIT-ACK back (for INIT sender) we MUST reduce the
-		 * count (streamoutcnt) but first check if we sent to any of
+		 * count (streamountcnt) but first check if we sent to any of
 		 * the upper streams that were dropped (if some were). Those
 		 * that were dropped must be notified to the upper layer as
 		 * failed to send.
@@ -1612,7 +1612,7 @@ sctp_timeout_handler(void *t)
 			return;
 		}
 	}
-	/* record in stopped what t-o occured */
+	/* record in stopped what t-o occurred */
 	tmr->stopped_from = type;
 
 	/* mark as being serviced now */
@@ -2720,7 +2720,7 @@ sctp_notify_assoc_change(uint16_t state, struct sctp_tcb *stcb,
 		sac->sac_state = state;
 		sac->sac_error = error;
 		/* XXX verify these stream counts */
-		sac->sac_outbound_streams = stcb->asoc.streamoutcnt;
+		sac->sac_outbound_streams = stcb->asoc.streamountcnt;
 		sac->sac_inbound_streams = stcb->asoc.streamincnt;
 		sac->sac_assoc_id = sctp_get_associd(stcb);
 		if (notif_len > sizeof(struct sctp_assoc_change)) {
@@ -3880,7 +3880,7 @@ sctp_report_all_outbound(struct sctp_tcb *stcb, uint16_t error, int holds_lock, 
 		sctp_free_a_chunk(stcb, chk, so_locked);
 		/* sa_ignore FREED_MEMORY */
 	}
-	for (i = 0; i < asoc->streamoutcnt; i++) {
+	for (i = 0; i < asoc->streamountcnt; i++) {
 		/* For each stream */
 		outs = &asoc->strmout[i];
 		/* clean up any sends there */
@@ -4619,7 +4619,7 @@ get_out:
 	}
 	while (mm) {
 		if (SCTP_BUF_LEN(mm) == 0) {
-			/* Skip mbufs with NO lenght */
+			/* Skip mbufs with NO length */
 			if (prev == NULL) {
 				/* First one */
 				m = sctp_m_free(mm);
@@ -7018,7 +7018,7 @@ sctp_over_udp_stop(void)
 {
 	/*
 	 * This function assumes sysctl caller holds sctp_sysctl_info_lock()
-	 * for writting!
+	 * for writing!
 	 */
 #ifdef INET
 	if (SCTP_BASE_INFO(udp4_tun_socket) != NULL) {
@@ -7050,7 +7050,7 @@ sctp_over_udp_start(void)
 #endif
 	/*
 	 * This function assumes sysctl caller holds sctp_sysctl_info_lock()
-	 * for writting!
+	 * for writing!
 	 */
 	port = SCTP_BASE_SYSCTL(sctp_udp_tunneling_port);
 	if (ntohs(port) == 0) {

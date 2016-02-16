@@ -83,7 +83,7 @@ enum {
  * heap_insert() adds a key-pointer pair to the heap
  *
  * HEAP_TOP() returns a pointer to the top element of the heap,
- *	but makes no checks on its existance (XXX should we change ?)
+ *	but makes no checks on its existence (XXX should we change ?)
  *
  * heap_extract() removes the entry at the top, returing the pointer.
  *	(the key should have been read before).

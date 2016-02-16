@@ -277,7 +277,7 @@ void scic_cb_task_request_complete(
  *            handle.
  * @param[in] io_request This parameter is the io request object handle
  *            for which the physical address is being requested.
- * @param[in] virtual_address This paramter is the virtual address which
+ * @param[in] virtual_address This parameter is the virtual address which
  *            is to be returned as a physical address.
  * @param[out] physical_address The physical address for the supplied virtual
  *        address.
@@ -294,14 +294,14 @@ void scic_cb_io_request_get_physical_address(
 
 /**
  * @brief This callback method asks the user to provide the number of
- *        bytes to be transfered as part of this request.
+ *        bytes to be transferred as part of this request.
  *
  * @param[in] scic_user_io_request This parameter points to the user's
  *            IO request object.  It is a cookie that allows the user to
  *            provide the necessary information for this callback.
  *
  * @return This method returns the number of payload data bytes to be
- *         transfered for this IO request.
+ *         transferred for this IO request.
  */
 U32 scic_cb_io_request_get_transfer_length(
    void * scic_user_io_request
@@ -912,7 +912,7 @@ void scic_cb_port_invalid_link_up(
  *
  * @return none
  */
-void scic_cb_port_bc_change_primitive_recieved(
+void scic_cb_port_bc_change_primitive_received(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -933,7 +933,7 @@ void scic_cb_port_bc_change_primitive_recieved(
  *
  * @return none
  */
-void scic_cb_port_bc_ses_primitive_recieved(
+void scic_cb_port_bc_ses_primitive_received(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -954,7 +954,7 @@ void scic_cb_port_bc_ses_primitive_recieved(
  *
  * @return none
  */
-void scic_cb_port_bc_expander_primitive_recieved(
+void scic_cb_port_bc_expander_primitive_received(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -975,7 +975,7 @@ void scic_cb_port_bc_expander_primitive_recieved(
  *
  * @return none
  */
-void scic_cb_port_bc_aen_primitive_recieved(
+void scic_cb_port_bc_aen_primitive_received(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy

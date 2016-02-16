@@ -127,7 +127,7 @@ chap_b642bin(const char *b64, void **binp, size_t *bin_lenp)
 }
 
 /*
- * XXX: Review this _carefully_.
+ * XXX: Review this _carefuly_.
  */
 static int
 chap_hex2bin(const char *hex, void **binp, size_t *bin_lenp)

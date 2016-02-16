@@ -704,7 +704,7 @@ xge_hal_mgmt_pci_config(xge_hal_device_h devh,
  * @read_length: Size of the valid data in the buffer.
  *
  * Read  HAL trace buffer contents starting from the offset
- * upto the size of the buffer or till EOF is reached.
+ * up to the size of the buffer or till EOF is reached.
  *
  * Returns: XGE_HAL_OK - success.
  * XGE_HAL_EOF_TRACE_BUF - No more data in the trace buffer.
@@ -796,7 +796,7 @@ xge_hal_restore_link_led(xge_hal_device_h devh)
 	 * handling is done by beacon control register as opposed to gpio
 	 * control register in Xena. Beacon control is used only to toggle
 	 * and the value written into it does not depend on the link state.
-	 * It is upto the ULD to toggle the LED even number of times which 
+	 * It is up to the ULD to toggle the LED even number of times which 
 	 * brings the LED to it's original state. 
 	 */
 	val64 = xge_os_pio_mem_read64(hldev->pdev, hldev->regh0,

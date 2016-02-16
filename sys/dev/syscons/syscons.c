@@ -3189,7 +3189,7 @@ sc_alloc_scr_buffer(scr_stat *scp, int wait, int discard)
     old = scp->vtb;
     sc_vtb_init(&new, VTB_MEMORY, scp->xsize, scp->ysize, NULL, wait);
     if (!discard && (old.vtb_flags & VTB_VALID)) {
-	/* retain the current cursor position and buffer contants */
+	/* retain the current cursor position and buffer constants */
 	scp->cursor_oldpos = scp->cursor_pos;
 	/* 
 	 * This works only if the old buffer has the same size as or larger 
@@ -3541,7 +3541,7 @@ next_code:
 		if (cold) {
 		    /*
 		     * While devices are being probed, the screen saver need
-		     * to be invoked explictly. XXX
+		     * to be invoked explicitly. XXX
 		     */
 		    if (sc->flags & SC_SCRN_BLANKED) {
 			scsplash_stick(FALSE);

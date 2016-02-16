@@ -639,7 +639,7 @@ i386_set_ldt(td, uap, descs)
 		case SDT_MEMROD:  /* memory read only expand dwn limit */
 		case SDT_MEMRODA: /* memory read only expand dwn lim accessed */
 		case SDT_MEMRWD:  /* memory read write expand dwn limit */  
-		case SDT_MEMRWDA: /* memory read write expand dwn lim acessed */
+		case SDT_MEMRWDA: /* memory read write expand dwn lim accessed */
 		case SDT_MEME:    /* memory execute only */ 
 		case SDT_MEMEA:   /* memory execute only accessed */
 		case SDT_MEMER:   /* memory execute read */

@@ -94,7 +94,7 @@ struct vattr va_null;
  * An undocumented feature of this approach to defining operations is that
  * there can be multiple entries in vfs_opv_descs for the same operations
  * vector. This allows third parties to extend the set of operations
- * supported by another layer in a binary compatibile way. For example,
+ * supported by another layer in a binary compatible way. For example,
  * assume that NFS needed to be modified to support Ficus. NFS has an entry
  * (probably nfs_vnopdeop_decls) declaring all the operations NFS supports by
  * default. Ficus could add another entry (ficus_nfs_vnodeop_decl_entensions)

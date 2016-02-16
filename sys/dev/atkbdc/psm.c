@@ -1808,7 +1808,7 @@ psmread(struct cdev *dev, struct uio *uio, int flag)
 	if ((sc->state & PSM_VALID) == 0)
 		return (EIO);
 
-	/* block until mouse activity occured */
+	/* block until mouse activity occurred */
 	s = spltty();
 	while (sc->queue.count <= 0) {
 		if (dev != sc->bdev) {
@@ -3009,7 +3009,7 @@ proc_synaptics(struct psm_softc *sc, packetbuf_t *pb, mousestatus_t *ms,
 		if (synaction->queue_len < synaction->window_min)
 			goto SYNAPTICS_END;
 
-		/* Is a scrolling action occuring? */
+		/* Is a scrolling action occurring? */
 		if (!synaction->in_taphold && !synaction->in_vscroll) {
 			/*
 			 * A scrolling action must not conflict with a tap
@@ -3519,7 +3519,7 @@ psmsoftintr(void *arg)
 
 		case MOUSE_MODEL_NETSCROLL:
 			/*
-			 * three addtional bytes encode buttons and
+			 * three additional bytes encode buttons and
 			 * wheel events
 			 */
 			ms.button |= (pb->ipacket[3] & MOUSE_PS2_BUTTON3DOWN) ?

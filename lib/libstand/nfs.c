@@ -469,7 +469,7 @@ nfs_open(const char *upath, struct open_file *f)
 
 	/*
 	 * This is silly - we should look at dv_type but that value is
-	 * arch dependant and we can't use it here.
+	 * arch dependent and we can't use it here.
 	 */
 #ifndef __i386__
 	if (strcmp(f->f_dev->dv_name, "net") != 0)
@@ -1111,7 +1111,7 @@ nfs_open(const char *upath, struct open_file *f)
 
 	/*
 	 * This is silly - we should look at dv_type but that value is
-	 * arch dependant and we can't use it here.
+	 * arch dependent and we can't use it here.
 	 */
 #ifndef __i386__
 	if (strcmp(f->f_dev->dv_name, "net") != 0)

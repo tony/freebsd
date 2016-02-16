@@ -2841,7 +2841,7 @@ scsi_set_transfer_settings(struct ccb_trans_settings *cts, struct cam_path *path
 
 		/*
 		 * If we are transitioning from tags to no-tags or
-		 * vice-versa, we need to carefully freeze and restart
+		 * vice-versa, we need to carefuly freeze and restart
 		 * the queue so that we don't overlap tagged and non-tagged
 		 * commands.  We also temporarily stop tags if there is
 		 * a change in transfer negotiation settings to allow

@@ -440,10 +440,10 @@ ath_rate_sysctlattach(struct ath_softc *sc)
 		"rate control: operation interval (ms)");
 	/* XXX bounds check values */
 	SYSCTL_ADD_INT(ctx, SYSCTL_CHILDREN(tree), OID_AUTO,
-		"max_sucess_threshold", CTLFLAG_RW,
+		"max_success_threshold", CTLFLAG_RW,
 		&ath_rate_max_success_threshold, 0, "");
 	SYSCTL_ADD_INT(ctx, SYSCTL_CHILDREN(tree), OID_AUTO,
-		"min_sucess_threshold", CTLFLAG_RW,
+		"min_success_threshold", CTLFLAG_RW,
 		&ath_rate_min_success_threshold, 0, "");
 }
 

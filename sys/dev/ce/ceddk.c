@@ -623,7 +623,7 @@ void ce_stop_chan (ce_chan_t *c)
 
 	/* XXXRIK: This function should be for comleteness, but for now I
 	 * don't use it. So I just start to write and didn't finished it yet.
-	 * It and it is VERY BUGGY!!! Do not use it. If you realy
+	 * It and it is VERY BUGGY!!! Do not use it. If you really
 	 * need it ask me to fix it or rewrite it by your self.
 	 * Note: most buggy part of it in ce_on_config_stop!
 	 */
@@ -848,7 +848,7 @@ void ce_e1_timer (ce_chan_t *c)
 	if (c->crc4)
 		pcv += crc4;
 
-	/* Unavaiable second -- receiving all ones, or
+	/* Unavailable second -- receiving all ones, or
 	 * loss of carrier, or loss of signal. */
 	if (acc_status & (TAU32_RUA1 | TAU32_RCL))
 		/* Unavailable second -- no other counters. */

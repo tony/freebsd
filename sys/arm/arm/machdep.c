@@ -36,7 +36,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * Machine dependant functions for kernel setup
+ * Machine dependent functions for kernel setup
  *
  * Created      : 17/09/94
  * Updated	: 18/04/01 updated for new wscons
@@ -518,7 +518,7 @@ cpu_idle_wakeup(int cpu)
 
 /*
  * Most ARM platforms don't need to do anything special to init their clocks
- * (they get intialized during normal device attachment), and by not defining a
+ * (they get initialized during normal device attachment), and by not defining a
  * cpu_initclocks() function they get this generic one.  Any platform that needs
  * to do something special can just provide their own implementation, which will
  * override this one due to the weak linkage.

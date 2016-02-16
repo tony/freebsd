@@ -538,7 +538,7 @@ zone_timeout(uma_zone_t zone)
  *	hash  A new hash structure with the old hash size in uh_hashsize
  *
  * Returns:
- *	1 on sucess and 0 on failure.
+ *	1 on success and 0 on failure.
  */
 static int
 hash_alloc(struct uma_hash *hash)
@@ -812,7 +812,7 @@ bucket_cache_drain(uma_zone_t zone)
 
 	/*
 	 * Shrink further bucket sizes.  Price of single zone lock collision
-	 * is probably lower then price of global cache drain.
+	 * is probably lower than price of global cache drain.
 	 */
 	if (zone->uz_count > zone->uz_count_min)
 		zone->uz_count--;
@@ -1858,7 +1858,7 @@ uma_startup(void *bootmem, int boot_pages)
 
 	/*
 	 * We also create a zone for the bigger slabs with reference
-	 * counts in them, to accomodate UMA_ZONE_REFCNT zones.
+	 * counts in them, to accommodate UMA_ZONE_REFCNT zones.
 	 */
 	slabsize = sizeof(struct uma_slab_refcnt);
 	slabsize += uma_max_ipers_ref * sizeof(uint32_t);
@@ -2315,7 +2315,7 @@ zalloc_start:
 
 	/*
 	 * Now lets just fill a bucket and put it on the free list.  If that
-	 * works we'll restart the allocation from the begining and it
+	 * works we'll restart the allocation from the beginning and it
 	 * will use the just filled bucket.
 	 */
 	bucket = zone_alloc_bucket(zone, udata, flags);

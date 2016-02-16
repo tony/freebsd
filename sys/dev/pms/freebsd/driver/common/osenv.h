@@ -92,7 +92,7 @@ iSCSI enviornment - The following is used for compiling the iSCSI
 **************************************************************************/
 
 /*
-** Define the existance of an external bus swapper using on of the
+** Define the existence of an external bus swapper using on of the
 ** following: 
 **
 **      #define AG_SWAPPING_BUS

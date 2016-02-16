@@ -212,7 +212,7 @@ GLOBAL bit32 mpiEchoCmd(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "xc");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -308,7 +308,7 @@ GLOBAL bit32 mpiGetPhyProfileCmd(
     SA_DBG1(("mpiGetPhyProfileCmd, No request from free list\n" ));
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_ASSERT((!pRequest->valid), "The pRequest is in use");
@@ -385,7 +385,7 @@ GLOBAL bit32 mpiVHistCapCmd(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "3C");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_ASSERT((!pRequest->valid), "The pRequest is in use");
@@ -468,7 +468,7 @@ GLOBAL bit32 mpiSetPhyProfileCmd(
     SA_DBG1(("mpiSetPhyProfileCmd, No request from free list\n" ));
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_ASSERT((!pRequest->valid), "The pRequest is in use");
@@ -571,7 +571,7 @@ GLOBAL bit32 mpiGetDeviceInfoCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -675,7 +675,7 @@ GLOBAL bit32 mpiSetDeviceInfoCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -990,7 +990,7 @@ GLOBAL bit32 mpiDeregDevHandleCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     pRequest->pDevice = pDevice;
@@ -1259,7 +1259,7 @@ GLOBAL bit32 mpiDevHandleAcceptCmd(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "xt");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1378,7 +1378,7 @@ GLOBAL bit32 mpiNVMReadRegDumpCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1485,7 +1485,7 @@ GLOBAL bit32 mpiGetNVMDCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG3(("mpiGetNVMDCmd, Build IOMB NVMDDevice= 0x%x\n", NVMDInfo->NVMDevice));
@@ -1663,7 +1663,7 @@ GLOBAL bit32 mpiSetNVMDCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG3(("mpiSetNVMDCmd, Build IOMB NVMDDevice= 0x%x\n", NVMDInfo->NVMDevice));
@@ -1824,7 +1824,7 @@ GLOBAL bit32 mpiSetDeviceStateCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG3(("mpiSetDeviceStateCmd, Build IOMB DeviceId= 0x%x\n", deviceId));
@@ -1925,7 +1925,7 @@ GLOBAL bit32 mpiGetDeviceStateCmd(
     }
 
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   SA_DBG3(("mpiGetDeviceStateCmd, Build IOMB DeviceId= 0x%x\n", deviceId));
   /* Remove the request from free list */
   if( using_reserved )
@@ -2026,7 +2026,7 @@ GLOBAL bit32 mpiSasReinitializeCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG3(("mpiSasReinitializeCmd, Build IOMB SAS_RE_INITIALIZE\n"));
@@ -2134,7 +2134,7 @@ mpiSetControllerConfigCmd(
       ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
       return AGSA_RC_BUSY;
     }
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     else
     {
       SA_DBG2(("mpiSetControllerConfigCmd, Build IOMB pageCode 0x%x configPage[0] 0x%x\n",agControllerConfig->pageCode,agControllerConfig->configPage[0]));
@@ -2221,7 +2221,7 @@ GLOBAL bit32 mpiGetControllerConfigCmd(
       ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
       return AGSA_RC_BUSY;
     }
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     else
     {
       SA_DBG3(("mpiGetControllerConfig, Build IOMB mpiGetControllerConfigCmd\n"));
@@ -2311,7 +2311,7 @@ GLOBAL bit32 mpiKekManagementCmd(
       ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
       return AGSA_RC_BUSY;
     }
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     else
     {
       SA_DBG3(("mpiKekManagementCmd, Build OPC_INB_KEK_MANAGEMENT\n"));
@@ -2394,7 +2394,7 @@ GLOBAL bit32 mpiDekManagementCmd(
       ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
       return AGSA_RC_BUSY;
     }
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     else
     {
       SA_DBG1(("mpiDekManagementCmd, Build OPC_INB_DEK_MANAGEMENT pRequest %p\n",pRequest));
@@ -2485,7 +2485,7 @@ GLOBAL bit32 mpiOperatorManagementCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG1(("mpiOperatorManagementCmd, Build OPC_INB_OPR_MGMT\n"));
@@ -2568,7 +2568,7 @@ GLOBAL bit32 mpiEncryptBistCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG1(("mpiEncryptBistCmd, Build OPC_INB_ENC_TEST_EXECUTE\n"));
@@ -2661,7 +2661,7 @@ mpiSetOperatorCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG1(("mpiSetOperatorCmd, Build OPC_INB_SET_OPERATOR\n"));
@@ -2746,7 +2746,7 @@ mpiGetOperatorCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG1(("mpiGetOperatorCmd, Build OPC_INB_GET_OPERATOR\n"));
@@ -2819,7 +2819,7 @@ GLOBAL bit32 mpiDIFEncryptionOffloadCmd(
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     SA_DBG1(("mpiDIFEncryptionOffloadCmd: Build OPC_INB_DIF_ENC_OFFLOAD_CMD pRequest %p\n",pRequest));

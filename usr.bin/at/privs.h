@@ -18,7 +18,7 @@
  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
  * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
  * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
@@ -53,7 +53,7 @@
  * state.
  *
  * It is NOT safe to call exec(), system() or popen() with a user-
- * supplied program (i.e. without carefully checking PATH and any
+ * supplied program (i.e. without carefuly checking PATH and any
  * library load paths) with relinquished privileges; the called program
  * can acquire them just as easily.  Set both effective and real userid
  * to the real userid before calling any of them.

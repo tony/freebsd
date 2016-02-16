@@ -196,7 +196,7 @@ __hal_channel_dtr_free(xge_hal_channel_h channelh, xge_hal_dtr_h dtrh)
  * xge_hal_channel_dtr_count
  * @channelh: Channel handle. Obtained via xge_hal_channel_open().
  *
- * Retreive number of DTRs available. This function can not be called
+ * Retrieve number of DTRs available. This function can not be called
  * from data path.
  */
 __HAL_STATIC_CHANNEL __HAL_INLINE_CHANNEL int

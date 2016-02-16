@@ -32,7 +32,7 @@
  */
 
 /*
- * Ioctl-related defintions for the Marvel Wireless LAN controller driver.
+ * Ioctl-related definitions for the Marvel Wireless LAN controller driver.
  */
 #ifndef _DEV_MALO_MVIOCTL_H
 #define _DEV_MALO_MVIOCTL_H

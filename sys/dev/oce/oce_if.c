@@ -1951,7 +1951,7 @@ done:
 		aic->ticks = now;
 	}
 
-	/* Is there atleast one eq that needs to be modified? */
+	/* Is there at least one eq that needs to be modified? */
 	if(num)
 		oce_mbox_eqd_modify_periodic(sc, set_eqd, num);
 }

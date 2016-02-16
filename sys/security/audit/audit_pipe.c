@@ -666,7 +666,7 @@ audit_pipe_dtor(void *arg)
 /*
  * Audit pipe open method.  Explicit privilege check isn't used as this
  * allows file permissions on the special device to be used to grant audit
- * review access.  Those file permissions should be managed carefully.
+ * review access.  Those file permissions should be managed carefuly.
  */
 static int
 audit_pipe_open(struct cdev *dev, int oflags, int devtype, struct thread *td)

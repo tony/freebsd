@@ -181,7 +181,7 @@ __FBSDID("$FreeBSD$");
  *  OPTIONAL, locked (UH). (M_NOWAIT). Returns 0 on success.
  *
  *  Finds entry specified by given key.
- *  * Caller is requred to do the following:
+ *  * Caller is required to do the following:
  *    entry found: returns 0, export entry to @tent
  *    entry not found: returns ENOENT
  *

@@ -348,13 +348,13 @@ GLOBAL bit32 mpiMsgFreeGetOQ(mpiOCQueue_t *circularQ, bit16 messageSize, void** 
  *  \param messagePtr    Pointer to the message buffer payload (not including message header))
  *  \param category      Message category (ETHERNET, FC, SAS-SATA, SCSI)
  *  \param opCode        Message operation code
- *  \param responseQueue If the message requires response, this paramater indicates the outbound queue for the response
+ *  \param responseQueue If the message requires response, this parameter indicates the outbound queue for the response
  *
  * This function is used to sumit a message buffer, previously obtained from  mpiMsgFreeGet()
  * function call, to the given Inbound queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been posted succesfully
+ *         AGSA_RC_SUCCESS if the message has been posted successfully
  */
 /*******************************************************************************/
 #ifdef FAST_IO_TEST
@@ -383,7 +383,7 @@ GLOBAL bit32 mpiMsgPrepare(
   msgHeader = (mpiMsgHeader_t*)(((bit8*)messagePtr) - sizeof(mpiMsgHeader_t));
   /* Read the BC from header, its stored in native endian format when message
      was allocated */
-  /* intially */
+  /* initially */
   bc = (((msgHeader->Header) >> SHIFT24) & BC_MASK);
   SA_DBG6(("mpiMsgProduce: msgHeader bc %d\n", bc));
   if (circularQ->priority)
@@ -508,7 +508,7 @@ mpiMsgProduce(
   /* Obtains the address of the entire message buffer, including the header */
   msgHeader = (mpiMsgHeader_t*)(((bit8*)messagePtr) - sizeof(mpiMsgHeader_t));
   /* Read the BC from header, its stored in native endian format when message was allocated */
-  /* intially */
+  /* initially */
   bc = (((msgHeader->Header) >> SHIFT24) & BC_MASK);
   SA_DBG6(("mpiMsgProduce: msgHeader bc %d\n", bc));
   if (circularQ->priority)
@@ -651,7 +651,7 @@ void mpiMsgProduceBunch(  agsaLLRoot_t  *saRoot)
  * Consume a receive message in the specified outbound queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been retrieved succesfully
+ *         AGSA_RC_SUCCESS if the message has been retrieved successfully
  *         AGSA_RC_BUSY    if the circular is empty
  */
 /*******************************************************************************/
@@ -809,7 +809,7 @@ mpiMsgConsume(
  * Returns consumed and processed message to the the specified outbounf queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been returned succesfully
+ *         AGSA_RC_SUCCESS if the message has been returned successfully
  */
 /*******************************************************************************/
 GLOBAL FORCEINLINE
@@ -935,7 +935,7 @@ GLOBAL bit32 mpiMsgProduceOQ(
   msgHeader = (mpiMsgHeader_t*)(((bit8*)messagePtr) - sizeof(mpiMsgHeader_t));
   /* Read the BC from header, its stored in native endian format when message
      was allocated */
-  /* intially */
+  /* initially */
   SA_DBG4(("mpiMsgProduceOQ: msgHeader %p opcode %d pi/ci %d / %d\n", msgHeader, opCode, circularQ->producerIdx, circularQ->consumerIdx));
   bc = (((msgHeader->Header) >> SHIFT24) & BC_MASK);
   SA_DBG6(("mpiMsgProduceOQ: msgHeader bc %d\n", bc));

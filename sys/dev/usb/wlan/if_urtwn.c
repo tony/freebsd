@@ -2451,7 +2451,7 @@ urtwn_newstate(struct ieee80211vap *vap, enum ieee80211_state nstate, int arg)
 		urtwn_write_1(sc, R92C_R2T_SIFS + 1, 10);
 		urtwn_write_1(sc, R92C_T2T_SIFS + 1, 10);
 
-		/* Intialize rate adaptation. */
+		/* Initialize rate adaptation. */
 		if (!(sc->chip & URTWN_CHIP_88E))
 			urtwn_ra_init(sc);
 		/* Turn link LED on. */

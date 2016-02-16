@@ -584,7 +584,7 @@ void scic_sds_port_get_attached_protocols(
 }
 
 /**
- * @brief This method returns the amount of memory requred for a port
+ * @brief This method returns the amount of memory required for a port
  *        object.
  *
  * @return U32
@@ -1496,7 +1496,7 @@ void scic_sds_port_broadcast_change_received(
 )
 {
    //notify the user.
-   scic_cb_port_bc_change_primitive_recieved(
+   scic_cb_port_bc_change_primitive_received(
       this_port->owning_controller, this_port, this_phy
    );
 }

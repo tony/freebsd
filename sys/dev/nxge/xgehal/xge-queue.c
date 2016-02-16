@@ -315,7 +315,7 @@ void xge_queue_destroy(xge_queue_h queueh)
  * @queueh: Queue handle.
  *
  * This function is called in the case of no slot avaialble in the queue
- * to accomodate the newly received event.
+ * to accommodate the newly received event.
  * Note that queue cannot grow beyond the max size specified for the
  * queue.
  *
@@ -389,7 +389,7 @@ __io_queue_grow(xge_queue_h queueh)
  * Returns: XGE_QUEUE_OK - success.
  * XGE_QUEUE_IS_EMPTY - Queue is empty.
  * XGE_QUEUE_NOT_ENOUGH_SPACE - Requested item size(@data_max_size)
- * is too small to accomodate an item from the queue.
+ * is too small to accommodate an item from the queue.
  *
  * See also: xge_queue_item_t{}, xge_queue_produce().
  */
@@ -440,7 +440,7 @@ void xge_queue_flush(xge_queue_h queueh)
  *
  * Check for critical event(s) in the queue, and reset the
  * "has-critical-event" flag upon return.
- * Returns: 1 - if the queue contains atleast one critical event.
+ * Returns: 1 - if the queue contains at least one critical event.
  * 0 - If there are no critical events in the queue.
  */
 int __queue_get_reset_critical (xge_queue_h qh) {

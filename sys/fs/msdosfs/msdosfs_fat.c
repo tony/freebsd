@@ -318,7 +318,7 @@ updatefats(struct msdosfsmount *pmp, struct buf *bp, u_long fatbn)
 		 * other fats and then writing them back out.  This could tie up
 		 * the fat for quite a while. Preventing others from accessing it.
 		 * To prevent us from going after the fat quite so much we use
-		 * delayed writes, unless they specfied "synchronous" when the
+		 * delayed writes, unless they specified "synchronous" when the
 		 * filesystem was mounted.  If synch is asked for then use
 		 * bwrite()'s and really slow things down.
 		 */

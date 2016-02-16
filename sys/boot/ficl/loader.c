@@ -752,7 +752,7 @@ ficlPciBiosCountDevices(FICL_VM *pVM)
  * pcibios-write-config (locator offset width value -- )
  *
  * Writes the specified config register.
- * Locator is bus << 8 | device << 3 | fuction
+ * Locator is bus << 8 | device << 3 | function
  * offset is the pci config register
  * width is 0 for byte, 1 for word, 2 for dword
  * value is the value to write
@@ -774,7 +774,7 @@ ficlPciBiosWriteConfig(FICL_VM *pVM)
  * pcibios-read-config (locator offset width -- value)
  *
  * Reads the specified config register.
- * Locator is bus << 8 | device << 3 | fuction
+ * Locator is bus << 8 | device << 3 | function
  * offset is the pci config register
  * width is 0 for byte, 1 for word, 2 for dword
  * value is the value to read from the register
@@ -801,7 +801,7 @@ ficlPciBiosReadConfig(FICL_VM *pVM)
  * class is the class to search for.
  * index 0..N (set to 0, increment until error)
  *
- * Locator is bus << 8 | device << 3 | fuction (or -1 on error)
+ * Locator is bus << 8 | device << 3 | function (or -1 on error)
  */
 static void
 ficlPciBiosFindDevclass(FICL_VM *pVM)
@@ -825,7 +825,7 @@ ficlPciBiosFindDevclass(FICL_VM *pVM)
  * class is the class to search for.
  * index 0..N (set to 0, increment until error)
  *
- * Locator is bus << 8 | device << 3 | fuction (or -1 on error)
+ * Locator is bus << 8 | device << 3 | function (or -1 on error)
  */
 static void
 ficlPciBiosFindDevice(FICL_VM *pVM)
@@ -846,7 +846,7 @@ ficlPciBiosFindDevice(FICL_VM *pVM)
  *
  * converts bus, device, function to locator.
  *
- * Locator is bus << 8 | device << 3 | fuction
+ * Locator is bus << 8 | device << 3 | function
  */
 static void
 ficlPciBiosLocator(FICL_VM *pVM)

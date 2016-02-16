@@ -628,7 +628,7 @@ ed98_alloc_memory(dev, rid)
 }
 
 /*
- * Generic probe routine for testing for the existance of a DS8390.
+ * Generic probe routine for testing for the existence of a DS8390.
  *	Must be called after the NIC has just been reset. This routine
  *	works by looking at certain register values that are guaranteed
  *	to be initialized a certain way after power-up or reset. Seems

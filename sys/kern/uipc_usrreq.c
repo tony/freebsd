@@ -948,7 +948,7 @@ uipc_send(struct socket *so, int flags, struct mbuf *m, struct sockaddr *nam,
 		 * return the slightly counter-intuitive but otherwise
 		 * correct error that the socket is not connected.
 		 *
-		 * Locking here must be done carefully: the linkage lock
+		 * Locking here must be done carefuly: the linkage lock
 		 * prevents interconnections between unpcbs from changing, so
 		 * we can traverse from unp to unp2 without acquiring unp's
 		 * lock.  Socket buffer locks follow unpcb locks, so we can
@@ -2163,7 +2163,7 @@ unp_externalize_fp(struct file *fp)
 }
 
 /*
- * unp_defer indicates whether additional work has been defered for a future
+ * unp_defer indicates whether additional work has been deferred for a future
  * pass through unp_gc().  It is thread local and does not require explicit
  * synchronization.
  */

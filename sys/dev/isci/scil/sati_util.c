@@ -445,7 +445,7 @@ void sati_scsi_common_response_iu_construct(
  *                for which to construct the buffer for sense data.
  * @param[in]     scsi_status This parameter specifies the SCSI status
  *                value for the user's IO request.
- * @param[out]    sense_data This paramater
+ * @param[out]    sense_data This parameter
  *
  * @return none
  */
@@ -1790,7 +1790,7 @@ void sati_ata_smart_read_log_construct(
 
 /**
  * @brief This method will construct a Write Uncorrectable ATA command that
- *        will write one sector with a psuedo or flagged error. The type of
+ *        will write one sector with a pseudo or flagged error. The type of
  *        error is specified by the feature value.
  *
  * @return N/A

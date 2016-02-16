@@ -348,7 +348,7 @@ void arm_physmem_exclude_region(vm_paddr_t pa, vm_size_t sz, uint32_t exflags)
  * Updates the kernel global 'physmem' with the number of physical pages
  * available for use (all pages not in any exclusion region).
  *
- * Updates the kernel global 'Maxmem' with the page number one greater then the
+ * Updates the kernel global 'Maxmem' with the page number one greater than the
  * last page of physical memory in the system.
  */
 void

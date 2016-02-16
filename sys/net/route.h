@@ -444,7 +444,7 @@ struct rtentry *rtalloc1(struct sockaddr *, int, u_long);
 int	 rtinit(struct ifaddr *, int, int);
 
 /* XXX MRT NEW VERSIONS THAT USE FIBs
- * For now the protocol indepedent versions are the same as the AF_INET ones
+ * For now the protocol independent versions are the same as the AF_INET ones
  * but this will change.. 
  */
 int	 rt_getifa_fib(struct rt_addrinfo *, u_int fibnum);

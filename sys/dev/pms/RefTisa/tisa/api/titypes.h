@@ -437,7 +437,7 @@ typedef bit32 (*IsrHandler_t)(
                         tiRoot_t    *tiRoot,
                         bit32       channelNum
                         );
-typedef void (*DeferedHandler_t)(
+typedef void (*DeferredHandler_t)(
                         tiRoot_t    *tiRoot,
                         bit32       channelNum,
                         bit32       count,

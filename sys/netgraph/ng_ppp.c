@@ -152,7 +152,7 @@ static MALLOC_DEFINE(M_NETGRAPH_PPP, "netgraph_ppp", "netgraph ppp node");
 				    ((s) | ~MP_LONG_SEQ_MASK)		\
 				    : ((s) & MP_LONG_SEQ_MASK))
 
-/* Comparision of MP sequence numbers. Note: all sequence numbers
+/* Comparison of MP sequence numbers. Note: all sequence numbers
    except priv->xseq are stored with the sign bit extended. */
 #define MP_SHORT_SEQ_DIFF(x,y)	MP_SHORT_EXTEND((x) - (y))
 #define MP_LONG_SEQ_DIFF(x,y)	MP_LONG_EXTEND((x) - (y))
@@ -1511,7 +1511,7 @@ done:
  *	discarded, their missing fragments are declared lost and MSEQ
  *	is increased.
  *
- *    o If we recieve a fragment with seq# < MSEQ, we throw it away
+ *    o If we receive a fragment with seq# < MSEQ, we throw it away
  *	because we've already delcared it lost.
  *
  * This assumes linkNum != NG_PPP_BUNDLE_LINKNUM.

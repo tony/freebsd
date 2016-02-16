@@ -228,7 +228,7 @@ blist_alloc(blist_t bl, daddr_t count)
 
 /*
  * blist_free() -	free up space in the block bitmap.  Return the base
- *		     	of a contiguous region.  Panic if an inconsistancy is
+ *		     	of a contiguous region.  Panic if an inconsistency is
  *			found.
  */
 

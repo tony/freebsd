@@ -20,7 +20,7 @@
 #define _DEV_ATH_AR5211DESC_H
 
 /*
- * Defintions for the DMA descriptors used by the Atheros
+ * Definitions for the DMA descriptors used by the Atheros
  * AR5211 and AR5110 Wireless Lan controller parts.
  */
 

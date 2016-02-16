@@ -1586,7 +1586,7 @@ ixl_media_change(struct ifnet * ifp)
 
 #ifdef IXL_FDIR
 /*
-** ATR: Application Targetted Receive - creates a filter
+** ATR: Application Targeted Receive - creates a filter
 **	based on TX flow info that will keep the receive
 **	portion of the flow on the same queue. Based on the
 **	implementation this is only available for TCP connections
@@ -2106,7 +2106,7 @@ ixl_init_msix(struct ixl_pf *pf)
 	/*
 	** When used in a virtualized environment 
 	** PCI BUSMASTER capability may not be set
-	** so explicity set it here and rewrite
+	** so explicitly set it here and rewrite
 	** the ENABLE in the MSIX control register
 	** at this point to cause the host to
 	** successfully initialize us.

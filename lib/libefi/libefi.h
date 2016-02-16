@@ -35,8 +35,8 @@
 
 /* Attributes. */
 #define	EFI_ATTR_NV	0x0001	/* Variable stored in NVRAM. */
-#define	EFI_ATTR_BS	0x0002	/* Boot services accessable. */
-#define	EFI_ATTR_RT	0x0004	/* Runtime accessable. */
+#define	EFI_ATTR_BS	0x0002	/* Boot services accessible. */
+#define	EFI_ATTR_RT	0x0004	/* Runtime accessible. */
 #define	EFI_ATTR_HR	0x0008	/* Hardware error record. */
 #define	EFI_ATTR_WR	0x0010	/* Authenticated write access. */
 

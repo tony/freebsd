@@ -1768,7 +1768,7 @@ cxgb_qflush(struct ifnet *ifp)
  *
  *	Writes a packet as immediate data into a Tx descriptor.  The packet
  *	contains a work request at its beginning.  We must write the packet
- *	carefully so the SGE doesn't read accidentally before it's written in
+ *	carefuly so the SGE doesn't read accidentally before it's written in
  *	its entirety.
  */
 static __inline void

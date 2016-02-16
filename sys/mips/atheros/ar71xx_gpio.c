@@ -526,7 +526,7 @@ ar71xx_gpio_attach(device_t dev)
 		GPIO_WRITE(sc, AR71XX_GPIO_OUT, oe);
 
 		/* Finally: Set the output config */
-		ar71xx_gpio_ouput_configure(i, gpiofunc);
+		ar71xx_gpio_output_configure(i, gpiofunc);
 	}
 
 	sc->busdev = gpiobus_attach_bus(dev);

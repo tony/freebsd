@@ -51,7 +51,7 @@ void platform_cpu_init(void);
 /*
  * Spin up the AP so that it starts executing MP bootstrap entry point: mpentry
  *
- * Returns 0 on sucess and non-zero on failure.
+ * Returns 0 on success and non-zero on failure.
  */
 int platform_start_ap(int processor_id);
 

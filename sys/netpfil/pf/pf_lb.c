@@ -433,7 +433,7 @@ pf_map_addr(sa_family_t af, struct pf_rule *r, struct pf_addr *saddr,
 		 * This is done w/o locking, because performance is assumed
 		 * more important than round-robin precision.
 		 *
-		 * In the simpliest case we just update the "rpool->cur"
+		 * In the simplest case we just update the "rpool->cur"
 		 * pointer. However, if pool contains tables or dynamic
 		 * addresses, then "tblidx" is also used to store machine
 		 * state. Since "tblidx" is int, concurrent access to it can't

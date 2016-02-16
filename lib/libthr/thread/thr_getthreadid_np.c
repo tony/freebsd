@@ -35,7 +35,7 @@
 __weak_reference(_pthread_getthreadid_np, pthread_getthreadid_np);
 
 /*
- * Provide the equivelant to AIX pthread_getthreadid_np() function.
+ * Provide the equivalent to AIX pthread_getthreadid_np() function.
  */
 int
 _pthread_getthreadid_np(void)

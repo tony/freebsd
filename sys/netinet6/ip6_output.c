@@ -350,7 +350,7 @@ ip6_output(struct mbuf *m0, struct ip6_pktopts *opt,
 			 * This only makes sense with a routing header.
 			 * See Section 9.2 of RFC 3542.
 			 * Disabling this part just for MIP6 convenience is
-			 * a bad idea.  We need to think carefully about a
+			 * a bad idea.  We need to think carefuly about a
 			 * way to make the advanced API coexist with MIP6
 			 * options, which might automatically be inserted in
 			 * the kernel.

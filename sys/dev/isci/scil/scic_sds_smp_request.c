@@ -811,7 +811,7 @@ scic_sds_smp_request_started_substate_handler_table
  *        sub-state.
  *
  * @param[in]  object This parameter specifies the request object for which
- *             the sub-state change is occuring.
+ *             the sub-state change is occurring.
  *
  * @return none.
  */
@@ -836,7 +836,7 @@ void scic_sds_smp_request_started_await_response_substate_enter(
  *        this sub-state.
  *
  * @param[in]  object This parameter specifies the request object for which
- *             the sub-state change is occuring.
+ *             the sub-state change is occurring.
  *
  * @return none.
  */

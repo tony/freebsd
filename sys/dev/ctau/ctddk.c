@@ -667,7 +667,7 @@ void ct_g703_timer (ct_chan_t *c)
 	if (! c->status)
 		c->status = ESTS_NOALARM;
 
-	/* Unavaiable second -- loss of carrier, or receiving test code. */
+	/* Unavailable second -- loss of carrier, or receiving test code. */
 	if ((! cd) || tstreq)
 		/* Unavailable second -- no other counters. */
 		++c->currnt.uas;
@@ -794,7 +794,7 @@ static void ct_e1timer_interrupt (ct_chan_t *c)
 	if (c->gopt.crc4)
 		pcv += crc4;
 
-	/* Unavaiable second -- receiving all ones, or
+	/* Unavailable second -- receiving all ones, or
 	 * loss of carrier, or loss of signal. */
 	if (sr1 & (SR1_RUA1 | SR1_RCL | SR1_RLOS))
 		/* Unavailable second -- no other counters. */

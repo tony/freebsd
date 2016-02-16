@@ -33,7 +33,7 @@
  */
 
 /*
- * Ioctl-related defintions for the Wireless TAP
+ * Ioctl-related definitions for the Wireless TAP
  * based on Atheros Wireless LAN controller driver.
  */
 

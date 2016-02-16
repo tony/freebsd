@@ -331,7 +331,7 @@ static int radeon_check_and_fixup_packet3(drm_radeon_private_t *
 			return -EINVAL;
 		}
 
-		/* carefully check packet contents */
+		/* carefuly check packet contents */
 		cmd = drm_buffer_pointer_to_dword(cmdbuf->buffer, 1);
 
 		narrays = *cmd & ~0xc000;

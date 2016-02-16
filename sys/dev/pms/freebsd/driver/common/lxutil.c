@@ -485,7 +485,7 @@ Parameters:
 Return:
   size of DMA memory which call to agtiapi_InitResource() will consume  
 Note:
-  this funcion mirrors the flow of agtiapi_InitResource()
+  this function mirrors the flow of agtiapi_InitResource()
   results are stored in agtiapi_softc fields
 ******************************************************************************/
 STATIC int agtiapi_ScopeDMARes( ag_card_info_t *thisCardInst )

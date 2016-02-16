@@ -162,7 +162,7 @@ typedef struct SCIC_POWER_CONTROL
 /**
  * @struct SCIC_SDS_CONTROLLER
  *
- * This structure represents the SCU contoller object.
+ * This structure represents the SCU controller object.
  */
 typedef struct SCIC_SDS_CONTROLLER
 {

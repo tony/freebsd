@@ -186,7 +186,7 @@ int	_udatasel, _ucodesel;
 u_int	basemem;
 
 #ifdef PC98
-int	need_pre_dma_flush;	/* If 1, use wbinvd befor DMA transfer. */
+int	need_pre_dma_flush;	/* If 1, use wbinvd before DMA transfer. */
 int	need_post_dma_flush;	/* If 1, use invd after DMA transfer. */
 
 static int	ispc98 = 1;
@@ -774,7 +774,7 @@ sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
  * has been taken.  Reset signal mask and
  * stack state from context left by sendsig (above).
  * Return to previous pc and psl as specified by
- * context left by sendsig. Check carefully to
+ * context left by sendsig. Check carefuly to
  * make sure that the user has not modified the
  * state to gain improper privileges.
  *

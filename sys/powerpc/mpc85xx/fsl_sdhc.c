@@ -622,7 +622,7 @@ handle_command_intr(struct fsl_sdhc_softc *sc, uint32_t irq_stat)
 	}
 
 	if (cmd->error) {
-		device_printf(sc->self, "Error interrupt occured\n");
+		device_printf(sc->self, "Error interrupt occurred\n");
 		reset_controller_dat_cmd(sc);
 		return;
 	}
@@ -653,7 +653,7 @@ handle_data_intr(struct fsl_sdhc_softc *sc, uint32_t irq_stat)
 	}
 
 	if (cmd->error) {
-		device_printf(sc->self, "Error interrupt occured\n");
+		device_printf(sc->self, "Error interrupt occurred\n");
 		sc->data_done = 1;
 		reset_controller_dat_cmd(sc);
 		return;

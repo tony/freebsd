@@ -270,7 +270,7 @@ show_msg(str, fd, ctl, dat, flags)
  * already created a named pipe for the socket using mknod(2).
  * We need to create a socket with the same name when we bind,
  * so we need to remove the pipe before, otherwise we'll get address
- * already in use. So we *carefully* remove the pipe, to avoid
+ * already in use. So we *carefuly* remove the pipe, to avoid
  * using this as a random file removal tool. We use system calls
  * to avoid code duplication.
  */

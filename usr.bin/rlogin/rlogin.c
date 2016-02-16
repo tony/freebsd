@@ -603,7 +603,7 @@ reader(int omask)
 	pid = getpid();
 	(void)signal(SIGTTOU, SIG_IGN);
 	(void)signal(SIGURG, oob);
-	(void)signal(SIGUSR1, oob); /* When propogating SIGURG from parent */
+	(void)signal(SIGUSR1, oob); /* When propagating SIGURG from parent */
 	ppid = getppid();
 	(void)fcntl(rem, F_SETOWN, pid);
 	(void)setjmp(rcvtop);

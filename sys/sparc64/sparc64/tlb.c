@@ -56,7 +56,7 @@ tlb_flush_user_t *tlb_flush_user;
 /*
  * Some tlb operations must be atomic, so no interrupt or trap can be allowed
  * while they are in progress. Traps should not happen, but interrupts need to
- * be explicitely disabled. critical_enter() cannot be used here, since it only
+ * be explicitly disabled. critical_enter() cannot be used here, since it only
  * disables soft interrupts.
  */
 

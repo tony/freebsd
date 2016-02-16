@@ -465,7 +465,7 @@ struct ahci_enclosure {
 	device_t		dev;            /* Device handle */
 	struct resource		*r_memc;	/* Control register */
 	struct resource		*r_memt;	/* Transmit buffer */
-	struct resource		*r_memr;	/* Recieve buffer */
+	struct resource		*r_memr;	/* Receive buffer */
 	struct cam_sim		*sim;
 	struct cam_path		*path;
 	struct mtx		mtx;		/* state lock */

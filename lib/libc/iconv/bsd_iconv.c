@@ -186,7 +186,7 @@ __bsd___iconv_free_list(char **list, size_t sz)
 }
 
 /*
- * GNU-compatibile non-standard interfaces.
+ * GNU-compatible non-standard interfaces.
  */
 static int
 qsort_helper(const void *first, const void *second)

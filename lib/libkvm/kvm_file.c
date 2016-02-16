@@ -216,7 +216,7 @@ kvm_getfiles(kvm_t *kd, int op, int arg, int *cnt)
 		kd->arglen = size;
 		n = kvm_deadfiles(kd, op, arg, nl[0].n_value, nprocs);
 		if (n != nfiles) {
-			_kvm_err(kd, kd->program, "inconsistant nfiles");
+			_kvm_err(kd, kd->program, "inconsistent nfiles");
 			return (0);
 		}
 		nfiles = n;

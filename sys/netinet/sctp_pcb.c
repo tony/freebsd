@@ -4943,7 +4943,7 @@ sctp_free_assoc(struct sctp_inpcb *inp, struct sctp_tcb *stcb, int from_inpcbfre
 	 * in case.
 	 */
 	/* anything on the wheel needs to be removed */
-	for (i = 0; i < asoc->streamoutcnt; i++) {
+	for (i = 0; i < asoc->streamountcnt; i++) {
 		struct sctp_stream_out *outs;
 
 		outs = &asoc->strmout[i];
@@ -5066,7 +5066,7 @@ sctp_free_assoc(struct sctp_inpcb *inp, struct sctp_tcb *stcb, int from_inpcbfre
 		/* sa_ignore FREED_MEMORY */
 	}
 #ifdef INVARIANTS
-	for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+	for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 		if (stcb->asoc.strmout[i].chunks_on_queues > 0) {
 			panic("%u chunks left for stream %u.", stcb->asoc.strmout[i].chunks_on_queues, i);
 		}
@@ -5127,7 +5127,7 @@ sctp_free_assoc(struct sctp_inpcb *inp, struct sctp_tcb *stcb, int from_inpcbfre
 		SCTP_FREE(asoc->strmout, SCTP_M_STRMO);
 		asoc->strmout = NULL;
 	}
-	asoc->strm_realoutsize = asoc->streamoutcnt = 0;
+	asoc->strm_realoutsize = asoc->streamountcnt = 0;
 	if (asoc->strmin) {
 		struct sctp_queued_to_read *ctl, *nctl;
 

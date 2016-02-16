@@ -165,7 +165,7 @@ busdma_lock_mutex(void *arg, bus_dma_lock_op_t op)
 /*
  * dflt_lock should never get called.  It gets put into the dma tag when
  * lockfunc == NULL, which is only valid if the maps that are associated
- * with the tag are meant to never be defered.
+ * with the tag are meant to never be deferred.
  * XXX Should have a way to identify which driver is responsible here.
  */
 static void

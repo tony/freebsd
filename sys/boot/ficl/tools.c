@@ -104,7 +104,7 @@ static void debugPrompt(FICL_VM *pVM)
 
 /**************************************************************************
 **                      i s A F i c l W o r d
-** Vet a candidate pointer carefully to make sure
+** Vet a candidate pointer carefuly to make sure
 ** it's not some chunk o' inline data...
 ** It has to have a name, and it has to look
 ** like it's in the dictionary address range.

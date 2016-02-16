@@ -56,7 +56,7 @@
 
 /**
  * @file
- * @brief This file contains the method declarations and type defintions
+ * @brief This file contains the method declarations and type definitions
  *        common to translations of the SCSI mode sense (6 and 10-byte)
  *        commands.
  */

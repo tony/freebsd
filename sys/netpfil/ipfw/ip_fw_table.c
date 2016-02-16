@@ -319,7 +319,7 @@ find_ref_table(struct ip_fw_chain *ch, struct tid_info *ti,
 	if (op == OP_DEL)
 		return (ESRCH);
 
-	/* Compability mode: create new table for old clients */
+	/* Compatibility mode: create new table for old clients */
 	if ((tei->flags & TEI_FLAGS_COMPAT) == 0)
 		return (ESRCH);
 
@@ -927,7 +927,7 @@ manage_table_ent_v0(struct ip_fw_chain *ch, ip_fw3_opheader *op3,
 	tei.masklen = xent->masklen;
 	ipfw_import_table_value_legacy(xent->value, &v);
 	tei.pvalue = &v;
-	/* Old requests compability */
+	/* Old requests compatibility */
 	tei.flags = TEI_FLAGS_COMPAT;
 	if (xent->type == IPFW_TABLE_ADDR) {
 		if (xent->len - hdrlen == sizeof(in_addr_t))
@@ -3375,7 +3375,7 @@ ref_rule_objects(struct ip_fw_chain *ch, struct ip_fw *rule,
 			pidx++;
 		}
 		/*
-		 * Compability stuff for old clients:
+		 * Compatibility stuff for old clients:
 		 * prepare to manually create non-existing objects.
 		 */
 		if (unresolved)

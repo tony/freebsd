@@ -319,7 +319,7 @@ xlr_pcib_identify(driver_t * driver, device_t parent)
 }
 
 /*
- * XLS PCIe can have upto 4 links, and each link has its on IRQ
+ * XLS PCIe can have up to 4 links, and each link has its on IRQ
  * Find the link on which the device is on 
  */
 static int

@@ -396,7 +396,7 @@ struct nt_kevent {
 
 typedef struct nt_kevent nt_kevent;
 
-/* Kernel defered procedure call (i.e. timer callback) */
+/* Kernel deferred procedure call (i.e. timer callback) */
 
 struct kdpc;
 typedef void (*kdpc_func)(struct kdpc *, void *, void *, void *);
@@ -670,13 +670,13 @@ struct kuser_shared_data {
  * created and maintained by bus drivers. For example, the PCI
  * bus driver might detect two PCI ethernet cards on a given
  * bus. The PCI bus driver will then allocate two device_objects
- * for its own internal bookeeping purposes. This is analagous
+ * for its own internal bookeeping purposes. This is analogous
  * to the device_t that the FreeBSD PCI code allocates and passes
  * into each PCI driver's probe and attach routines.
  *
  * When an ethernet driver claims one of the ethernet cards
  * on the bus, it will create its own device_object. This is
- * the Functional Device Object. This object is analagous to the
+ * the Functional Device Object. This object is analogous to the
  * device-specific softc structure.
  */
 

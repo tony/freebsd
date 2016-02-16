@@ -157,7 +157,7 @@ fdt_find_static_dtb()
 	}
 
 	/*
-	 * The most efficent way to find a symbol would be to calculate a
+	 * The most efficient way to find a symbol would be to calculate a
 	 * hash, find proper bucket and chain, and thus find a symbol.
 	 * However, that would involve code duplication (e.g. for hash
 	 * function). So we're using simpler and a bit slower way: we're
@@ -1232,7 +1232,7 @@ fdt_modprop(int nodeoff, char *propname, void *value, char mode)
 
 	if (p != NULL) {
 		if (mode == 1) {
-			 /* Adding inexistant value in mode 1 is forbidden */
+			 /* Adding inexistent value in mode 1 is forbidden */
 			sprintf(command_errbuf, "property already exists!");
 			return (CMD_ERROR);
 		}

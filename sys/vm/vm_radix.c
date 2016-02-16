@@ -43,7 +43,7 @@
  * - There is not a huge bias toward the number of lookup operations over
  *   the number of insert and remove operations.  This basically implies
  *   that optimizations supposedly helping one operation but hurting the
- *   other might be carefully evaluated.
+ *   other might be carefuly evaluated.
  * - On average not many nodes are expected to be fully populated, hence
  *   level compression may just complicate things.
  */

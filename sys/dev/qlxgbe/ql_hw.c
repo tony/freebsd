@@ -28,7 +28,7 @@
 /*
  * File: ql_hw.c
  * Author : David C Somayajulu, Qlogic Corporation, Aliso Viejo, CA 92656.
- * Content: Contains Hardware dependant functions
+ * Content: Contains Hardware dependent functions
  */
 
 #include <sys/cdefs.h>
@@ -1822,7 +1822,7 @@ ql_hw_send(qla_host_t *ha, bus_dma_segment_t *segs, int nsegs,
 	dev = ha->pci_dev;
 
 	/*
-	 * Always make sure there is atleast one empty slot in the tx_ring
+	 * Always make sure there is at least one empty slot in the tx_ring
 	 * tx_ring is considered full when there only one entry available
 	 */
         num_tx_cmds = (nsegs + (Q8_TX_CMD_MAX_SEGMENTS - 1)) >> 2;

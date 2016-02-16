@@ -271,7 +271,7 @@
  *			cleared by HW when the buffer level goes above
  *			the threshold.
  *
- *	TX_OVER		Indicates that the processer attempted to write
+ *	TX_OVER		Indicates that the processor attempted to write
  *			to the TX FIFO while the TX FIFO was full.  Cleared
  *			by reading CLR_TX_OVER.
  *

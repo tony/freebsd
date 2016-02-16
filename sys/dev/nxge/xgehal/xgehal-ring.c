@@ -489,7 +489,7 @@ __hal_ring_hw_initialize(xge_hal_device_h devh)
 	u64 val64;
 	int i, j;
 
-	/* Rx DMA intialization. */
+	/* Rx DMA initialization. */
 
 	val64 = 0;
 	for (i = 0; i < XGE_HAL_MAX_RING_NUM; i++) {

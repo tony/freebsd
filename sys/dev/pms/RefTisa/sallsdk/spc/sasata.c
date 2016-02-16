@@ -120,7 +120,7 @@ GLOBAL bit32 saSATAStart(
   pRequest = (agsaIORequestDesc_t *)saLlistIOGetHead(&(saRoot->freeIORequests));
   if ( agNULL != pRequest )
   {
-    /* If free IOMB avaliable */
+    /* If free IOMB available */
     /* Remove the request from free list */
     saLlistIORemove(&(saRoot->freeIORequests), &(pRequest->linkNode));
 
@@ -145,7 +145,7 @@ GLOBAL bit32 saSATAStart(
         else
             size = IOMB_SIZE64;
     }
-    /* If LL IO request entry avaliable */
+    /* If LL IO request entry available */
     /* set up pRequest */
     pRequest->pIORequestContext = agIORequest;
     pRequest->pDevice = pDevice;
@@ -701,7 +701,7 @@ GLOBAL bit32 saSATAAbort(
     return AGSA_RC_BUSY;
   }
 
-  /* If free IOMB avaliable */
+  /* If free IOMB available */
   /* Remove the request from free list */
   saLlistIORemove(&(saRoot->freeIORequests), &(pRequest->linkNode));
 
@@ -732,7 +732,7 @@ GLOBAL bit32 saSATAAbort(
   ossaSingleThreadedEnter(agRoot, LL_IOREQ_IBQ0_LOCK + inq);
 #endif /* SA_LL_IBQ_PROTECT */
 
-  /* If LL IO request entry avaliable */
+  /* If LL IO request entry available */
   /* Get a free inbound queue entry */
   circularQ = &saRoot->inboundQueue[inq];
   retVal    = mpiMsgFreeGet(circularQ, IOMB_SIZE64, &pMessage);

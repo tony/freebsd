@@ -5979,7 +5979,7 @@ ctl_debugconf_sp_sense_handler(struct ctl_scsiio *ctsio,
 	case SMS_PAGE_CTRL_DEFAULT >> 6:
 	case SMS_PAGE_CTRL_SAVED >> 6:
 		/*
-		 * We don't update the changable or default bits for this page.
+		 * We don't update the changeable or default bits for this page.
 		 */
 		break;
 	case SMS_PAGE_CTRL_CURRENT >> 6:

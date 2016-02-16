@@ -368,7 +368,7 @@ fe_probe_fmv(device_t dev)
  * board, when the corresponding implementation is detected.  It
  * returns a NULL otherwise.
  * 
- * Primary purpose of the functin is to analize the config EEPROM,
+ * Primary purpose of the function is to analize the config EEPROM,
  * determine if it matches with the pattern of that of supported card,
  * and extract necessary information from it.  One of the information
  * expected to be extracted from EEPROM is the Ethernet station (MAC)

@@ -309,7 +309,7 @@ int xs_gather(struct xs_transaction t, const char *dir, ...);
  *
  * \return  On success, 0. Otherwise an errno value indicating the
  *          type of write failure.  EEXIST errors from the XenStore
- *          are supressed, allowing multiple, physically different,
+ *          are suppressed, allowing multiple, physically different,
  *          xenbus_watch objects, to watch the same path in the XenStore.
  */
 int xs_register_watch(struct xs_watch *watch);

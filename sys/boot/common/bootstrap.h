@@ -34,7 +34,7 @@
 #include <sys/linker_set.h>
 
 /*
- * Generic device specifier; architecture-dependant 
+ * Generic device specifier; architecture-dependent 
  * versions may be larger, but should be allowed to
  * overlap.
  */

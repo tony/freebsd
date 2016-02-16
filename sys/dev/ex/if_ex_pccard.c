@@ -121,7 +121,7 @@ ex_pccard_probe(device_t dev)
 	 *	57, 59, 61, 63		48 + 9
 	 * (entries 8, 24, 40 and 56 are single resoruce cfes)
 	 * Fortunately the code that enables and disables the multiple
-	 * fuctions of the card won't mess with the lower bit for cards
+	 * functions of the card won't mess with the lower bit for cards
 	 * that aren't stanards conforming MFC cards (which these olicom
 	 * cards aren't).
 	 *

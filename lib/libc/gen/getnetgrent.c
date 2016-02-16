@@ -438,7 +438,7 @@ parse_netgrp(const char *group)
 #ifdef DEBUG
 		/*
 		 * This error message is largely superflous since the
-		 * code handles the error condition sucessfully, and
+		 * code handles the error condition successfully, and
 		 * spewing it out from inside libc can actually hose
 		 * certain programs.
 		 */

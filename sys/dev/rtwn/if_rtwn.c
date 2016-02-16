@@ -1319,7 +1319,7 @@ rtwn_newstate(struct ieee80211vap *vap, enum ieee80211_state nstate, int arg)
 		rtwn_write_1(sc, R92C_R2T_SIFS + 1, 10);
 		rtwn_write_1(sc, R92C_T2T_SIFS + 1, 10);
 
-		/* Intialize rate adaptation. */
+		/* Initialize rate adaptation. */
 		rtwn_ra_init(sc);
 		/* Turn link LED on. */
 		rtwn_set_led(sc, RTWN_LED_LINK, 1);

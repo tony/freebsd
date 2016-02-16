@@ -122,7 +122,7 @@
  *     apply the value associated with this key in its place.
  *
  * The following is an example of a valid schema, as printed by nvlist_dump.
- * Keys are printed followed by the type of the value in parantheses.  The
+ * Keys are printed followed by the type of the value in parentheses.  The
  * value is displayed following a colon.  The indentation level reflects the
  * level of nesting of nvlists.  String values are displayed between []
  * brackets.  Binary values are shown with the length of the binary value (in

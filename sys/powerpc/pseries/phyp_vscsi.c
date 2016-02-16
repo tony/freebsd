@@ -220,7 +220,7 @@ struct srp_tsk_mgmt {
 #define SRP_DIOVER	0x10
 #define SRP_DIUNDER	0x20
 
-#define	MAD_SUCESS			0x00
+#define	MAD_SUCCESS			0x00
 #define	MAD_NOT_SUPPORTED		0xf1
 #define	MAD_FAILED			0xf7
 

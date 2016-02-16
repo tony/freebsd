@@ -925,7 +925,7 @@ sys_select(struct thread *td, struct select_args *uap)
 }
 
 /*
- * In the unlikely case when user specified n greater then the last
+ * In the unlikely case when user specified n greater than the last
  * open file descriptor, check that no bits are set after the last
  * valid fd.  We must return EBADF if any is set.
  *

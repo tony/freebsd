@@ -266,14 +266,14 @@ _kvm_dpcpu_init(kvm_t *kd)
 }
 
 /*
- * Check whether the dpcpu module has been initialized sucessfully or not,
+ * Check whether the dpcpu module has been initialized successfully or not,
  * initialize it if permitted.
  */
 int
-_kvm_dpcpu_initialized(kvm_t *kd, int intialize)
+_kvm_dpcpu_initialized(kvm_t *kd, int initialize)
 {
 
-	if (kd->dpcpu_initialized || !intialize)
+	if (kd->dpcpu_initialized || !initialize)
 		return (kd->dpcpu_initialized);
 
 	(void)_kvm_dpcpu_init(kd);

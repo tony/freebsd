@@ -38,7 +38,7 @@
 /*
  * Privilege list, sorted loosely by kernel subsystem.
  *
- * Think carefully before adding or reusing one of these privileges -- are
+ * Think carefuly before adding or reusing one of these privileges -- are
  * there existing instances referring to the same privilege?  Third party
  * vendors may request the assignment of privileges to be used in loadable
  * modules.  Particular numeric privilege assignments are part of the

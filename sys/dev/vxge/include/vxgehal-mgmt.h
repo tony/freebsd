@@ -122,7 +122,7 @@ vxge_hal_mgmt_pci_config(vxge_hal_device_h devh, u8 *buffer, u32 *size);
  * struct vxge_hal_mgmt_pm_cap_t - Power Management Capabilities
  * @pm_cap_ver: Version
  * @pm_cap_pme_clock: PME clock required
- * @pm_cap_aux_power: Auxilliary power support
+ * @pm_cap_aux_power: Auxiliary power support
  * @pm_cap_dsi: Device specific initialization
  * @pm_cap_aux_current: auxiliary current requirements
  * @pm_cap_cap_d0: D1 power state support
@@ -430,7 +430,7 @@ vxge_hal_mgmt_driver_config(vxge_hal_driver_config_t *drv_config, u32 *size);
  * @read_length: Size of the valid data in the buffer.
  *
  * Read  HAL trace buffer contents starting from the offset
- * upto the size of the buffer or till EOF is reached.
+ * up to the size of the buffer or till EOF is reached.
  *
  * Returns: VXGE_HAL_OK - success.
  * VXGE_HAL_EOF_TRACE_BUF - No more data in the trace buffer.

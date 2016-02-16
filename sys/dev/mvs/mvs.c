@@ -1042,7 +1042,7 @@ mvs_crbq_intr(device_t dev)
 		slot = le16toh(crpb->id) & MVS_CRPB_TAG_MASK;
 		flags = le16toh(crpb->rspflg);
 		/*
-		 * Handle only successfull completions here.
+		 * Handle only successful completions here.
 		 * Errors will be handled by main intr handler.
 		 */
 #if defined(__i386__) || defined(__amd64__)

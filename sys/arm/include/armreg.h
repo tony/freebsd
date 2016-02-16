@@ -293,7 +293,7 @@
 #define	ARM1176_AUXCTL_FSD	0x40000000 /* force speculative ops disable */
 #define	ARM1176_AUXCTL_FIO	0x80000000 /* low intr latency override */
 
-/* XScale Auxillary Control Register (CP15 register 1, opcode2 1) */
+/* XScale Auxiliary Control Register (CP15 register 1, opcode2 1) */
 #define	XSCALE_AUXCTL_K		0x00000001 /* dis. write buffer coalescing */
 #define	XSCALE_AUXCTL_P		0x00000002 /* ECC protect page table access */
 /* Note: XSCale core 3 uses those for LLR DCcahce attributes */
@@ -437,7 +437,7 @@
  *       3 3 2 2 2
  *       1 0 9 8 7                                                     0
  *      +-------+-------------------------------------------------------+
- *      | cond  |              instruction dependant                    |
+ *      | cond  |              instruction dependent                    |
  *      |c c c c|                                                       |
  *      +-------+-------------------------------------------------------+
  */

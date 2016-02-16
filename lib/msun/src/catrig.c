@@ -342,7 +342,7 @@ casin(double complex z)
 
 /*
  * cacos(z) = PI/2 - casin(z)
- * but do the computation carefully so cacos(z) is accurate when z is
+ * but do the computation carefuly so cacos(z) is accurate when z is
  * close to 1.
  *
  * cacos(z) = PI/2 - z + O(z^3)   as z -> 0
@@ -472,7 +472,7 @@ clog_for_large_values(double complex z)
 	 * Divide x and y by E, and then add 1 to the logarithm.  This depends
 	 * on E being larger than sqrt(2).
 	 * Dividing by E causes an insignificant loss of accuracy; however
-	 * this method is still poor since it is uneccessarily slow.
+	 * this method is still poor since it is unecessarily slow.
 	 */
 	if (ax > DBL_MAX / 2)
 		return (CMPLX(log(hypot(x / m_e, y / m_e)) + 1, atan2(y, x)));

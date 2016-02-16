@@ -218,7 +218,7 @@ domain_init_rmrr(struct dmar_domain *domain, device_t dev)
 		 * VT-d specification requires that the start of an
 		 * RMRR entry is 4k-aligned.  Buggy BIOSes put
 		 * anything into the start and end fields.  Truncate
-		 * and round as neccesary.
+		 * and round as necessary.
 		 *
 		 * We also allow the overlapping RMRR entries, see
 		 * dmar_gas_alloc_region().

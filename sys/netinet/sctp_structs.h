@@ -500,7 +500,7 @@ struct sctp_queued_to_read {	/* sinfo structure Pluse more */
  * for one of two reasons. Either the user
  * is blocked on a send() call and has not
  * awoken to copy more data down... OR
- * the user is in the explict MSG_EOR mode
+ * the user is in the explicit MSG_EOR mode
  * and wrote some data, but has not completed
  * sending.
  */
@@ -938,7 +938,7 @@ struct sctp_association {
 	uint32_t cumulative_tsn;
 	/*
 	 * Used to track the mapping array and its offset bits. This MAY be
-	 * lower then cumulative_tsn.
+	 * lower than cumulative_tsn.
 	 */
 	uint32_t mapping_array_base_tsn;
 	/*
@@ -955,7 +955,7 @@ struct sctp_association {
 	uint32_t sat_t3_recovery_tsn;
 	uint32_t tsn_last_delivered;
 	/*
-	 * For the pd-api we should re-write this a bit more efficent. We
+	 * For the pd-api we should re-write this a bit more efficient. We
 	 * could have multiple sctp_queued_to_read's that we are building at
 	 * once. Now we only do this when we get ready to deliver to the
 	 * socket buffer. Note that we depend on the fact that the struct is
@@ -1108,7 +1108,7 @@ struct sctp_association {
 	/* counts of actual built streams. Allocation may be more however */
 	/* could re-arrange to optimize space here. */
 	uint16_t streamincnt;
-	uint16_t streamoutcnt;
+	uint16_t streamountcnt;
 	uint16_t strm_realoutsize;
 	uint16_t strm_pending_add_size;
 	/* my maximum number of retrans of INIT and SEND */

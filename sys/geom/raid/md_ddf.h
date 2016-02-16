@@ -190,7 +190,7 @@ struct ddf_vd_entry {
 #define	DDF_VDE_MORPH		(1 << 3)
 #define	DDF_VDE_DIRTY		(1 << 4)
 	uint8_t			Init_State;
-#define	DDF_VDE_UNINTIALIZED	0x00
+#define	DDF_VDE_UNINITIALIZED	0x00
 #define	DDF_VDE_INIT_QUICK	0x01
 #define	DDF_VDE_INIT_FULL	0x02
 #define	DDF_VDE_INIT_MASK	0x03

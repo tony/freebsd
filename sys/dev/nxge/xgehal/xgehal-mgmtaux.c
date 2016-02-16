@@ -1555,7 +1555,7 @@ xge_hal_status_e xge_hal_aux_device_config_read(xge_hal_device_h devh,
 	        continue;
 
 	    (void) xge_os_sprintf(key, "ring%d_", i);
-	    xge_os_strcpy(key+6, "inital");
+	    xge_os_strcpy(key+6, "initial");
 	    __HAL_AUX_ENTRY(key, ring->initial, "%u");
 	    xge_os_strcpy(key+6, "max");
 	    __HAL_AUX_ENTRY(key, ring->max, "%u");

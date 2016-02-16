@@ -75,7 +75,7 @@
  * An application finds out how many elements an enclosure instance
  * is managing by performing a ENCIOC_GETNELM operation. It then
  * performs a ENCIOC_GETELMMAP to get the map that contains the
- * elment identifiers for all elements (see encioc_element_t below).
+ * element identifiers for all elements (see encioc_element_t below).
  * This information is static.
  * 
  * The application may perform ENCIOC_GETELMSTAT operations to retrieve
@@ -163,7 +163,7 @@ typedef struct encioc_string {
  * Tables 21, 22, and 23
  */
 typedef struct encioc_elm_desc {
-	unsigned int	 elm_idx;       /* IN: elment requested */
+	unsigned int	 elm_idx;       /* IN: element requested */
 	uint16_t	 elm_desc_len; /* IN: buffer size; OUT: bytes written */
 	char		*elm_desc_str; /* IN/OUT: buffer for descriptor data */
 } encioc_elm_desc_t;

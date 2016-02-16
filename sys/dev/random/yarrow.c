@@ -93,10 +93,10 @@ static struct yarrow_state {
 	u_int ys_gengateinterval;	/* Pg */
 	u_int ys_bins;			/* Pt/t */
 	u_int ys_outputblocks;		/* count output blocks for gates */
-	u_int ys_slowoverthresh;	/* slow pool overthreshhold reseed count */
+	u_int ys_slowoverthresh;	/* slow pool overthreshold reseed count */
 	struct ys_pool {
 		u_int ysp_source_bits[ENTROPYSOURCE];	/* estimated bits of entropy per source */
-		u_int ysp_thresh;	/* pool reseed threshhold */
+		u_int ysp_thresh;	/* pool reseed threshold */
 		struct randomdev_hash ysp_hash;	/* accumulated entropy */
 	} ys_pool[RANDOM_YARROW_NPOOLS];/* pool[0] is fast, pool[1] is slow */
 	bool ys_seeded;
@@ -218,7 +218,7 @@ random_yarrow_deinit_alg(void *unused __unused)
 static void
 random_yarrow_process_event(struct harvest_event *event)
 {
-	u_int pl, overthreshhold[RANDOM_YARROW_NPOOLS];
+	u_int pl, overthreshold[RANDOM_YARROW_NPOOLS];
 	enum random_entropy_source src;
 
 	RANDOM_RESEED_LOCK();
@@ -233,19 +233,19 @@ random_yarrow_process_event(struct harvest_event *event)
 	yarrow_state.ys_pool[pl].ysp_source_bits[event->he_source] += event->he_bits;
 	/* Count the over-threshold sources in each pool */
 	for (pl = RANDOM_YARROW_FAST; pl <= RANDOM_YARROW_SLOW; pl++) {
-		overthreshhold[pl] = 0;
+		overthreshold[pl] = 0;
 		for (src = RANDOM_START; src < ENTROPYSOURCE; src++) {
 			if (yarrow_state.ys_pool[pl].ysp_source_bits[src] > yarrow_state.ys_pool[pl].ysp_thresh)
-				overthreshhold[pl]++;
+				overthreshold[pl]++;
 		}
 	}
 	/*
-	 * If enough slow sources are over threshhold, then slow reseed
-	 * else if any fast source over threshhold, then fast reseed.
+	 * If enough slow sources are over threshold, then slow reseed
+	 * else if any fast source over threshold, then fast reseed.
 	 */
-	if (overthreshhold[RANDOM_YARROW_SLOW] >= yarrow_state.ys_slowoverthresh)
+	if (overthreshold[RANDOM_YARROW_SLOW] >= yarrow_state.ys_slowoverthresh)
 		random_yarrow_reseed_internal(RANDOM_YARROW_SLOW);
-	else if (overthreshhold[RANDOM_YARROW_FAST] > 0 && yarrow_state.ys_seeded)
+	else if (overthreshold[RANDOM_YARROW_FAST] > 0 && yarrow_state.ys_seeded)
 		random_yarrow_reseed_internal(RANDOM_YARROW_FAST);
 	explicit_bzero(event, sizeof(*event));
 	RANDOM_RESEED_UNLOCK();

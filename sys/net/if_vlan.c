@@ -873,7 +873,7 @@ vlan_clone_create(struct if_clone *ifc, char *name, size_t len, caddr_t params)
 	 * o specify no parameters and get an unattached device that
 	 *   must be configured separately.
 	 * The first technique is preferred; the latter two are
-	 * supported for backwards compatibilty.
+	 * supported for backwards compatibility.
 	 *
 	 * XXXRW: Note historic use of the word "tag" here.  New ioctls may be
 	 * called for.

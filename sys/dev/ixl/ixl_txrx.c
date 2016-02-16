@@ -34,7 +34,7 @@
 
 /*
 **	IXL driver TX/RX Routines:
-**	    This was seperated to allow usage by
+**	    This was separated to allow usage by
 ** 	    both the BASE and the VF drivers.
 */
 

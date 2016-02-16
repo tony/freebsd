@@ -960,7 +960,7 @@ xge_hal_fifo_dtr_buffer_append(xge_hal_channel_h channelh, xge_hal_dtr_h dtrh,
  * @dtrh: Descriptor handle.
  * @frag_idx: Index of the data buffer in the Txdl list.
  *
- * This API in conjuction with xge_hal_fifo_dtr_buffer_append() prepares
+ * This API in conjunction with xge_hal_fifo_dtr_buffer_append() prepares
  * a descriptor that consists of a single physically contiguous buffer
  * which inturn contains the contents of one or more virtually contiguous
  * buffers received from the upper layer.

@@ -515,9 +515,9 @@ exec_setregs(struct thread *td, struct image_params *imgp, u_long stack)
 	 *	_start(argc, argv, envp, obj, cleanup, ps_strings);
 	 *
 	 * Notes:
-	 *	- obj and cleanup are the auxilliary and termination
+	 *	- obj and cleanup are the auxiliary and termination
 	 *	  vectors.  They are fixed up by ld.elf_so.
-	 *	- ps_strings is a NetBSD extention, and will be
+	 *	- ps_strings is a NetBSD extension, and will be
 	 * 	  ignored by executables which are strictly
 	 *	  compliant with the SVR4 ABI.
 	 *
@@ -539,7 +539,7 @@ exec_setregs(struct thread *td, struct image_params *imgp, u_long stack)
 	tf->fixreg[3] = argc;
 	tf->fixreg[4] = stack + sizeof(register_t);
 	tf->fixreg[5] = stack + (2 + argc)*sizeof(register_t);
-	tf->fixreg[6] = 0;				/* auxillary vector */
+	tf->fixreg[6] = 0;				/* auxiliary vector */
 	tf->fixreg[7] = 0;				/* termination vector */
 	tf->fixreg[8] = (register_t)imgp->ps_strings;	/* NetBSD extension */
 
@@ -573,7 +573,7 @@ ppc32_setregs(struct thread *td, struct image_params *imgp, u_long stack)
 	tf->fixreg[3] = argc;
 	tf->fixreg[4] = stack + sizeof(uint32_t);
 	tf->fixreg[5] = stack + (2 + argc)*sizeof(uint32_t);
-	tf->fixreg[6] = 0;				/* auxillary vector */
+	tf->fixreg[6] = 0;				/* auxiliary vector */
 	tf->fixreg[7] = 0;				/* termination vector */
 	tf->fixreg[8] = (register_t)imgp->ps_strings;	/* NetBSD extension */
 

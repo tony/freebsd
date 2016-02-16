@@ -249,7 +249,7 @@ nexus_init_resources(void)
 		panic("nexus_init_resources drq_rman");
 
 	/*
-	 * However, IO ports and Memory truely are global at this level,
+	 * However, IO ports and Memory truly are global at this level,
 	 * as are APIC interrupts (however many IO APICS there turn out
 	 * to be on large systems..)
 	 */

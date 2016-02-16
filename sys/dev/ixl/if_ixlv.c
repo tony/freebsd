@@ -986,7 +986,7 @@ ixlv_setup_vc(struct ixlv_sc *sc)
 	int error = 0, ret_error = 0, asq_retries = 0;
 	bool send_api_ver_retried = 0;
 
-	/* Need to set these AQ paramters before initializing AQ */
+	/* Need to set these AQ parameters before initializing AQ */
 	hw->aq.num_arq_entries = IXL_AQ_LEN;
 	hw->aq.num_asq_entries = IXL_AQ_LEN;
 	hw->aq.arq_buf_size = IXL_AQ_BUFSZ;

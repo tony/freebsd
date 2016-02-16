@@ -138,11 +138,11 @@ typedef uint32_t DWordIO_t;
 #define AIOPID_NULL -1		    /* no AIOP or channel exists */
 #define AIOPID_0001 0x0001	    /* AIOP release 1 */
 
-#define NULLDEV -1		    /* identifies non-existant device */
-#define NULLCTL -1		    /* identifies non-existant controller */
-#define NULLCTLPTR (CONTROLLER_T *)0 /* identifies non-existant controller */
-#define NULLAIOP -1		    /* identifies non-existant AIOP */
-#define NULLCHAN -1		    /* identifies non-existant channel */
+#define NULLDEV -1		    /* identifies non-existent device */
+#define NULLCTL -1		    /* identifies non-existent controller */
+#define NULLCTLPTR (CONTROLLER_T *)0 /* identifies non-existent controller */
+#define NULLAIOP -1		    /* identifies non-existent AIOP */
+#define NULLCHAN -1		    /* identifies non-existent channel */
 
 /************************************************************************
  Global Register Offsets - Direct Access - Fixed values

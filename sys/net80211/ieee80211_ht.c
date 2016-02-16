@@ -2300,7 +2300,7 @@ bar_timeout(void *arg)
 		 * to make sure we notify the driver that a BAR
 		 * TX did occur and fail.  This gives the driver
 		 * a chance to undo any queue pause that may
-		 * have occured.
+		 * have occurred.
 		 */
 		ic->ic_bar_response(ni, tap, 1);
 		ieee80211_ampdu_stop(ni, tap, IEEE80211_REASON_TIMEOUT);
@@ -2528,7 +2528,7 @@ ht_action_output(struct ieee80211_node *ni, struct mbuf *m)
 /*
  * Send an action management frame.  The arguments are stuff
  * into a frame without inspection; the caller is assumed to
- * prepare them carefully (e.g. based on the aggregation state).
+ * prepare them carefuly (e.g. based on the aggregation state).
  */
 static int
 ht_send_action_ba_addba(struct ieee80211_node *ni,

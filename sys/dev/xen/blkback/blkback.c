@@ -250,7 +250,7 @@ struct xbb_xen_reqlist {
 	uint8_t			*kva;
 
 	/**
-	 * Base, psuedo-physical address, corresponding to the start
+	 * Base, pseudo-physical address, corresponding to the start
 	 * of this request's kva region.
 	 */
 	uint64_t	 	 gnt_base;
@@ -589,7 +589,7 @@ struct xbb_softc {
 	 */
 	vm_offset_t		  kva;
 
-	/** Psuedo-physical address corresponding to kva. */
+	/** Pseudo-physical address corresponding to kva. */
 	uint64_t		  gnt_base_addr;
 
 	/** The size of the global kva pool. */
@@ -619,7 +619,7 @@ struct xbb_softc {
 	 * There are situations where the back and front ends can
 	 * have a different, native abi (e.g. intel x86_64 and
 	 * 32bit x86 domains on the same machine).  The back-end
-	 * always accomodates the front-end's native abi.  That
+	 * always accommodates the front-end's native abi.  That
 	 * value is pulled from the XenStore and recorded here.
 	 */
 	int			  abi;
@@ -700,7 +700,7 @@ struct xbb_softc {
 
 	/**
 	 * Vnode corresponding to the backend device node or file
-	 * we are acessing.
+	 * we are accessing.
 	 */
 	struct vnode		 *vn;
 
@@ -932,7 +932,7 @@ xbb_reqlist_ioaddr(struct xbb_xen_reqlist *reqlist, int pagenr, int sector)
 
 /**
  * Given a page index and 512b sector offset within that page, calculate
- * an offset into the local psuedo-physical address space used to map a
+ * an offset into the local pseudo-physical address space used to map a
  * front-end's request data into a request.
  *
  * \param reqlist The request list structure whose pseudo-physical region
@@ -1478,7 +1478,7 @@ xbb_bio_done(struct bio *bio)
 	/*
 	 * This is a bit imprecise.  With aggregated I/O a single
 	 * request list can contain multiple front-end requests and
-	 * a multiple bios may point to a single request.  By carefully
+	 * a multiple bios may point to a single request.  By carefuly
 	 * walking the request list, we could map residuals and errors
 	 * back to the original front-end request, but the interface
 	 * isn't sufficiently rich for us to properly report the error.
@@ -3062,7 +3062,7 @@ xbb_collect_frontend_info(struct xbb_softc *xbb)
 	 * and the new value is outside of its allowed range.
 	 *
 	 * \note xs_gather() returns on the first encountered error, so
-	 *       we must use independant calls in order to guarantee
+	 *       we must use independent calls in order to guarantee
 	 *       we don't miss information in a sparsly populated front-end
 	 *       tree.
 	 *
@@ -3739,8 +3739,8 @@ xbb_attach(device_t dev)
  * 
  * \note A block back device may be detached at any time in its life-cycle,
  *       including part way through the attach process.  For this reason,
- *       initialization order and the intialization state checks in this
- *       routine must be carefully coupled so that attach time failures
+ *       initialization order and the initialization state checks in this
+ *       routine must be carefuly coupled so that attach time failures
  *       are gracefully handled.
  */
 static int

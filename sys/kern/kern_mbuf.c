@@ -927,7 +927,7 @@ m_getm2(struct mbuf *m, int len, int how, short type, int flags)
  * Configure a provided mbuf to refer to the provided external storage
  * buffer and setup a reference count for said buffer.  If the setting
  * up of the reference count fails, the M_EXT bit will not be set.  If
- * successfull, the M_EXT bit is set in the mbuf's flags.
+ * successful, the M_EXT bit is set in the mbuf's flags.
  *
  * Arguments:
  *    mb     The existing mbuf to which to attach the provided buffer.

@@ -4474,7 +4474,7 @@ int validate_vlan_mac(struct bxe_softc *sc,
 		      struct ecore_vlan_mac_obj *vlan_mac)
 {
 	if (!vlan_mac->get_n_elements) {
-		ECORE_ERR("vlan mac object was not intialized\n");
+		ECORE_ERR("vlan mac object was not initialized\n");
 		return ECORE_INVAL;
 	}
 	return 0;

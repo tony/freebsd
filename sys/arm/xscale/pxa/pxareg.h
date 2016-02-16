@@ -576,7 +576,7 @@ struct pxa_dma_desc {
 #define  CMDAT_WRITE		(1<<3) /* 1=write 0=read operation */
 #define  CMDAT_STREAM_BLOCK	(1<<4) /* stream mode */
 #define  CMDAT_BUSY		(1<<5) /* busy signal is expected */
-#define  CMDAT_INIT		(1<<6) /* preceede command with 80 clocks */
+#define  CMDAT_INIT		(1<<6) /* precede command with 80 clocks */
 #define  CMDAT_MMC_DMA_EN	(1<<7) /* DMA enable */
 #define MMC_RESTO	0x14	/* expected response time out */
 #define MMC_RDTO 	0x18	/* expected data read time out */

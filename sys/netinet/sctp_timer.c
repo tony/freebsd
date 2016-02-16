@@ -187,7 +187,7 @@ sctp_find_alternate_net(struct sctp_tcb *stcb,
 	 * JRS 5/14/07 - If mode is set to 2, use the CMT PF find alternate
 	 * net algorithm. This algorithm chooses the active destination (not
 	 * in PF state) with the largest cwnd value. If all destinations are
-	 * in PF state, unreachable, or unconfirmed, choose the desination
+	 * in PF state, unreachable, or unconfirmed, choose the designation
 	 * that is in PF state with the lowest error count. In case of a
 	 * tie, choose the destination that was most recently active.
 	 */
@@ -1353,7 +1353,7 @@ sctp_audit_stream_queues_for_size(struct sctp_inpcb *inp,
 		}
 	}
 	/* Check to see if some data queued, if so report it */
-	for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+	for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 		if (!TAILQ_EMPTY(&stcb->asoc.strmout[i].outqueue)) {
 			TAILQ_FOREACH(sp, &stcb->asoc.strmout[i].outqueue, next) {
 				if (sp->msg_is_complete)

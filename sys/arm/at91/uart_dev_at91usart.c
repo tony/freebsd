@@ -676,7 +676,7 @@ at91_usart_bus_ipend(struct uart_softc *sc)
 	}
 
 	/*
-	 * Due to the contraints of the DMA engine present in the
+	 * Due to the constraints of the DMA engine present in the
 	 * atmel chip, I can't just say I have a rx interrupt pending
 	 * and do all the work elsewhere.  I need to look at the CSR
 	 * bits right now and do things based on them to avoid races.

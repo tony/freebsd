@@ -268,7 +268,7 @@ typedef struct _IMAGE_SECTION_HEADER {
 #define IMAGE_SCN_ALIGN_64BYTES              0x00700000  //
 
 #define IMAGE_SCN_MEM_DISCARDABLE            0x02000000  // Section can be discarded.
-#define IMAGE_SCN_MEM_NOT_CACHED             0x04000000  // Section is not cachable.
+#define IMAGE_SCN_MEM_NOT_CACHED             0x04000000  // Section is not cacheable.
 #define IMAGE_SCN_MEM_NOT_PAGED              0x08000000  // Section is not pageable.
 #define IMAGE_SCN_MEM_SHARED                 0x10000000  // Section is shareable.
 #define IMAGE_SCN_MEM_EXECUTE                0x20000000  // Section is executable.

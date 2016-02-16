@@ -201,7 +201,7 @@ ncl_getpages(struct vop_getpages_args *ap)
 		} else {
 			/*
 			 * Read operation was short.  If no error
-			 * occured we may have hit a zero-fill
+			 * occurred we may have hit a zero-fill
 			 * section.  We leave valid set to 0, and page
 			 * is freed by vm_page_readahead_finish() if
 			 * its index is not equal to requested, or
@@ -1188,7 +1188,7 @@ again:
 
 		/*
 		 * Get the partial update on the progress made from
-		 * uiomove, if an error occured.
+		 * uiomove, if an error occurred.
 		 */
 		if (error != 0)
 			n = local_resid - uio->uio_resid;
@@ -1256,7 +1256,7 @@ again:
  * interrupted by a signal for an interruptible mount point, return
  * NULL.
  *
- * The caller must carefully deal with the possible B_INVAL state of
+ * The caller must carefuly deal with the possible B_INVAL state of
  * the buffer.  ncl_doio() clears B_INVAL (and ncl_asyncio() clears it
  * indirectly), so synchronous reads can be issued without worrying about
  * the B_INVAL state.  We have to be a little more careful when dealing

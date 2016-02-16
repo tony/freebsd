@@ -2360,7 +2360,7 @@ sctp_process_data(struct mbuf **mm, int iphlen, int *offset, int length,
 			/* copy the length and free up the old */
 			SCTP_BUF_LEN(m) = SCTP_BUF_LEN((*mm));
 			sctp_m_freem(*mm);
-			/* sucess, back copy */
+			/* success, back copy */
 			*mm = m;
 		} else {
 			/* We are in trouble in the mbuf world .. yikes */
@@ -4505,7 +4505,7 @@ sctp_handle_sack(struct mbuf *m, int offset_seg, int offset_dup,
 	}
 	if (TAILQ_EMPTY(&asoc->sent_queue) && (asoc->total_flight > 0)) {
 #ifdef INVARIANTS
-		panic("Warning flight size is postive and should be 0");
+		panic("Warning flight size is positive and should be 0");
 #else
 		SCTP_PRINTF("Warning flight size incorrect should be 0 is %d\n",
 		    asoc->total_flight);

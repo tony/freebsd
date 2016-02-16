@@ -42,7 +42,7 @@
  * - Real random etheraddrs that are checked to be uniquish; we would need
  *   to re-do them in case we move the interface between network stacks
  *   in a private if_reassign function.
- *   In case we bridge to a real interface/network or between indepedent
+ *   In case we bridge to a real interface/network or between independent
  *   epairs on multiple stacks/machines, we may need this.
  *   For now let the user handle that case.
  */
@@ -160,12 +160,12 @@ STAILQ_HEAD(eid_list, epair_ifp_drain);
 
 #ifdef INVARIANTS
 #define	EPAIR_REFCOUNT_INIT(r, v)	refcount_init((r), (v))
-#define	EPAIR_REFCOUNT_AQUIRE(r)	refcount_acquire((r))
+#define	EPAIR_REFCOUNT_ACQUIRE(r)	refcount_acquire((r))
 #define	EPAIR_REFCOUNT_RELEASE(r)	refcount_release((r))
 #define	EPAIR_REFCOUNT_ASSERT(a, p)	KASSERT(a, p)
 #else
 #define	EPAIR_REFCOUNT_INIT(r, v)
-#define	EPAIR_REFCOUNT_AQUIRE(r)
+#define	EPAIR_REFCOUNT_ACQUIRE(r)
 #define	EPAIR_REFCOUNT_RELEASE(r)
 #define	EPAIR_REFCOUNT_ASSERT(a, p)
 #endif
@@ -376,7 +376,7 @@ epair_add_ifp_for_draining(struct ifnet *ifp)
 
 	elm->ifp = ifp;
 	/* Add a reference for the ifp pointer on the list. */
-	EPAIR_REFCOUNT_AQUIRE(&sc->refcount);
+	EPAIR_REFCOUNT_ACQUIRE(&sc->refcount);
 	STAILQ_INSERT_TAIL(&epair_dpcpu->epair_ifp_drain_list, elm, ifp_next);
 
 	return (0);
@@ -430,7 +430,7 @@ epair_start_locked(struct ifnet *ifp)
 		 * Add a reference so the interface cannot go while the
 		 * packet is in transit as we rely on rcvif to stay valid.
 		 */
-		EPAIR_REFCOUNT_AQUIRE(&sc->refcount);
+		EPAIR_REFCOUNT_ACQUIRE(&sc->refcount);
 		m->m_pkthdr.rcvif = oifp;
 		CURVNET_SET_QUIET(oifp->if_vnet);
 		error = netisr_queue(NETISR_EPAIR, m);
@@ -552,7 +552,7 @@ epair_transmit_locked(struct ifnet *ifp, struct mbuf *m)
 	 * Add a reference so the interface cannot go while the
 	 * packet is in transit as we rely on rcvif to stay valid.
 	 */
-	EPAIR_REFCOUNT_AQUIRE(&sc->refcount);
+	EPAIR_REFCOUNT_ACQUIRE(&sc->refcount);
 	m->m_pkthdr.rcvif = oifp;
 	CURVNET_SET_QUIET(oifp->if_vnet);
 	error = netisr_queue(NETISR_EPAIR, m);

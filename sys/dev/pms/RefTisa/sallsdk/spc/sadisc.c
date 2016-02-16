@@ -384,7 +384,7 @@ GLOBAL bit32 saRegisterNewDevice(
   }
   else
   {
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     saLlistIORemove(&(saRoot->freeIORequests), &(pRequest->linkNode));
   }
 

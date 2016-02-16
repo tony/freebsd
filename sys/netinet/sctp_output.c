@@ -3071,7 +3071,7 @@ bound_all_plan_b:
 		    ifn, num_preferred);
 		if (num_preferred == 0) {
 			/* None on this interface. */
-			SCTPDBG(SCTP_DEBUG_OUTPUT2, "No prefered -- skipping to next\n");
+			SCTPDBG(SCTP_DEBUG_OUTPUT2, "No preferred -- skipping to next\n");
 			continue;
 		}
 		SCTPDBG(SCTP_DEBUG_OUTPUT2,
@@ -3612,7 +3612,7 @@ sctp_process_cmsgs_for_init(struct sctp_tcb *stcb, struct mbuf *control, int *er
 					stcb->asoc.max_inbound_streams = initmsg.sinit_max_instreams;
 				if (initmsg.sinit_max_init_timeo)
 					stcb->asoc.initial_init_rto_max = initmsg.sinit_max_init_timeo;
-				if (stcb->asoc.streamoutcnt < stcb->asoc.pre_open_streams) {
+				if (stcb->asoc.streamountcnt < stcb->asoc.pre_open_streams) {
 					struct sctp_stream_out *tmp_str;
 					unsigned int i;
 
@@ -3623,7 +3623,7 @@ sctp_process_cmsgs_for_init(struct sctp_tcb *stcb, struct mbuf *control, int *er
 
 					/* Default is NOT correct */
 					SCTPDBG(SCTP_DEBUG_OUTPUT1, "Ok, default:%d pre_open:%d\n",
-					    stcb->asoc.streamoutcnt, stcb->asoc.pre_open_streams);
+					    stcb->asoc.streamountcnt, stcb->asoc.pre_open_streams);
 					SCTP_TCB_UNLOCK(stcb);
 					SCTP_MALLOC(tmp_str,
 					    struct sctp_stream_out *,
@@ -3633,11 +3633,11 @@ sctp_process_cmsgs_for_init(struct sctp_tcb *stcb, struct mbuf *control, int *er
 					if (tmp_str != NULL) {
 						SCTP_FREE(stcb->asoc.strmout, SCTP_M_STRMO);
 						stcb->asoc.strmout = tmp_str;
-						stcb->asoc.strm_realoutsize = stcb->asoc.streamoutcnt = stcb->asoc.pre_open_streams;
+						stcb->asoc.strm_realoutsize = stcb->asoc.streamountcnt = stcb->asoc.pre_open_streams;
 					} else {
-						stcb->asoc.pre_open_streams = stcb->asoc.streamoutcnt;
+						stcb->asoc.pre_open_streams = stcb->asoc.streamountcnt;
 					}
-					for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+					for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 						TAILQ_INIT(&stcb->asoc.strmout[i].outqueue);
 						stcb->asoc.strmout[i].chunks_on_queues = 0;
 						stcb->asoc.strmout[i].next_sequence_send = 0;
@@ -5381,7 +5381,7 @@ sctp_are_there_new_addresses(struct sctp_association *asoc,
 			}
 		}
 		if (fnd == 0) {
-			/* New address added! no need to look futher. */
+			/* New address added! no need to look further. */
 			return (1);
 		}
 	}
@@ -5622,7 +5622,7 @@ do_a_abort:
 	stc.peerport = sh->src_port;
 
 	/*
-	 * If we wanted to honor cookie life extentions, we would add to
+	 * If we wanted to honor cookie life extensions, we would add to
 	 * stc.cookie_life. For now we should NOT honor any extension
 	 */
 	stc.site_scope = stc.local_scope = stc.loopback_scope = 0;
@@ -5889,8 +5889,8 @@ do_a_abort:
 	his_limit = ntohs(init_chk->init.num_inbound_streams);
 	/* choose what I want */
 	if (asoc != NULL) {
-		if (asoc->streamoutcnt > asoc->pre_open_streams) {
-			i_want = asoc->streamoutcnt;
+		if (asoc->streamountcnt > asoc->pre_open_streams) {
+			i_want = asoc->streamountcnt;
 		} else {
 			i_want = asoc->pre_open_streams;
 		}
@@ -6326,7 +6326,7 @@ sctp_msg_append(struct sctp_tcb *stcb,
 	 * Given an mbuf chain, put it into the association send queue and
 	 * place it on the wheel
 	 */
-	if (srcv->sinfo_stream >= stcb->asoc.streamoutcnt) {
+	if (srcv->sinfo_stream >= stcb->asoc.streamountcnt) {
 		/* Invalid stream number */
 		SCTP_LTRACE_ERR_RET_PKT(m, NULL, stcb, net, SCTP_FROM_SCTP_OUTPUT, EINVAL);
 		error = EINVAL;
@@ -7764,7 +7764,7 @@ sctp_move_chunks_from_net(struct sctp_tcb *stcb, struct sctp_nets *net)
 		return;
 	}
 	asoc = &stcb->asoc;
-	for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+	for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 		TAILQ_FOREACH(sp, &stcb->asoc.strmout[i].outqueue, next) {
 			if (sp->net == net) {
 				sctp_free_remote_addr(sp->net);
@@ -11606,7 +11606,7 @@ sctp_add_stream_reset_out(struct sctp_tcb *stcb, struct sctp_tmit_chunk *chk,
 	/* get to new offset for the param. */
 	req_out = (struct sctp_stream_reset_out_request *)((caddr_t)ch + len);
 	/* now how long will this param be? */
-	for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+	for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 		if ((stcb->asoc.strmout[i].state == SCTP_STREAM_RESET_PENDING) &&
 		    (stcb->asoc.strmout[i].chunks_on_queues == 0) &&
 		    TAILQ_EMPTY(&stcb->asoc.strmout[i].outqueue)) {
@@ -11616,7 +11616,7 @@ sctp_add_stream_reset_out(struct sctp_tcb *stcb, struct sctp_tmit_chunk *chk,
 	if (number_entries == 0) {
 		return (0);
 	}
-	if (number_entries == stcb->asoc.streamoutcnt) {
+	if (number_entries == stcb->asoc.streamountcnt) {
 		number_entries = 0;
 	}
 	if (number_entries > SCTP_MAX_STREAMS_AT_ONCE_RESET) {
@@ -11630,7 +11630,7 @@ sctp_add_stream_reset_out(struct sctp_tcb *stcb, struct sctp_tmit_chunk *chk,
 	req_out->send_reset_at_tsn = htonl(last_sent);
 	at = 0;
 	if (number_entries) {
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			if ((stcb->asoc.strmout[i].state == SCTP_STREAM_RESET_PENDING) &&
 			    (stcb->asoc.strmout[i].chunks_on_queues == 0) &&
 			    TAILQ_EMPTY(&stcb->asoc.strmout[i].outqueue)) {
@@ -11643,7 +11643,7 @@ sctp_add_stream_reset_out(struct sctp_tcb *stcb, struct sctp_tmit_chunk *chk,
 			}
 		}
 	} else {
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			stcb->asoc.strmout[i].state = SCTP_STREAM_RESET_IN_FLIGHT;
 		}
 	}
@@ -12085,7 +12085,7 @@ sctp_send_str_reset_req(struct sctp_tcb *stcb,
 		}
 	}
 	if ((add_stream & 1) &&
-	    ((stcb->asoc.strm_realoutsize - stcb->asoc.streamoutcnt) < adding_o)) {
+	    ((stcb->asoc.strm_realoutsize - stcb->asoc.streamountcnt) < adding_o)) {
 		/* Need to allocate more */
 		struct sctp_stream_out *oldstream;
 		struct sctp_stream_queue_pending *sp, *nsp;
@@ -12099,7 +12099,7 @@ sctp_send_str_reset_req(struct sctp_tcb *stcb,
 		oldstream = stcb->asoc.strmout;
 		/* get some more */
 		SCTP_MALLOC(stcb->asoc.strmout, struct sctp_stream_out *,
-		    (stcb->asoc.streamoutcnt + adding_o) * sizeof(struct sctp_stream_out),
+		    (stcb->asoc.streamountcnt + adding_o) * sizeof(struct sctp_stream_out),
 		    SCTP_M_STRMO);
 		if (stcb->asoc.strmout == NULL) {
 			uint8_t x;
@@ -12116,7 +12116,7 @@ sctp_send_str_reset_req(struct sctp_tcb *stcb,
 		 */
 		SCTP_TCB_SEND_LOCK(stcb);
 		stcb->asoc.ss_functions.sctp_ss_clear(stcb, &stcb->asoc, 0, 1);
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			TAILQ_INIT(&stcb->asoc.strmout[i].outqueue);
 			stcb->asoc.strmout[i].chunks_on_queues = oldstream[i].chunks_on_queues;
 			stcb->asoc.strmout[i].next_sequence_send = oldstream[i].next_sequence_send;
@@ -12139,7 +12139,7 @@ sctp_send_str_reset_req(struct sctp_tcb *stcb,
 		}
 		/* now the new streams */
 		stcb->asoc.ss_functions.sctp_ss_init(stcb, &stcb->asoc, 1);
-		for (i = stcb->asoc.streamoutcnt; i < (stcb->asoc.streamoutcnt + adding_o); i++) {
+		for (i = stcb->asoc.streamountcnt; i < (stcb->asoc.streamountcnt + adding_o); i++) {
 			TAILQ_INIT(&stcb->asoc.strmout[i].outqueue);
 			stcb->asoc.strmout[i].chunks_on_queues = 0;
 #if defined(SCTP_DETAILED_STR_STATS)
@@ -12157,7 +12157,7 @@ sctp_send_str_reset_req(struct sctp_tcb *stcb,
 			stcb->asoc.ss_functions.sctp_ss_init_stream(&stcb->asoc.strmout[i], NULL);
 			stcb->asoc.strmout[i].state = SCTP_STREAM_CLOSED;
 		}
-		stcb->asoc.strm_realoutsize = stcb->asoc.streamoutcnt + adding_o;
+		stcb->asoc.strm_realoutsize = stcb->asoc.streamountcnt + adding_o;
 		SCTP_FREE(oldstream, SCTP_M_STRMO);
 		SCTP_TCB_SEND_UNLOCK(stcb);
 	}
@@ -12631,8 +12631,8 @@ sctp_lower_sosend(struct socket *so,
 			if ((sinfo_flags & SCTP_ABORT) ||
 			    ((sinfo_flags & SCTP_EOF) && (sndlen == 0))) {
 				/*-
-				 * User asks to abort a non-existant assoc,
-				 * or EOF a non-existant assoc with no data
+				 * User asks to abort a non-existent assoc,
+				 * or EOF a non-existent assoc with no data
 				 */
 				SCTP_LTRACE_ERR_RET(inp, stcb, net, SCTP_FROM_SCTP_OUTPUT, ENOENT);
 				error = ENOENT;
@@ -12770,7 +12770,7 @@ sctp_lower_sosend(struct socket *so,
 		create_lock_applied = 0;
 	}
 	/* Is the stream no. valid? */
-	if (srcv->sinfo_stream >= asoc->streamoutcnt) {
+	if (srcv->sinfo_stream >= asoc->streamountcnt) {
 		/* Invalid stream number */
 		SCTP_LTRACE_ERR_RET(inp, stcb, net, SCTP_FROM_SCTP_OUTPUT, EINVAL);
 		error = EINVAL;

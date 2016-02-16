@@ -31,7 +31,7 @@
 __FBSDID("$FreeBSD$");
 
 /*
- * dpt_scsi.c: SCSI dependant code for the DPT driver
+ * dpt_scsi.c: SCSI dependent code for the DPT driver
  *
  * credits:	Assisted by Mike Neuffer in the early low level DPT code
  *		Thanx to Mark Salyzyn of DPT for his assistance.
@@ -568,7 +568,7 @@ dpt_get_conf(dpt_softc_t *dpt, dpt_ccb_t *dccb, u_int32_t dccb_busaddr,
 	status = dpt_inb(dpt, HA_RSTATUS);
 
 	/*
-	 * Check the status carefully.  Return only if the
+	 * Check the status carefuly.  Return only if the
 	 * command was successful.
 	 */
 	if (((status & HA_SERROR) == 0)
@@ -1878,7 +1878,7 @@ dpt_reset_hba(dpt_softc_t *dpt)
 	ccb->cp_msg[0] = HA_IDENTIFY_MSG | HA_DISCO_RECO;
 	ccb->cp_scsi_cmd = 0;  /* Should be ignored */
 
-	/* Lock up the submitted queue.  We are very persistant here */
+	/* Lock up the submitted queue.  We are very persistent here */
 	while (dpt->queue_status & DPT_SUBMITTED_QUEUE_ACTIVE) {
 		DELAY(100);
 	}

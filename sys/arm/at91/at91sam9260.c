@@ -170,7 +170,7 @@ at91_clock_init(void)
 	clk->pmc_mask  = PMC_SCER_UHP_SAM9;
 	at91_pmc_clock_deref(clk);
 
-	/* Each SOC has different PLL contraints */
+	/* Each SOC has different PLL constraints */
 	clk = at91_pmc_clock_ref("plla");
 	clk->pll_min_in    = SAM9260_PLL_A_MIN_IN_FREQ;		/*   1 MHz */
 	clk->pll_max_in    = SAM9260_PLL_A_MAX_IN_FREQ;		/*  32 MHz */
@@ -185,7 +185,7 @@ at91_clock_init(void)
 
 	/*
 	 * Fudge MAX pll in frequence down below 3.0 MHz to ensure
-	 * PMC alogrithm choose the divisor that causes the input clock
+	 * PMC algorithm choose the divisor that causes the input clock
 	 * to be near the optimal 2 MHz per datasheet.  We know
 	 * we are going to be using this for the USB clock at 96 MHz.
 	 * Causes no extra frequency deviation for all recomended crystal

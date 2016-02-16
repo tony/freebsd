@@ -79,7 +79,7 @@ keys_load(struct keys *keys, const struct pdu *pdu)
 	memcpy(keys->keys_data, pdu->pdu_data, keys->keys_data_len);
 
 	/*
-	 * XXX: Review this carefully.
+	 * XXX: Review this carefuly.
 	 */
 	pair = keys->keys_data;
 	for (i = 0;; i++) {

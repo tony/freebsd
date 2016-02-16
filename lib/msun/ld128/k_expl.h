@@ -64,7 +64,7 @@ static const long double
  * |exp(x) - p(x)| < 2**-124.9
  * (0.002708 is ln2/(2*INTERVALS) rounded up a little).
  *
- * XXX the coeffs aren't very carefully rounded, and I get 3.6 more bits.
+ * XXX the coeffs aren't very carefuly rounded, and I get 3.6 more bits.
  */
 A2  =  0.5,
 A3  =  1.66666666666666666666666666651085500e-1L,

@@ -246,7 +246,7 @@ GLOBAL agsaTimerDesc_t *siTimerAdd(
   /* (2) Get a free timer */
   pTimer = (agsaTimerDesc_t *) saLlistGetHead(&(saRoot->freeTimers));
 
-  /* (3) If the timer is availble  */
+  /* (3) If the timer is available  */
   if ( agNULL != pTimer )
   {
     saLlistRemove(&(saRoot->freeTimers), &(pTimer->linkNode));

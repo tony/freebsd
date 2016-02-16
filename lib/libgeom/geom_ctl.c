@@ -46,7 +46,7 @@
 #include <libgeom.h>
 
 /* 
- * Global pointer to a string that is used to avoid an errorneous free in
+ * Global pointer to a string that is used to avoid an erroneous free in
  * gctl_free.
  */
 static char nomemmsg[] = "Could not allocate memory";

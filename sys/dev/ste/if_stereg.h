@@ -412,7 +412,7 @@ struct ste_hw_stats {
 	uint32_t		tx_single_colls;
 	uint32_t		tx_multi_colls;
 	uint32_t		tx_late_colls;
-	uint32_t		tx_frames_defered;
+	uint32_t		tx_frames_deferred;
 	uint32_t		tx_excess_defers;
 	uint32_t		tx_abort;
 };

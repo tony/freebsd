@@ -271,7 +271,7 @@ main(int argc, char **argv)
 		jailparam_import(&params[0], argv[0]);
 		for (i = 1; i < argc; i++) {
 			for (str = argv[i]; *str != '=' && *str != 0; str++) {
-				/* Do nothing - search for '=' delimeter. */
+				/* Do nothing - search for '=' delimiter. */
 			}
 			if (*str == 0)
 				break;

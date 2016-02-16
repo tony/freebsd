@@ -69,7 +69,7 @@ __FBSDID("$FreeBSD$");
 
 /**
  * @brief The UF buffer address table size must be programmed to a power
- *        of 2.  Find the first power of 2 that is equal to or greater then
+ *        of 2.  Find the first power of 2 that is equal to or greater than
  *        the number of unsolicited frame buffers to be utilized.
  *
  * @param[in,out] uf_control This parameter specifies the UF control

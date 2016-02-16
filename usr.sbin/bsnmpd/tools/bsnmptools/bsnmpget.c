@@ -840,7 +840,7 @@ parse_pair_numoid_val(char *str, struct snmp_value *snmp_val)
 	return (1);
 }
 
-/* XXX-BZ aruments should be swapped. */
+/* XXX-BZ arguments should be swapped. */
 static int32_t
 parse_syntax_strval(struct snmp_toolinfo *snmptoolctx, char *str,
     struct snmp_object *object)

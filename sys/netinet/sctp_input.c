@@ -236,7 +236,7 @@ sctp_is_there_unsent_data(struct sctp_tcb *stcb, int so_locked
 	SCTP_TCB_SEND_LOCK(stcb);
 	if (!stcb->asoc.ss_functions.sctp_ss_is_empty(stcb, asoc)) {
 		/* Check to see if some data queued */
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			/* sa_ignore FREED_MEMORY */
 			sp = TAILQ_FIRST(&stcb->asoc.strmout[i].outqueue);
 			if (sp == NULL) {
@@ -364,8 +364,8 @@ sctp_process_init(struct sctp_init_chunk *cp, struct sctp_tcb *stcb)
 		asoc->pre_open_streams = newcnt;
 	}
 	SCTP_TCB_SEND_UNLOCK(stcb);
-	asoc->streamoutcnt = asoc->pre_open_streams;
-	for (i = 0; i < asoc->streamoutcnt; i++) {
+	asoc->streamountcnt = asoc->pre_open_streams;
+	for (i = 0; i < asoc->streamountcnt; i++) {
 		asoc->strmout[i].state = SCTP_STREAM_OPEN;
 	}
 	/* EY - nr_sack: initialize highest tsn in nr_mapping_array */
@@ -620,7 +620,7 @@ sctp_handle_heartbeat_ack(struct sctp_heartbeat_chunk *cp,
 			if (f_net != r_net) {
 				/*
 				 * first one on the list is NOT the primary
-				 * sctp_cmpaddr() is much more efficent if
+				 * sctp_cmpaddr() is much more efficient if
 				 * the primary is the first on the list,
 				 * make it so.
 				 */
@@ -1239,7 +1239,7 @@ sctp_handle_error(struct sctp_chunkhdr *ch,
 			 * (or IPv4 for that matter) it does not matter. If
 			 * they don't support that type of address, they can
 			 * NOT possibly get that packet type... i.e. with no
-			 * IPv6 you can't recieve a IPv6 packet. so we can
+			 * IPv6 you can't receive a IPv6 packet. so we can
 			 * safely ignore this one. If we ever added support
 			 * for HOSTNAME Addresses, then we would need to do
 			 * something here.
@@ -1940,7 +1940,7 @@ sctp_process_cookie_existing(struct mbuf *m, int iphlen, int offset,
 		SCTP_TCB_SEND_LOCK(stcb);
 
 		sctp_report_all_outbound(stcb, 0, 1, SCTP_SO_LOCKED);
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			stcb->asoc.strmout[i].chunks_on_queues = 0;
 #if defined(SCTP_DETAILED_STR_STATS)
 			for (j = 0; j < SCTP_PR_SCTP_MAX + 1; j++) {
@@ -3503,14 +3503,14 @@ sctp_reset_out_streams(struct sctp_tcb *stcb, uint32_t number_entries, uint16_t 
 	if (number_entries > 0) {
 		for (i = 0; i < number_entries; i++) {
 			temp = ntohs(list[i]);
-			if (temp >= stcb->asoc.streamoutcnt) {
+			if (temp >= stcb->asoc.streamountcnt) {
 				/* no such stream */
 				continue;
 			}
 			stcb->asoc.strmout[temp].next_sequence_send = 0;
 		}
 	} else {
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			stcb->asoc.strmout[i].next_sequence_send = 0;
 		}
 	}
@@ -3526,14 +3526,14 @@ sctp_reset_clear_pending(struct sctp_tcb *stcb, uint32_t number_entries, uint16_
 	if (number_entries > 0) {
 		for (i = 0; i < number_entries; i++) {
 			temp = ntohs(list[i]);
-			if (temp >= stcb->asoc.streamoutcnt) {
+			if (temp >= stcb->asoc.streamountcnt) {
 				/* no such stream */
 				continue;
 			}
 			stcb->asoc.strmout[temp].state = SCTP_STREAM_OPEN;
 		}
 	} else {
-		for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+		for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 			stcb->asoc.strmout[i].state = SCTP_STREAM_OPEN;
 		}
 	}
@@ -3681,9 +3681,9 @@ sctp_handle_stream_reset_response(struct sctp_tcb *stcb,
 				int num_stream;
 
 				num_stream = stcb->asoc.strm_pending_add_size;
-				if (num_stream > (stcb->asoc.strm_realoutsize - stcb->asoc.streamoutcnt)) {
+				if (num_stream > (stcb->asoc.strm_realoutsize - stcb->asoc.streamountcnt)) {
 					/* TSNH */
-					num_stream = stcb->asoc.strm_realoutsize - stcb->asoc.streamoutcnt;
+					num_stream = stcb->asoc.strm_realoutsize - stcb->asoc.streamountcnt;
 				}
 				stcb->asoc.strm_pending_add_size = 0;
 				if (asoc->stream_reset_outstanding)
@@ -3692,26 +3692,26 @@ sctp_handle_stream_reset_response(struct sctp_tcb *stcb,
 					/* Put the new streams into effect */
 					int i;
 
-					for (i = asoc->streamoutcnt; i < (asoc->streamoutcnt + num_stream); i++) {
+					for (i = asoc->streamountcnt; i < (asoc->streamountcnt + num_stream); i++) {
 						asoc->strmout[i].state = SCTP_STREAM_OPEN;
 					}
-					asoc->streamoutcnt += num_stream;
-					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt, 0);
+					asoc->streamountcnt += num_stream;
+					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt, 0);
 				} else if (action == SCTP_STREAM_RESET_RESULT_DENIED) {
-					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt,
+					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt,
 					    SCTP_STREAM_CHANGE_DENIED);
 				} else {
-					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt,
+					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt,
 					    SCTP_STREAM_CHANGE_FAILED);
 				}
 			} else if (type == SCTP_STR_RESET_ADD_IN_STREAMS) {
 				if (asoc->stream_reset_outstanding)
 					asoc->stream_reset_outstanding--;
 				if (action == SCTP_STREAM_RESET_RESULT_DENIED) {
-					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt,
+					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt,
 					    SCTP_STREAM_CHANGE_DENIED);
 				} else if (action != SCTP_STREAM_RESET_RESULT_PERFORMED) {
-					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt,
+					sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt,
 					    SCTP_STREAM_CHANGE_FAILED);
 				}
 			} else if (type == SCTP_STR_RESET_TSN_REQUEST) {
@@ -3808,7 +3808,7 @@ sctp_handle_str_reset_request_in(struct sctp_tcb *stcb,
 			if (number_entries) {
 				for (i = 0; i < number_entries; i++) {
 					temp = ntohs(req->list_of_streams[i]);
-					if (temp >= stcb->asoc.streamoutcnt) {
+					if (temp >= stcb->asoc.streamountcnt) {
 						asoc->last_reset_action[0] = SCTP_STREAM_RESET_RESULT_DENIED;
 						goto bad_boy;
 					}
@@ -3821,7 +3821,7 @@ sctp_handle_str_reset_request_in(struct sctp_tcb *stcb,
 				}
 			} else {
 				/* Its all */
-				for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+				for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 					if (stcb->asoc.strmout[i].state == SCTP_STREAM_OPEN)
 						stcb->asoc.strmout[i].state = SCTP_STREAM_RESET_PENDING;
 				}
@@ -4049,7 +4049,7 @@ sctp_handle_str_reset_add_strm(struct sctp_tcb *stcb, struct sctp_tmit_chunk *ch
 			/* update the size */
 			stcb->asoc.streamincnt = num_stream;
 			stcb->asoc.last_reset_action[0] = SCTP_STREAM_RESET_RESULT_PERFORMED;
-			sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamoutcnt, 0);
+			sctp_notify_stream_reset_add(stcb, stcb->asoc.streamincnt, stcb->asoc.streamountcnt, 0);
 		}
 		sctp_add_stream_reset_result(chk, seq, asoc->last_reset_action[0]);
 		asoc->str_reset_seq_in++;
@@ -4098,7 +4098,7 @@ sctp_handle_str_reset_add_out_strm(struct sctp_tcb *stcb, struct sctp_tmit_chunk
 			/* Ok, we can do that :-) */
 			int mychk;
 
-			mychk = stcb->asoc.streamoutcnt;
+			mychk = stcb->asoc.streamountcnt;
 			mychk += num_stream;
 			if (mychk < 0x10000) {
 				stcb->asoc.last_reset_action[0] = SCTP_STREAM_RESET_RESULT_PERFORMED;

@@ -230,7 +230,7 @@ __FBSDID("$FreeBSD$");
 #define SCTP_LOG_MAX_TYPES 124
 /*
  * To turn on various logging, you must first enable 'options KTR' and
- * you might want to bump the entires 'options KTR_ENTRIES=80000'.
+ * you might want to bump the entries 'options KTR_ENTRIES=80000'.
  * To get something to log you define one of the logging defines.
  * (see LINT).
  *
@@ -511,7 +511,7 @@ __FBSDID("$FreeBSD$");
 /* Maximum the mapping array will  grow to (TSN mapping array) */
 #define SCTP_MAPPING_ARRAY	512
 
-/* size of the inital malloc on the mapping array */
+/* size of the initial malloc on the mapping array */
 #define SCTP_INITIAL_MAPPING_ARRAY  16
 /* how much we grow the mapping array each call */
 #define SCTP_MAPPING_ARRAY_INCR     32

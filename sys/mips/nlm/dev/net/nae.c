@@ -342,7 +342,7 @@ nlm_setup_freein_fifo_cfg(uint64_t nae_base, struct nae_port_config *cfg)
 int
 nlm_get_flow_mask(int num_ports)
 {
-	const int max_bits = 5; /* upto 32 ports */
+	const int max_bits = 5; /* up to 32 ports */
 	int i;
 
 	/* Compute the number of bits to needed to
@@ -1089,7 +1089,7 @@ nlm_enable_hardware_parser(uint64_t nae_base)
 	nlm_setup_l3ctable_even(nae_base, 12, 0, 0, 9, 1, 0xc021);
 	/* LCP packet consists of 1 byte of code, 1 byte of
 	 * identifier and two bytes of length followed by
-	 * data (upto length bytes).
+	 * data (up to length bytes).
 	 * We extract 4 bytes from start of packet
 	 */
 	nlm_setup_l3ctable_odd(nae_base, 12, 0, 4, 0, 0, 0, 0);

@@ -853,7 +853,7 @@ verify_krb_v5_tgt(krb5_context context, krb5_ccache ccache,
 	 * principals, including at least the host principal and the PAM
 	 * service principal.  The host principal is preferred because access
 	 * to that key is generally sufficient to compromise root, while the
-	 * service key for this PAM service may be less carefully guarded.
+	 * service key for this PAM service may be less carefuly guarded.
 	 * It is important to check the keytab first before the KDC so we do
 	 * not get spoofed by a fake KDC.
 	 */

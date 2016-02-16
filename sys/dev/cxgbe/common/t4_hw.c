@@ -1589,7 +1589,7 @@ int t4_read_cim_obq(struct adapter *adap, unsigned int qid, u32 *data, size_t n)
 		     V_QUENUMSELECT(qid));
 	v = t4_read_reg(adap, A_CIM_QUEUE_CONFIG_CTRL);
 
-	addr = G_CIMQBASE(v) * 64;    /* muliple of 256 -> muliple of 4 */
+	addr = G_CIMQBASE(v) * 64;    /* multiple of 256 -> multiple of 4 */
 	nwords = G_CIMQSIZE(v) * 64;  /* same */
 	if (n > nwords)
 		n = nwords;
@@ -1948,7 +1948,7 @@ struct intr_info {
  *
  *	A table driven interrupt handler that applies a set of masks to an
  *	interrupt status word and performs the corresponding actions if the
- *	interrupts described by the mask have occured.  The actions include
+ *	interrupts described by the mask have occurred.  The actions include
  *	optionally emitting a warning or alert message.  The table is terminated
  *	by an entry specifying mask 0.  Returns the number of fatal interrupt
  *	conditions.
@@ -3134,7 +3134,7 @@ static void refresh_vlan_pri_map(struct adapter *adap)
 
 	/*
 	 * If TP_INGRESS_CONFIG.VNID == 0, then TP_VLAN_PRI_MAP.VNIC_ID
-	 * represents the presense of an Outer VLAN instead of a VNIC ID.
+	 * represents the presence of an Outer VLAN instead of a VNIC ID.
 	 */
 	if ((adap->params.tp.ingress_config & F_VNIC) == 0)
 		adap->params.tp.vnic_shift = -1;

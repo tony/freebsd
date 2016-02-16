@@ -575,9 +575,9 @@ ns8250_bus_getsig(struct uart_softc *sc)
 	 * when capturing PPS pulses which are too narrow for software detection
 	 * to see the edges.  Hardware delta for RI doesn't work like the
 	 * others, so always use software for it.  Other threads may be changing
-	 * other (non-MSR) bits in sc_hwsig, so loop until it can succesfully
+	 * other (non-MSR) bits in sc_hwsig, so loop until it can successfully
 	 * update without other changes happening.  Note that the SIGCHGxx()
-	 * macros carefully preserve the delta bits when we have to loop several
+	 * macros carefuly preserve the delta bits when we have to loop several
 	 * times and a signal transitions between iterations.
 	 */
 	do {

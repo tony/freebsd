@@ -103,7 +103,7 @@ ppb_1284_get_state(device_t bus)
 /*
  * ppb_1284_set_state()
  *
- * Change IEEE1284 state if no error occured
+ * Change IEEE1284 state if no error occurred
  */
 int
 ppb_1284_set_state(device_t bus, int state)
@@ -825,7 +825,7 @@ ppb_1284_terminate(device_t bus)
 #endif
 
 	/* do not reset error here to keep the error that
-	 * may occured before the ppb_1284_terminate() call */
+	 * may occurred before the ppb_1284_terminate() call */
 	ppb_1284_set_state(bus, PPB_TERMINATION);
 
 #ifdef PERIPH_1284

@@ -582,7 +582,7 @@ struct oce_mq_sge {
 };
 
 /*
- * payload can contain an SGL or an embedded array of upto 59 dwords
+ * payload can contain an SGL or an embedded array of up to 59 dwords
  */
 struct oce_mbx_payload {
 	union {

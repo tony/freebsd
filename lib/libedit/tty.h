@@ -435,7 +435,7 @@
 #define	C_SH(A)		((unsigned int)(1 << (A)))
 
 /*
- * Terminal dependend data structures
+ * Terminal dependent data structures
  */
 #define	EX_IO	0	/* while we are executing	*/
 #define	ED_IO	1	/* while we are editing		*/

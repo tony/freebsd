@@ -2897,7 +2897,7 @@ WaitLonger:
  *  \param config   Pointer to Configuration Table
  *
  * Return:
- *         AGSA_RC_SUCCESS if read the configuration table from SPC sucessful
+ *         AGSA_RC_SUCCESS if read the configuration table from SPC successful
  *         AGSA_RC_FAILURE if read the configuration table from SPC failed
  */
 /*******************************************************************************/
@@ -3427,7 +3427,7 @@ GLOBAL bit32 mpiWaitForConfigTable(agsaRoot_t                 *agRoot,
  *  \param agsaRoot Pointer to a data structure containing LL layer context handles
  *
  * Return:
- *         AGSA_RC_SUCCESS if Un-initialize the configuration table sucessful
+ *         AGSA_RC_SUCCESS if Un-initialize the configuration table successful
  *         AGSA_RC_FAILURE if Un-initialize the configuration table failed
  */
 /*******************************************************************************/
@@ -4215,7 +4215,7 @@ GLOBAL void mpiWrAnalogSetupTable(agsaRoot_t *agRoot,
 
   SA_DBG1(("mpiWrAnalogSetupTable:%d %d\n",(int)sizeof(agsaPhyAnalogSetupRegisters_t), AnalogtableSize));
 
-  for(phy = 0; phy < 10; phy++) /* upto 10 phys See PM*/
+  for(phy = 0; phy < 10; phy++) /* up to 10 phys See PM*/
   {
       ossaHwRegWriteExt(agRoot, pcibar,(AnalogTableBase + ( AnalogtableSize * phy)+ 0 ),config->phyAnalogConfig.phyAnalogSetupRegisters[phy].spaRegister0 );
       ossaHwRegWriteExt(agRoot, pcibar,(AnalogTableBase + ( AnalogtableSize * phy)+ 4 ),config->phyAnalogConfig.phyAnalogSetupRegisters[phy].spaRegister1 );
@@ -4360,7 +4360,7 @@ GLOBAL void mpiWrPhyAttrbTable(agsaRoot_t *agRoot, sasPhyAttribute_t *phyAttrib)
  *  \param bitMapQueueNum1    bit map for inbound queue number 32 - 63 to freeze
  *
  * Return:
- *         AGSA_RC_SUCCESS if Un-initialize the configuration table sucessful
+ *         AGSA_RC_SUCCESS if Un-initialize the configuration table successful
  *         AGSA_RC_FAILURE if Un-initialize the configuration table failed
  */
 /*******************************************************************************/
@@ -4427,7 +4427,7 @@ GLOBAL bit32 mpiFreezeInboundQueue(agsaRoot_t *agRoot, bit32 bitMapQueueNum0, bi
  *  \param bitMapQueueNum1    bit map for inbound queue number 32 - 63 to freeze
  *
  * Return:
- *         AGSA_RC_SUCCESS if Un-initialize the configuration table sucessful
+ *         AGSA_RC_SUCCESS if Un-initialize the configuration table successful
  *         AGSA_RC_FAILURE if Un-initialize the configuration table failed
  */
 /******************************************************************************/

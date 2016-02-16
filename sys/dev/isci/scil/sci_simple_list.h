@@ -305,7 +305,7 @@ static void sci_simple_list_insert_list_at_head(
       }
 
       // Wipe the source list to make sure the list elements can not be accessed
-      // from two seperate lists at the same time.
+      // from two separate lists at the same time.
       sci_simple_list_init(source_anchor);
    }
 }
@@ -335,14 +335,14 @@ static void sci_simple_list_insert_list_at_tail(
       }
       else
       {
-         // If the source list is empty the desination list is the result.
+         // If the source list is empty the designation list is the result.
          dest_anchor->list_tail->next = source_anchor->list_head;
          dest_anchor->list_tail = source_anchor->list_tail;
          dest_anchor->list_count += source_anchor->list_count;
       }
 
       // Wipe the source list to make sure the list elements can not be accessed
-      // from two seperate lists at the same time.
+      // from two separate lists at the same time.
       sci_simple_list_init(source_anchor);
    }
 }

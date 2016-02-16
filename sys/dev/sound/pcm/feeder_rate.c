@@ -1356,7 +1356,7 @@ z_setup_adaptive_sinc:
 
 #ifdef Z_DIAGNOSTIC
 	/*
-	 * XXX Debuging mess !@#$%^
+	 * XXX Debugging mess !@#$%^
 	 */
 #define dumpz(x)	fprintf(stderr, "\t%12s = %10u : %-11d\n",	\
 			    "z_"__STRING(x), (uint32_t)info->z_##x,	\

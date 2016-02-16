@@ -89,7 +89,7 @@ __FBSDID("$FreeBSD$");
 static int parse_mount(char **);
 static struct mntarg *parse_mountroot_options(struct mntarg *, const char *);
 static int sysctl_vfs_root_mount_hold(SYSCTL_HANDLER_ARGS);
-static int vfs_mountroot_wait_if_neccessary(const char *fs, const char *dev);
+static int vfs_mountroot_wait_if_necessary(const char *fs, const char *dev);
 
 /*
  * The vnode of the system's root (/ in the filesystem, without chroot
@@ -741,7 +741,7 @@ parse_mount(char **conf)
 		goto out;
 	}
 
-	error = vfs_mountroot_wait_if_neccessary(fs, dev);
+	error = vfs_mountroot_wait_if_necessary(fs, dev);
 	if (error != 0)
 		goto out;
 
@@ -952,7 +952,7 @@ vfs_mountroot_wait(void)
 }
 
 static int
-vfs_mountroot_wait_if_neccessary(const char *fs, const char *dev)
+vfs_mountroot_wait_if_necessary(const char *fs, const char *dev)
 {
 	int delay, timeout;
 

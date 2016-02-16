@@ -722,7 +722,7 @@ IoGetDriverObjectExtension(drv, clid)
 
 	/*
 	 * Sanity check. Our dummy bus drivers don't have
-	 * any driver extentions.
+	 * any driver extensions.
 	 */
 
 	if (drv->dro_driverext == NULL)
@@ -3797,7 +3797,7 @@ KeInitializeTimerEx(timer, type)
 }
 
 /*
- * DPC subsystem. A Windows Defered Procedure Call has the following
+ * DPC subsystem. A Windows Deferred Procedure Call has the following
  * properties:
  * - It runs at DISPATCH_LEVEL.
  * - It can have one of 3 importance values that control when it

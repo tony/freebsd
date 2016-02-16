@@ -97,7 +97,7 @@ static device_method_t ndis_methods[] = {
 	/* Bus interface. */
 
 	/*
-	 * This is an awful kludge, but we need it becase pccard
+	 * This is an awful kludge, but we need it because pccard
 	 * does not implement a bus_get_resource_list() method.
 	 */
 

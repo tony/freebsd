@@ -539,7 +539,7 @@ bcm_dma_reg_dump(int ch)
  *     ch - channel number
  *     src, dst - source and destination address in
  *         ARM physical memory address space. 
- *     len - amount of bytes to be transfered
+ *     len - amount of bytes to be transferred
  *	  
  * Returns 0 on success, -1 otherwise
  */

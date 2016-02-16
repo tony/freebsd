@@ -260,7 +260,7 @@ promote(int i)
 {
 	/*
 	 * Query the current mode of the interface in case it's
-	 * constrained (e.g. to 11a).  We must do this carefully
+	 * constrained (e.g. to 11a).  We must do this carefuly
 	 * as there may be a pending ifmedia request in which case
 	 * asking the kernel will give us the wrong answer.  This
 	 * is an unfortunate side-effect of the way ifconfig is

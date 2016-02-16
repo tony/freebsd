@@ -163,7 +163,7 @@ dmar_fault_intr(void *arg)
 done:
 	/*
 	 * On SandyBridge, due to errata BJ124, IvyBridge errata
-	 * BV100, and Haswell errata HSD40, "Spurious Intel VT-d
+	 * BV100, and Has well errata HSD40, "Spurious Intel VT-d
 	 * Interrupts May Occur When the PFO Bit is Set".  Handle the
 	 * cases by clearing overflow bit even if no fault is
 	 * reported.

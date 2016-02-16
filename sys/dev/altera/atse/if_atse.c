@@ -170,7 +170,7 @@ a_onchip_fifo_mem_core_read(struct resource *res, uint32_t off,
 	    "RX_FILL", __func__, __LINE__)
 
 /* The FIFO does an endian convertion, so we must not do it as well. */
-/* XXX-BZ in fact we shoudl do a htobe32 so le would be fine as well? */
+/* XXX-BZ in fact we should do a htobe32 so le would be fine as well? */
 #define	ATSE_RX_DATA_READ(sc)						\
 	bus_read_4((sc)->atse_rx_mem_res, A_ONCHIP_FIFO_MEM_CORE_DATA)
 #define	ATSE_RX_META_READ(sc)						\
@@ -866,7 +866,7 @@ atse_reset(struct atse_softc *sc)
 	CSR_WRITE_4(sc, BASE_CFG_RX_SECTION_FULL, 0);
 #endif
 	/* c. MAC address configuration. */
-	/* Also intialize supplementary addresses to our primary one. */
+	/* Also initialize supplementary addresses to our primary one. */
 	/* XXX-BZ FreeBSD really needs to grow and API for using these. */
 	atse_get_eth_address(sc);
 	atse_set_eth_address(sc, ATSE_ETH_ADDR_ALL);
@@ -1816,7 +1816,7 @@ atse_attach(device_t dev)
 		goto err;
 	}
 
-	/* Call media-indepedent attach routine. */
+	/* Call media-independent attach routine. */
 	ether_ifattach(ifp, sc->atse_eth_addr);
 
 	/* Tell the upper layer(s) about vlan mtu support. */

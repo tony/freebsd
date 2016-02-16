@@ -200,7 +200,7 @@ pfi_kif_attach(struct pfi_kif *kif, const char *kif_name)
 	bzero(kif, sizeof(*kif));
 	strlcpy(kif->pfik_name, kif_name, sizeof(kif->pfik_name));
 	/*
-	 * It seems that the value of time_second is in unintialzied state
+	 * It seems that the value of time_second is in uninitialzied state
 	 * when pf sets interface statistics clear time in boot phase if pf
 	 * was statically linked to kernel. Instead of setting the bogus
 	 * time value have pfi_get_ifaces handle this case. In

@@ -188,7 +188,7 @@ ether_cmp(void *one, void *two)
 #ifdef	m68k
 	/*
 	 * The post-increment-pointer form produces the best
-	 * machine code for m68k.  This was carefully tuned
+	 * machine code for m68k.  This was carefuly tuned
 	 * so it compiles to just 8 short (2-byte) op-codes!
 	 */
 	diff  = *a++ - *b++;
@@ -196,7 +196,7 @@ ether_cmp(void *one, void *two)
 	diff |= *a++ - *b++;
 #else
 	/*
-	 * Most modern CPUs do better with a single expresion.
+	 * Most modern CPUs do better with a single expression.
 	 * Note that short-cut evaluation is NOT helpful here,
 	 * because it just makes the code longer, not faster!
 	 */

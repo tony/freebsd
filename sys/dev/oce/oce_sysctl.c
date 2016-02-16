@@ -762,7 +762,7 @@ oce_add_stats_sysctls_be3(POCE_SOFTC sc,
 			"Receive Packets");
 		SYSCTL_ADD_QUAD(ctx, queue_stats_list, OID_AUTO, "rx_bytes",
 			CTLFLAG_RD, &sc->rq[i]->rx_stats.rx_bytes,
-			"Recived Bytes");
+			"Received Bytes");
 		SYSCTL_ADD_UINT(ctx, queue_stats_list, OID_AUTO, "rx_frags",
 			CTLFLAG_RD, &sc->rq[i]->rx_stats.rx_frags, 0,
 			"Received Fragments");
@@ -977,7 +977,7 @@ oce_add_stats_sysctls_xe201(POCE_SOFTC sc,
 			"Receive Packets");
 		SYSCTL_ADD_QUAD(ctx, queue_stats_list, OID_AUTO, "rx_bytes",
 			CTLFLAG_RD, &sc->rq[i]->rx_stats.rx_bytes,
-			"Recived Bytes");
+			"Received Bytes");
 		SYSCTL_ADD_UINT(ctx, queue_stats_list, OID_AUTO, "rx_frags",
 			CTLFLAG_RD, &sc->rq[i]->rx_stats.rx_frags, 0,
 			"Received Fragments");

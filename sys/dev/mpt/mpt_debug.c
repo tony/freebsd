@@ -98,7 +98,7 @@ static const struct Error_Map IOC_Status[] = {
 { MPI_IOCSTATUS_CONFIG_INVALID_DATA,      "Invalid Data" },
 { MPI_IOCSTATUS_CONFIG_NO_DEFAULTS,       "No Defaults" },
 { MPI_IOCSTATUS_CONFIG_CANT_COMMIT,       "Can't Commit" },
-{ MPI_IOCSTATUS_SCSI_RECOVERED_ERROR,     "SCSI: Recoverd Error" },
+{ MPI_IOCSTATUS_SCSI_RECOVERED_ERROR,     "SCSI: Recovered Error" },
 { MPI_IOCSTATUS_SCSI_INVALID_BUS,         "SCSI: Invalid Bus" },
 { MPI_IOCSTATUS_SCSI_INVALID_TARGETID,    "SCSI: Invalid Target ID" },
 { MPI_IOCSTATUS_SCSI_DEVICE_NOT_THERE,    "SCSI: Device Not There" },

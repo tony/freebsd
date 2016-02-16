@@ -617,7 +617,7 @@ en_txdma_load(void *uarg, bus_dma_segment_t *segs, int nseg, bus_size_t mapsize,
 
 		/*
 		 * do we need to do a DMA op to align to the maximum
-		 * burst? Note, that we are alway 32-bit aligned.
+		 * burst? Note, that we are always 32-bit aligned.
 		 */
 		if (sc->alburst &&
 		    (needalign = (addr & sc->bestburstmask)) != 0) {
@@ -2072,7 +2072,7 @@ en_rxdma_load(void *uarg, bus_dma_segment_t *segs, int nseg,
 
 		/*
 		 * do we need to do a DMA op to align to the maximum
-		 * burst? Note, that we are alway 32-bit aligned.
+		 * burst? Note, that we are always 32-bit aligned.
 		 */
 		if (sc->alburst &&
 		    (needalign = (addr & sc->bestburstmask)) != 0) {

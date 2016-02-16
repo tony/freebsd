@@ -88,7 +88,7 @@ nand_make_dev(struct nand_chip *chip)
 
 		/*
 		 * If we got distinct name for chip device we can enumarete it
-		 * based on contoller number.
+		 * based on controller number.
 		 */
 		parent = device_get_parent(nandbus);
 	} else {

@@ -956,7 +956,7 @@ sbbc_uart_bus_ipend(struct uart_softc *sc)
 	}
 
 	/*
-	 * Unfortunately, we can't use compare and swap for non-cachable
+	 * Unfortunately, we can't use compare and swap for non-cacheable
 	 * memory.
 	 */
 	reason = SBBC_SRAM_READ_4(sbbc_scsolir);

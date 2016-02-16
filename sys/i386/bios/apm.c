@@ -162,8 +162,8 @@ apm_disable_smm(sc)
 #endif
 
 /*
- * return  0 if the function successfull,
- * return  1 if the function unsuccessfull,
+ * return  0 if the function successful,
+ * return  1 if the function unsuccessful,
  * return -1 if the function unsupported.
  */
 static int

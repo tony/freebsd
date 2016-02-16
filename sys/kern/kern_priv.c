@@ -116,7 +116,7 @@ priv_check_cred(struct ucred *cred, int priv, int flags)
 	 * Superuser policy grants privilege based on the effective (or in
 	 * the case of specific privileges, real) uid being 0.  We allow the
 	 * superuser policy to be globally disabled, although this is
-	 * currenty of limited utility.
+	 * currently of limited utility.
 	 */
 	if (suser_enabled) {
 		switch (priv) {

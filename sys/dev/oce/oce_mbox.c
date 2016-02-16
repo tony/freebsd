@@ -80,7 +80,7 @@ oce_reset_fun(POCE_SOFTC sc)
 
 
 /**
- * @brief  		This funtions tells firmware we are
+ * @brief  		This functions tells firmware we are
  *			done with commands.
  * @param sc            software handle to the device
  * @returns             0 on success, ETIMEDOUT on failure
@@ -296,7 +296,7 @@ error:
  *		attach only after sending first mcc commnad. We  
  *		use MCC queue only for getting async and mailbox
  *		for sending cmds. So to get gracious notifications
- *		atleast send one dummy command on mcc.
+ *		at least send one dummy command on mcc.
  */
 int 
 oce_first_mcc_cmd(POCE_SOFTC sc)
@@ -732,8 +732,8 @@ oce_set_flow_control(POCE_SOFTC sc, uint32_t flow_control)
 /**
  * @brief Initialize the RSS CPU indirection table
  *
- * The table is used to choose the queue to place the incomming packets.
- * Incomming packets are hashed.  The lowest bits in the hash result
+ * The table is used to choose the queue to place the incoming packets.
+ * Incoming packets are hashed.  The lowest bits in the hash result
  * are used as the index into the CPU indirection table.
  * Each entry in the table contains the RSS CPU-ID returned by the NIC
  * create.  Based on the CPU ID, the receive completion is routed to
@@ -1023,7 +1023,7 @@ oce_mbox_get_nic_stats_v0(POCE_SOFTC sc, POCE_DMA_MEM pstats_dma_mem)
  * @param *stats	pointer to where to store statistics
  * @param reset_stats	resets statistics of set
  * @returns		0 on success, EIO on failure
- * @note		command depricated in Lancer
+ * @note		command deprecated in Lancer
  */
 int
 oce_mbox_get_nic_stats(POCE_SOFTC sc, POCE_DMA_MEM pstats_dma_mem)
@@ -1202,7 +1202,7 @@ oce_update_multicast(POCE_SOFTC sc, POCE_DMA_MEM pdma_mem)
 
 	bzero(&mbx, sizeof(struct oce_mbx));
 
-	mbx.u0.s.embedded = 0; /*Non embeded*/
+	mbx.u0.s.embedded = 0; /*Non embedded*/
 	mbx.payload_length = sizeof(struct mbx_set_common_iface_multicast);
 	mbx.u0.s.sge_count = 1;
 	sgl = &mbx.payload.u0.u1.sgl[0];
@@ -1240,7 +1240,7 @@ oce_pass_through_mbox(POCE_SOFTC sc, POCE_DMA_MEM dma_mem, uint32_t req_size)
 
 	bzero(&mbx, sizeof(struct oce_mbx));
 
-	mbx.u0.s.embedded  = 0; /*Non embeded*/
+	mbx.u0.s.embedded  = 0; /*Non embedded*/
 	mbx.payload_length = req_size;
 	mbx.u0.s.sge_count = 1;
 	sgl = &mbx.payload.u0.u1.sgl[0];
@@ -1487,7 +1487,7 @@ oce_mbox_write_flashrom(POCE_SOFTC sc, uint32_t optype,uint32_t opcode,
 	fwcmd->flash_op_code = LE_32(opcode);
 	fwcmd->data_buffer_size = LE_32(num_bytes);
 
-	mbx.u0.s.embedded  = 0; /*Non embeded*/
+	mbx.u0.s.embedded  = 0; /*Non embedded*/
 	mbx.payload_length = payload_len;
 	mbx.u0.s.sge_count = 1;
 

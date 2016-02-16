@@ -552,7 +552,7 @@ atomic_store_64(volatile uint64_t *p, uint64_t val)
 
 	/*
 	 * The only way to atomically store 64 bits is with STREXD, which will
-	 * succeed only if paired up with a preceeding LDREXD using the same
+	 * succeed only if paired up with a preceding LDREXD using the same
 	 * address, so we read and discard the existing value before storing.
 	 */
 	__asm __volatile(

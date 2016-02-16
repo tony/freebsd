@@ -25,7 +25,7 @@
 **    
 *   sm.h 
 *
-*   Abstract:   This module defines the contants, enum and #define definition used
+*   Abstract:   This module defines the constants, enum and #define definition used
 *               by SAT Moduled (SM).
 *     
 ********************************************************************************/

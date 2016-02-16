@@ -274,7 +274,7 @@ ossaSATACompleted(
   /* send SMP_PHY_CONTROL_HARD_RESET */
   if (agIOStatus == OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY && tdsaAllShared->FCA)
   {
-    if (pSatDevData->NumOfFCA <= 0) /* does SMP HARD RESET only upto one time */
+    if (pSatDevData->NumOfFCA <= 0) /* does SMP HARD RESET only up to one time */
     {
       TI_DBG1(("ossaSATACompleted: OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY; sending HARD_RESET\n"));
       pSatDevData->NumOfFCA++;
@@ -1970,7 +1970,7 @@ void satNonChainedWriteNVerifyCB(
   status = satNonChainedWriteNVerify_Verify(tiRoot,
                                              &satNewIntIo->satIntTiIORequest,
                                              satNewIOContext->ptiDeviceHandle,
-                                             tiScsiRequest, /* orginal from OS layer */
+                                             tiScsiRequest, /* original from OS layer */
                                              satNewIOContext
                                              );
 
@@ -5718,7 +5718,7 @@ void satTestUnitReadyCB(
   {
     TI_DBG5(("satTestUnitReadyCB: yes internal satInternalIo_t satIntIoContext\n"));
 
-    /* orginal tiIOContext */
+    /* original tiIOContext */
     tiOrgIORequest         = (tiIORequest_t *)satIOContext->satIntIoContext->satOrgTiIORequest;
     tdOrgIORequestBody     = (tdIORequestBody_t *)tiOrgIORequest->tdData;
     satOrgIOContext        = &(tdOrgIORequestBody->transport.SATA.satIOContext);
@@ -5875,7 +5875,7 @@ void satTestUnitReadyCB(
     return;
   }/* end error */
 
-  /* ATA command completes sucessfully */
+  /* ATA command completes successfully */
   switch (hostToDevFis->h.command)
   {
   case SAT_GET_MEDIA_STATUS:
@@ -6440,7 +6440,7 @@ void satWriteSame10CB(
     else
     {
       status = tiError;
-      TI_DBG1(("satWriteSame10CB: sucess but error in command 0x%x\n", hostToDevFis->h.command));
+      TI_DBG1(("satWriteSame10CB: success but error in command 0x%x\n", hostToDevFis->h.command));
     }
 
     if (status != tiSuccess)
@@ -6900,7 +6900,7 @@ void satStartStopUnitCB(
   } /* error check */
   }
 
-  /* ATA command completes sucessfully */
+  /* ATA command completes successfully */
   switch (hostToDevFis->h.command)
   {
   case SAT_FLUSH_CACHE: /* fall through */
@@ -8737,7 +8737,7 @@ void satModeSelect6n10CB(
       status = satModeSelect6n10_1( tiRoot,
                                  &satNewIntIo->satIntTiIORequest,
                                  satNewIOContext->ptiDeviceHandle,
-                                 tiScsiRequest, /* orginal from OS layer */
+                                 tiScsiRequest, /* original from OS layer */
                                  satNewIOContext
                                  );
 
@@ -9339,7 +9339,7 @@ void satLogSenseCB(
 
     /* SPC-4, Table 217 */
     pLogPage[4] = 0;    /* Parameter Code */
-    pLogPage[5] = 0x01; /* Parameter Code,  unspecfied but ... */
+    pLogPage[5] = 0x01; /* Parameter Code,  unspecified but ... */
     pLogPage[6] = 3;    /* unspecified but ... */
     pLogPage[7] = 0x10; /* Parameter Length */
     pLogPage[8] = (bit8)(0 | ((virtAddr1->byte[5] & 0xF0) >> 4)); /* Self Test Code and Self-Test Result */
@@ -9509,7 +9509,7 @@ void satLogSenseCB(
 
       /* SPC-4, Table 217 */
       pLogPage[4] = 0;    /* Parameter Code */
-      pLogPage[5] = 0x01; /* Parameter Code unspecfied but ... */
+      pLogPage[5] = 0x01; /* Parameter Code unspecified but ... */
       pLogPage[6] = 3;    /* unspecified but ... */
       pLogPage[7] = 0x10; /* Parameter Length */
       pLogPage[8] = (bit8)(0 | ((virtAddr2->byte[3] & 0xF0) >> 4)); /* Self Test Code and Self-Test Result */
@@ -9670,7 +9670,7 @@ void satLogSenseCB(
         no vendor specific field
        */
       pLogPage[4] = 0;    /* Parameter Code */
-      pLogPage[5] = 0;    /* Parameter Code unspecfied but to do: */
+      pLogPage[5] = 0;    /* Parameter Code unspecified but to do: */
       pLogPage[6] = 0;    /* unspecified */
       pLogPage[7] = 0x03; /* Parameter length, unspecified */
 
@@ -10735,7 +10735,7 @@ void satReassignBlocksCB(
                                    tiRoot,
                                    &satNewIntIo->satIntTiIORequest,
                                    satNewIOContext->ptiDeviceHandle,
-                                   tiScsiRequest, /* orginal from OS layer */
+                                   tiScsiRequest, /* original from OS layer */
                                    satNewIOContext,
                                    satOrgIOContext
                                    );
@@ -11069,7 +11069,7 @@ osGLOBAL void ossaSATAEvent(
      * 5. Check flag that indicates whether the failed I/O has been returned
      *    to the OS Layer. If not, search the I/O context in device data
      *    looking for a matched tag. Then return the completion of the failed
-     *    NCQ command with the appopriate/trasnlated SCSI status.
+     *    NCQ command with the appropriate/trasnlated SCSI status.
      *
      * 6. Issue abort to LL layer to all other pending I/Os for the same SATA
      *    drive.
@@ -11277,7 +11277,7 @@ osGLOBAL void ossaSATAEvent(
     /* send SMP_PHY_CONTROL_HARD_RESET */
     if (event == OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY && tdsaAllShared->FCA)
     {
-      if (pSatDevData->NumOfFCA <= 0) /* does SMP HARD RESET only upto one time */
+      if (pSatDevData->NumOfFCA <= 0) /* does SMP HARD RESET only up to one time */
       {
         TI_DBG1(("ossaSATAEvent: OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY; sending HARD_RESET\n"));
         pSatDevData->NumOfFCA++;
@@ -11822,7 +11822,7 @@ satTranslateATAPIErrorsToSCSIErrors(
 {
     if (pSenseKey == agNULL || pSenseCodeInfo == agNULL)
     {
-        TI_DBG0(("TranslateATAErrorsToSCSIErros: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
+        TI_DBG0(("TranslateATAErrorsToSCSIErrors: pSenseKey == agNULL || pSenseCodeInfo == agNULL\n"));
         return;
     }
 

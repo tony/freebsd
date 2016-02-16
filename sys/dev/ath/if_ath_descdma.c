@@ -123,7 +123,7 @@ __FBSDID("$FreeBSD$");
 MALLOC_DECLARE(M_ATHDEV);
 
 /*
- * This is the descriptor setup / busdma memory intialisation and
+ * This is the descriptor setup / busdma memory initialisation and
  * teardown routines.
  */
 

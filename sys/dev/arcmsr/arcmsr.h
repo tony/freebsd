@@ -1255,7 +1255,7 @@ struct SENSE_DATA {
 **********************************
 */
 #define SCSI_DASD		0x00	   /* Direct-access Device	   */
-#define SCSI_SEQACESS		0x01	   /* Sequential-access device     */
+#define SCSI_SEQACCESS		0x01	   /* Sequential-access device     */
 #define SCSI_PRINTER		0x02	   /* Printer device		   */
 #define SCSI_PROCESSOR		0x03	   /* Processor device		   */
 #define SCSI_WRITEONCE		0x04	   /* Write-once device 	   */

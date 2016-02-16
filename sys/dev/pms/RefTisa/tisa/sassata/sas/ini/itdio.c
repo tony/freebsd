@@ -1852,7 +1852,7 @@ tiNumOfLunIOCTLreq(
     	
     osti_memset((void *)respBuffer, 0, REPORT_LUN_LEN);
     
-    	// use FW control place in shared structure to keep the neccesary information
+    	// use FW control place in shared structure to keep the necessary information
     tdsaAllShared->tdFWControlEx.virtAddr = respBuffer;
     tdsaAllShared->tdFWControlEx.len = REPORT_LUN_LEN;
     tdsaAllShared->tdFWControlEx.param1 = agParam1;

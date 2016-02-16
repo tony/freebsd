@@ -94,7 +94,7 @@ struct hatm_softc;
  */
 struct dmamem {
 	u_int		size;		/* in bytes */
-	u_int		align;		/* alignement */
+	u_int		align;		/* alignment */
 	bus_dma_tag_t	tag;		/* DMA tag */
 	void		*base;		/* the memory */
 	bus_addr_t	paddr;		/* physical address */

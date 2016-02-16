@@ -1351,7 +1351,7 @@ mfi_process_fw_state_chg_isr(void *arg)
  * interrupt thread.
  *
  * The driver could get the RAID state via the MFI_DCMD_LD_MAP_GET_INFO
- * That requires a bunch of structure and it is simplier to just do
+ * That requires a bunch of structure and it is simpler to just do
  * the MFI_DCMD_LD_GET_LIST versus walking the RAID map.
  */
 

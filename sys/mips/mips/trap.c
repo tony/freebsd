@@ -538,7 +538,7 @@ trap(struct trapframe *trapframe)
 
 	/*
 	 * Enable hardware interrupts if they were on before the trap. If it
-	 * was off disable all so we don't accidently enable it when doing a
+	 * was off disable all so we don't accidentally enable it when doing a
 	 * return to userland.
 	 */
 	if (trapframe->sr & MIPS_SR_INT_IE) {

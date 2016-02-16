@@ -4224,7 +4224,7 @@ SYSCTL_UINT(_security_jail, OID_AUTO, jail_max_af_ips, CTLFLAG_RW,
 #endif
 
 /*
- * Default parameters for jail(2) compatability.  For historical reasons,
+ * Default parameters for jail(2) compatibility.  For historical reasons,
  * the sysctl names have varying similarity to the parameter names.  Prisons
  * just see their own parameters, and can't change them.
  */

@@ -159,7 +159,7 @@ MODULE_PARM_DESC(high_rate_steer, "Enable steering mode for higher packet rate"
 static int fast_drop;
 module_param_named(fast_drop, fast_drop, int, 0444);
 MODULE_PARM_DESC(fast_drop,
-		 "Enable fast packet drop when no recieve WQEs are posted");
+		 "Enable fast packet drop when no receive WQEs are posted");
 
 int mlx4_enable_64b_cqe_eqe = 1;
 module_param_named(enable_64b_cqe_eqe, mlx4_enable_64b_cqe_eqe, int, 0644);

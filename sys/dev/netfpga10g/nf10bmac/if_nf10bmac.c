@@ -355,7 +355,7 @@ nf10bmac_rx_locked(struct nf10bmac_softc *sc)
 	/*
 	 * General problem here in case we need to sync ourselves to the
 	 * beginning of a packet.  Length will only be set for the first
-	 * read, and together with strb we can detect the begining (or
+	 * read, and together with strb we can detect the beginning (or
 	 * skip to tlast).
 	 */
 
@@ -815,7 +815,7 @@ nf10bmac_attach(device_t dev)
 	ifp->if_snd.ifq_drv_maxlen = NF10BMAC_MAX_PKTS - 1;
 	IFQ_SET_READY(&ifp->if_snd);
 
-	/* Call media-indepedent attach routine. */
+	/* Call media-independent attach routine. */
 	ether_ifattach(ifp, sc->nf10bmac_eth_addr);
 
 	/* Tell the upper layer(s) about vlan mtu support. */

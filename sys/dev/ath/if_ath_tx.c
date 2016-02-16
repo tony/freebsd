@@ -651,7 +651,7 @@ ath_tx_setds_11n(struct ath_softc *sc, struct ath_buf *bf_first)
 	 * the rate info isn't copied.
 	 *
 	 * This is inefficient on MIPS/ARM platforms that have
-	 * non-cachable memory for TX descriptors, but we'll just
+	 * non-cacheable memory for TX descriptors, but we'll just
 	 * make do for now.
 	 *
 	 * As to why the rate table is stashed in the last descriptor
@@ -1745,7 +1745,7 @@ ath_tx_normal_setup(struct ath_softc *sc, struct ieee80211_node *ni,
 	 * when the descriptor is specifically marked to generate
 	 * an interrupt.  We periodically mark descriptors in this
 	 * way to insure timely replenishing of the supply needed
-	 * for sending frames.  Defering interrupts reduces system
+	 * for sending frames.  Deferring interrupts reduces system
 	 * load and potentially allows more concurrent work to be
 	 * done but if done to aggressively can cause senders to
 	 * backup.
@@ -3949,7 +3949,7 @@ ath_tx_tid_reset(struct ath_softc *sc, struct ath_tid *tid)
 	 * XXX TODO: it may just be enough to walk the HWQs and mark
 	 * frames for that node as non-aggregate; or mark the ath_node
 	 * with something that indicates that aggregation is no longer
-	 * occuring.  Then we can just toss the BAW complaints and
+	 * occurring.  Then we can just toss the BAW complaints and
 	 * do a complete hard reset of state here - no pause, no
 	 * complete counter, etc.
 	 */

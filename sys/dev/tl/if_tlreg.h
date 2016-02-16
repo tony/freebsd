@@ -317,7 +317,7 @@ struct tl_softc {
 #define TL_TXUNDERRUN		0x33
 #define TL_RXGOODFRAMES		0x34
 #define TL_RXOVERRUN		0x37
-#define TL_DEFEREDTX		0x38
+#define TL_DEFERREDTX		0x38
 #define TL_CRCERROR		0x3A
 #define TL_CODEERROR		0x3B
 #define TL_MULTICOLTX		0x3C

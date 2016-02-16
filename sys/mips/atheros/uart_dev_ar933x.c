@@ -661,7 +661,7 @@ ar933x_bus_setsig(struct uart_softc *sc, int sig)
  * is written to the hardware.  Thus for now, this will wait for
  * the FIFO to finish draining before it pushes more frames into it.
  *
- * If non-blocking operation is truely needed here, either
+ * If non-blocking operation is truly needed here, either
  * the FreeBSD uart device will need to handle partial writes
  * in xxx_bus_transmit(), or we'll need to do TX FIFO buffering
  * of our own here.

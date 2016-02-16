@@ -362,7 +362,7 @@ dumpsys_generic(struct dumperinfo *di)
 
 	/*
 	 * All headers are written using blocked I/O, so we know the
-	 * current offset is (still) block aligned. Skip the alignement
+	 * current offset is (still) block aligned. Skip the alignment
 	 * in the file to have the segment contents aligned at page
 	 * boundary. We cannot use MD_ALIGN on dumplo, because we don't
 	 * care and may very well be unaligned within the dump device.

@@ -187,7 +187,7 @@ qla_add_sysctls(qla_host_t *ha)
                 SYSCTL_CHILDREN(device_get_sysctl_tree(dev)),
                 OID_AUTO, "rcv_pkt_thres_d",  CTLFLAG_RW,
                 &rcv_pkt_thres_d, rcv_pkt_thres_d,
-                "Threshold for # of rcv pkts to trigger indication defered");
+                "Threshold for # of rcv pkts to trigger indication deferred");
 
         SYSCTL_ADD_UINT(device_get_sysctl_ctx(dev),
                 SYSCTL_CHILDREN(device_get_sysctl_tree(dev)),

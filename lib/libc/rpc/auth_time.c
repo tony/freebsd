@@ -276,7 +276,7 @@ __rpc_get_time_offset(struct timeval *td, nis_server *srv, char *thost,
 		if (! srv) {
 			srv = get_server(netid, thost, &tsrv, teps, 32);
 			if (srv == NULL) {
-				msg("unable to contruct server data.");
+				msg("unable to construct server data.");
 				return (0);
 			}
 			needfree = 1;	/* need to free data in endpoints */

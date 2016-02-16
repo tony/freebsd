@@ -88,7 +88,7 @@ struct en_stats {
 	uint32_t otrash;	/* sw copy of counter */
 	uint32_t ttrash;	/* # of RBD's with T bit set */
 	uint32_t mfixaddr;	/* # of times we had to mfix an address */
-	uint32_t mfixlen;	/* # of times we had to mfix a lenght*/
+	uint32_t mfixlen;	/* # of times we had to mfix a length*/
 	uint32_t mfixfail;	/* # of times mfix failed */
 	uint32_t txmbovr;	/* # of times we dropped due to mbsize */
 	uint32_t dmaovr;	/* tx dma overflow count */

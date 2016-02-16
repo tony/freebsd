@@ -452,7 +452,7 @@ bd_opendisk(struct open_disk **odp, struct i386_devdesc *dev)
 	return (ENOMEM);
     }
 
-    /* Look up BIOS unit number, intialise open_disk structure */
+    /* Look up BIOS unit number, initialise open_disk structure */
     od->od_dkunit = dev->d_unit;
     od->od_unit = bdinfo[od->od_dkunit].bd_unit;
     od->od_flags = bdinfo[od->od_dkunit].bd_flags;

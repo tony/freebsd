@@ -307,7 +307,7 @@ feed_matrix_setup(struct feed_matrix_info *info, struct pcmchan_matrix *m_in,
 
 	/*
 	 * If both in and out are part of standard matrix and identical, skip
-	 * everything alltogether.
+	 * everything altogether.
 	 */
 	if (m_in->id == m_out->id && !(m_in->id < SND_CHN_MATRIX_BEGIN ||
 	    m_in->id > SND_CHN_MATRIX_END))
@@ -551,7 +551,7 @@ feeder_matrix_setup(struct pcm_feeder *f, struct pcmchan_matrix *m_in,
 
 /*
  * feeder_matrix_default_id(): For a given number of channels, return
- *                             default prefered id (example: both 5.1 and
+ *                             default preferred id (example: both 5.1 and
  *                             6.0 are simply 6 channels, but 5.1 is more
  *                             preferable).
  */

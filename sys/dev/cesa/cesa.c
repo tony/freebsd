@@ -705,7 +705,7 @@ cesa_create_chain_cb(void *arg, bus_dma_segment_t *segs, int nseg, int error)
 			/*
 			 * Fill in current packet with data. Break if there is
 			 * no more data in current DMA segment or an error
-			 * occured.
+			 * occurred.
 			 */
 			size = cesa_fill_packet(sc, &cp, &seg);
 			if (size <= 0) {
@@ -1257,7 +1257,7 @@ cesa_detach(device_t dev)
 	/* Stop interrupt */
 	bus_teardown_intr(dev, sc->sc_res[1], sc->sc_icookie);
 
-	/* Relase I/O and IRQ resources */
+	/* Release I/O and IRQ resources */
 	bus_release_resources(dev, cesa_res_spec, sc->sc_res);
 
 	/* Destory mutexes */

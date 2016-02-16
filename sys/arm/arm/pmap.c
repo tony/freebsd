@@ -126,7 +126,7 @@
  *
  * pmap.c
  *
- * Machine dependant vm stuff
+ * Machine dependent vm stuff
  *
  * Created      : 20/09/94
  */
@@ -418,7 +418,7 @@ void pmap_copy_page_offs_xscale(vm_paddr_t a_phys, vm_offset_t a_offs,
  * find them as necessary.
  *
  * Note that the data on this list MUST remain valid after initarm() returns,
- * as pmap_bootstrap() uses it to contruct L2 table metadata.
+ * as pmap_bootstrap() uses it to construct L2 table metadata.
  */
 SLIST_HEAD(, pv_addr) kernel_pt_list = SLIST_HEAD_INITIALIZER(kernel_pt_list);
 
@@ -596,7 +596,7 @@ pmap_pte_init_xscale(void)
 	pmap_copy_page_offs_func = pmap_copy_page_offs_generic;
 	pmap_zero_page_func = pmap_zero_page_generic;
 	xscale_use_minidata = 0;
-	/* Make sure it is L2-cachable */
+	/* Make sure it is L2-cacheable */
     	pte_l1_s_cache_mode |= L1_S_XSCALE_TEX(TEX_XSCALE_T);
 	pte_l1_s_cache_mode_pt = pte_l1_s_cache_mode &~ L1_S_XSCALE_P;
 	pte_l2_l_cache_mode |= L2_XSCALE_L_TEX(TEX_XSCALE_T) ;
@@ -1253,7 +1253,7 @@ pmap_fix_cache(struct vm_page *pg, pmap_t pm, vm_offset_t va)
 			pmwc = 1;
 
 	TAILQ_FOREACH(pv, &pg->md.pv_list, pv_list) {
-		/* check for user uncachable conditions - order is important */
+		/* check for user uncacheable conditions - order is important */
 		if (pm != kernel_pmap &&
 		    (pv->pv_pmap == pm || pv->pv_pmap == kernel_pmap)) {
 
@@ -1273,7 +1273,7 @@ pmap_fix_cache(struct vm_page *pg, pmap_t pm, vm_offset_t va)
 		}
 
 		/*
-		 * check for kernel uncachable conditions
+		 * check for kernel uncacheable conditions
 		 * kernel writable or kernel readable with writable user entry
 		 */
 		if ((kwritable && (entries || kentries > 1)) ||
@@ -1290,7 +1290,7 @@ pmap_fix_cache(struct vm_page *pg, pmap_t pm, vm_offset_t va)
 			continue;
 		}
 
-			/* kernel and user are cachable */
+			/* kernel and user are cacheable */
 		if ((pm == kernel_pmap) && !(pv->pv_flags & PVF_MWC) &&
 		    (pv->pv_flags & PVF_NC)) {
 
@@ -3950,7 +3950,7 @@ pmap_remove(pmap_t pm, vm_offset_t sva, vm_offset_t eva)
  * pmap_zero_page()
  *
  * Zero a given physical page by mapping it at a page hook point.
- * In doing the zero page op, the page we zero is mapped cachable, as with
+ * In doing the zero page op, the page we zero is mapped cacheable, as with
  * StrongARM accesses to non-cached pages are non-burst making writing
  * _any_ bulk data very slow.
  */

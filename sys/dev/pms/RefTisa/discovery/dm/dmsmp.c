@@ -132,7 +132,7 @@ dmSMPStart(
 
   agDevHandle = oneExpander->agDevHandle;
 
-  /* save the callback funtion */
+  /* save the callback function */
   dmSMPRequestBody->SMPCompletionFunc = dmSMPCompleted; /* in dmsmp.c */
 
   dmSMPRequestBody->retries = 0;

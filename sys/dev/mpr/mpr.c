@@ -131,7 +131,7 @@ static struct timeval mpr_chainfail_interval = { 60, 0 };
 /* 
  * sleep_flag can be either CAN_SLEEP or NO_SLEEP.
  * If this function is called from process context, it can sleep
- * and there is no harm to sleep, in case if this fuction is called
+ * and there is no harm to sleep, in case if this function is called
  * from Interrupt handler, we can not sleep and need NO_SLEEP flag set.
  * based on sleep flags driver will call either msleep, pause or DELAY.
  * msleep and pause are of same variant, but pause is used when mpr_mtx
@@ -2671,7 +2671,7 @@ mpr_request_polled(struct mpr_softc *sc, struct mpr_command *cm)
 
 /*
  * The MPT driver had a verbose interface for config pages.  In this driver,
- * reduce it to much simplier terms, similar to the Linux driver.
+ * reduce it to much simpler terms, similar to the Linux driver.
  */
 int
 mpr_read_config_page(struct mpr_softc *sc, struct mpr_config_params *params)

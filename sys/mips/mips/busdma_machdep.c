@@ -314,7 +314,7 @@ busdma_lock_mutex(void *arg, bus_dma_lock_op_t op)
 /*
  * dflt_lock should never get called.  It gets put into the dma tag when
  * lockfunc == NULL, which is only valid if the maps that are associated
- * with the tag are meant to never be defered.
+ * with the tag are meant to never be deferred.
  * XXX Should have a way to identify which driver is responsible here.
  */
 static void
@@ -1079,7 +1079,7 @@ bus_dmamap_sync_buf(vm_offset_t buf, int len, bus_dmasync_op_t op, int aligned)
 	 * data if a transfer appears to overlap cachelines.  An mbuf in
 	 * particular will usually appear to be overlapped because of offsetting
 	 * within the buffer to align the L3 headers, but we know that the bytes
-	 * preceeding that offset are part of the same mbuf memory and are not
+	 * preceding that offset are part of the same mbuf memory and are not
 	 * unrelated adjacent data (and a rule of mbuf handling is that the cpu
 	 * is not allowed to touch the mbuf while dma is in progress, including
 	 * header fields).

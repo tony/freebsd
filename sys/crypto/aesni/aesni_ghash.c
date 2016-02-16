@@ -800,5 +800,5 @@ AES_GCM_decrypt(const unsigned char *in, unsigned char *out,
 		for (j=0; j<nbytes%16; j++)
 			out[k*16+j] = ((unsigned char*)&last_block)[j];
 	}
-	return 1; //when sucessfull returns 1
+	return 1; //when successfull returns 1
 }

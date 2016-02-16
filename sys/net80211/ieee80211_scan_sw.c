@@ -528,7 +528,7 @@ ieee80211_swscan_scan_done(struct ieee80211vap *vap)
 }
 
 /*
- * Probe the curent channel, if allowed, while scanning.
+ * Probe the current channel, if allowed, while scanning.
  * If the channel is not marked passive-only then send
  * a probe request immediately.  Otherwise mark state and
  * listen for beacons on the channel; if we receive something
@@ -747,7 +747,7 @@ scan_task(void *arg, int pending)
 	/* XXX scan state can change! Re-validate scan state! */
 
 	/*
-	 * Since a cancellation may have occured during one of the
+	 * Since a cancellation may have occurred during one of the
 	 * driver calls (whilst unlocked), update scandone.
 	 */
 	if (scandone == 0 &&
@@ -795,7 +795,7 @@ scan_task(void *arg, int pending)
 		    "[ticks %u, dwell min %lu scanend %lu]\n",
 		    __func__,
 		    ticks, ss->ss_mindwell, scanend);
-		ss->ss_next = 0;	/* reset to begining */
+		ss->ss_next = 0;	/* reset to beginning */
 		if (ss->ss_flags & IEEE80211_SCAN_ACTIVE)
 			vap->iv_stats.is_scan_active++;
 		else
@@ -817,7 +817,7 @@ scan_task(void *arg, int pending)
 	    ticks, ss->ss_mindwell, scanend);
 
 	/*
-	 * Since a cancellation may have occured during one of the
+	 * Since a cancellation may have occurred during one of the
 	 * driver calls (whilst unlocked), update scandone.
 	 */
 	if (scandone == 0 &&

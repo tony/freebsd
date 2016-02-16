@@ -149,7 +149,7 @@ kernacc(addr, len, rw)
  * the associated vm_map_entry range.  It does not determine whether the
  * contents of the memory is actually readable or writable.  vmapbuf(),
  * vm_fault_quick(), or copyin()/copout()/su*()/fu*() functions should be
- * used in conjuction with this call.
+ * used in conjunction with this call.
  */
 int
 useracc(addr, len, rw)

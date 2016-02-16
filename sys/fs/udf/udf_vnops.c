@@ -1226,7 +1226,7 @@ lookloop:
 		}
 		udf_closedir(ds);
 
-		/* Enter name into cache as non-existant */
+		/* Enter name into cache as non-existent */
 		if (flags & MAKEENTRY)
 			cache_enter(dvp, *vpp, a->a_cnp);
 

@@ -65,7 +65,7 @@ typedef struct _SALINK_LIST
   PSALINK pHead;
   bit32   Count;
 
-  SALINK  Head; /* allways one link to speed up insert and delete */
+  SALINK  Head; /* always one link to speed up insert and delete */
 
 } SALINK_LIST, * PSALINK_LIST;
 

@@ -405,7 +405,7 @@ sncinit_locked(struct snc_softc *sc)
 		/* already running */
 		return;
 
-	NIC_PUT(sc, SNCR_CR, CR_RST);	/* DCR only accessable in reset mode! */
+	NIC_PUT(sc, SNCR_CR, CR_RST);	/* DCR only accessible in reset mode! */
 
 	/* config it */
 	NIC_PUT(sc, SNCR_DCR, (sc->sncr_dcr |

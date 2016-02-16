@@ -1015,7 +1015,7 @@ struct ti_mc_entry {
 
 typedef enum {
 	TI_FLAG_NONE		= 0x00,
-	TI_FLAG_DEBUGING	= 0x01,
+	TI_FLAG_DEBUGGING	= 0x01,
 	TI_FLAG_WAIT_FOR_LINK	= 0x02
 } ti_flag_vals;
 

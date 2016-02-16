@@ -688,7 +688,7 @@ typedef struct {
 	u_int16_t	scid;		/* source (local) channel ID */
 	u_int16_t	dcid;		/* destination (remote) channel ID */
 
-	u_int16_t	imtu;		/* incomming MTU */
+	u_int16_t	imtu;		/* incoming MTU */
 	u_int16_t	omtu;		/* outgoing MTU */
 
 	u_int16_t	psm;		/* PSM */

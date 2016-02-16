@@ -131,7 +131,7 @@ typedef void (*xge_uld_event_queued_f) (xge_hal_device_h devh, int event_type);
  * Upper-layer driver can use HAL queue to serialize certain slow-path
  * events. HAL periodically polls the queue as part of the
  * xge_hal_device_poll() processing. When/if HAL discovers in the queue
- * an unkown event type it simply invokes the event callback
+ * an unknown event type it simply invokes the event callback
  * (which must be non-NULL and supplied by the ULD in this case).
  *
  * See also: xge_hal_uld_cbs_t{}, xge_hal_device_poll(), xge_queue_t{},
@@ -201,7 +201,7 @@ typedef void (*xge_uld_xpak_alarm_log_f) (xge_hal_device_h devh, xge_hal_xpak_al
  * Note that these callbacks are not mandatory: HAL will not invoke
  * a callback if NULL is specified.
  *
- * Note that in addition to those, there are curently 2 per-channel callbacks
+ * Note that in addition to those, there are currently 2 per-channel callbacks
  * (completion and abort) specified at channel open time
  * via xge_hal_channel_open().
  *

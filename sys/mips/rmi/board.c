@@ -377,11 +377,11 @@ xlr_board_info_setup()
 	 *    - boards (for each CPU, multiple board configs are possible
 	 *	        and available).
 	 *
-	 * At the time of writing, there are atleast 12 boards, 4 with XLR 
+	 * At the time of writing, there are at least 12 boards, 4 with XLR 
 	 * and 8 with XLS. This means that the base driver needs to work with
 	 * 12 different configurations, with varying levels of differences. 
-	 * To accomodate the different configs, the xlr_board_info struct
-	 * has various attributes for paramters that could be different. 
+	 * To accommodate the different configs, the xlr_board_info struct
+	 * has various attributes for parameters that could be different. 
 	 * These attributes are setup here and can be used directly in the 
 	 * base driver. 
 	 * It was seen that the setup code is not entirely trivial and

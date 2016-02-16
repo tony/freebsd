@@ -867,7 +867,7 @@ ste_stats_update(struct ste_softc *sc)
 	val += CSR_READ_1(sc, STE_STAT_LATE_COLLS);
 	stats->tx_late_colls += val;
 	if_inc_counter(ifp, IFCOUNTER_COLLISIONS, val);
-	stats->tx_frames_defered += CSR_READ_1(sc, STE_STAT_TX_DEFER);
+	stats->tx_frames_deferred += CSR_READ_1(sc, STE_STAT_TX_DEFER);
 	stats->tx_excess_defers += CSR_READ_1(sc, STE_STAT_TX_EXDEFER);
 	stats->tx_abort += CSR_READ_1(sc, STE_STAT_TX_ABORT);
 }
@@ -2089,7 +2089,7 @@ ste_sysctl_node(struct ste_softc *sc)
 	STE_SYSCTL_STAT_ADD32(ctx, child, "late_colls",
 	    &stats->tx_late_colls, "Late collisions");
 	STE_SYSCTL_STAT_ADD32(ctx, child, "defers",
-	    &stats->tx_frames_defered, "Frames with deferrals");
+	    &stats->tx_frames_deferred, "Frames with deferrals");
 	STE_SYSCTL_STAT_ADD32(ctx, child, "excess_defers",
 	    &stats->tx_excess_defers, "Frames with excessive derferrals");
 	STE_SYSCTL_STAT_ADD32(ctx, child, "abort",

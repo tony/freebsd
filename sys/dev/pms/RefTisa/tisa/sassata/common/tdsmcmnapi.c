@@ -529,7 +529,7 @@ tdsmIDCompletedCB(
     oneDeviceData->satDevData.IDDeviceValid = agFALSE;
     if (tdsaAllShared->FCA)
     {
-      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only upto one time */
+      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only up to one time */
       {
         TI_DBG1(("tdsmIDCompletedCB: OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY; sending HARD_RESET\n"));
         oneDeviceData->SMNumOfFCA++;
@@ -632,7 +632,7 @@ tdsmIDCompletedCB(
                        );
         oneDeviceData->satDevData.IDDeviceValid = agFALSE;
 
-        if (oneDeviceData->SMNumOfID <= 0) /* does SMP HARD RESET only upto one time */
+        if (oneDeviceData->SMNumOfID <= 0) /* does SMP HARD RESET only up to one time */
         {
           TI_DBG1(("tdsmIDCompletedCB: fail; sending HARD_RESET\n"));
           oneDeviceData->SMNumOfID++;
@@ -809,7 +809,7 @@ tdsmIOCompletedCB(
       smIORequest = (smIORequest_t *)&(tdIORequestBody->smIORequest);
       tiDeviceHandle = tdIORequestBody->tiDevHandle;
       oneDeviceData = (tdsaDeviceData_t *)tiDeviceHandle->tdData;
-      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only upto one time */
+      if (oneDeviceData->SMNumOfFCA <= 0) /* does SMP HARD RESET only up to one time */
       {
         TI_DBG1(("tdsmIOCompletedCB: OSSA_IO_OPEN_CNX_ERROR_STP_RESOURCES_BUSY; sending HARD_RESET\n"));
         oneDeviceData->SMNumOfFCA++;

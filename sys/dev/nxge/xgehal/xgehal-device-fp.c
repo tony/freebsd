@@ -330,7 +330,7 @@ xge_hal_device_clear_tx(xge_hal_device_t *hldev)
  * xge_hal_device_poll_rx_channel - Poll Rx channel for completed
  * descriptors and process the same.
  * @channel: HAL channel.
- * @got_rx: Buffer to return the flag set if receive interrupt is occured
+ * @got_rx: Buffer to return the flag set if receive interrupt is occurred
  *
  * The function polls the Rx channel for the completed  descriptors and calls
  * the upper-layer driver (ULD) via supplied completion callback.
@@ -380,7 +380,7 @@ xge_hal_device_poll_rx_channel(xge_hal_channel_t *channel, int *got_rx)
  * xge_hal_device_poll_tx_channel - Poll Tx channel for completed
  * descriptors and process the same.
  * @channel: HAL channel.
- * @got_tx: Buffer to return the flag set if transmit interrupt is occured
+ * @got_tx: Buffer to return the flag set if transmit interrupt is occurred
  *
  * The function polls the Tx channel for the completed  descriptors and calls
  * the upper-layer driver (ULD) via supplied completion callback.

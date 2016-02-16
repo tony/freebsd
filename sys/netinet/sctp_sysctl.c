@@ -462,7 +462,7 @@ sctp_sysctl_handle_assoclist(SYSCTL_HANDLER_ARGS)
 			xstcb.assoc_id = sctp_get_associd(stcb);
 			xstcb.peers_rwnd = stcb->asoc.peers_rwnd;
 			xstcb.in_streams = stcb->asoc.streamincnt;
-			xstcb.out_streams = stcb->asoc.streamoutcnt;
+			xstcb.out_streams = stcb->asoc.streamountcnt;
 			xstcb.max_nr_retrans = stcb->asoc.overall_error_count;
 			xstcb.primary_process = 0;	/* not really supported
 							 * yet */

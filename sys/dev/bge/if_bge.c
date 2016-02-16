@@ -1309,7 +1309,7 @@ bge_miibus_statchg(device_t dev)
 }
 
 /*
- * Intialize a standard receive ring descriptor.
+ * Initialize a standard receive ring descriptor.
  */
 static int
 bge_newbuf_std(struct bge_softc *sc, int i)

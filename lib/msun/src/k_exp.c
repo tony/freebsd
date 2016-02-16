@@ -49,7 +49,7 @@ __frexp_exp(double x, int *expt)
 	uint32_t hx;
 
 	/*
-	 * We use exp(x) = exp(x - kln2) * 2**k, carefully chosen to
+	 * We use exp(x) = exp(x - kln2) * 2**k, carefuly chosen to
 	 * minimize |exp(kln2) - 2**k|.  We also scale the exponent of
 	 * exp_x to MAX_EXP so that the result can be multiplied by
 	 * a tiny number without losing accuracy due to denormalization.

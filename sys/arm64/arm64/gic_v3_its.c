@@ -826,7 +826,7 @@ lpi_bitmap_init(struct gic_v3_its_softc *sc)
 	gic_sc = device_get_softc(parent);
 
 	lpi_id_num = (1 << gic_sc->gic_idbits) - 1;
-	/* Substract IDs dedicated for SGIs, PPIs and SPIs */
+	/* Subtract IDs dedicated for SGIs, PPIs and SPIs */
 	lpi_id_num -= GIC_FIRST_LPI;
 
 	sc->its_lpi_maxid = lpi_id_num;

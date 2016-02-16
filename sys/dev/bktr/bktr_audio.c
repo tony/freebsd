@@ -132,7 +132,7 @@ set_audio( bktr_ptr_t bktr, int cmd )
 	else
 #endif /* AUDIOMUX_DISCOVER */
 
-	/* check for existance of audio MUXes */
+	/* check for existence of audio MUXes */
 	if ( !bktr->card.audiomuxs[ 4 ] )
 		return( -1 );
 

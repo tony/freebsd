@@ -1581,7 +1581,7 @@ ip6_pullexthdr(struct mbuf *m, size_t off, int nxt)
  *	are valid, and
  *	the sum of each header length equals to OFF.
  * Because of these assumptions, this function must be called very
- * carefully. Moreover, it will not be used in the near future when
+ * carefuly. Moreover, it will not be used in the near future when
  * we develop `neater' mechanism to process extension headers.
  */
 char *

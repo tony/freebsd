@@ -121,7 +121,7 @@ static  void adp_get_macaddr(struct en_pci_softc *);
 #define ADP_PCIREG_SWAP_WORD	0x4	/* swap byte on slave access */
 #define ADP_PCIREG_SWAP_DMA	0x8	/* swap byte on DMA */
 
-#define PCI_VENDOR_EFFICIENTNETS 0x111a			/* Efficent Networks */
+#define PCI_VENDOR_EFFICIENTNETS 0x111a			/* Efficient Networks */
 #define PCI_PRODUCT_EFFICIENTNETS_ENI155PF 0x0000	/* ENI-155P ATM */
 #define PCI_PRODUCT_EFFICIENTNETS_ENI155PA 0x0002	/* ENI-155P ATM */
 #define PCI_VENDOR_ADP 0x9004				/* adaptec */

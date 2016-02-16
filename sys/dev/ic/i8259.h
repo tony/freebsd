@@ -27,7 +27,7 @@
  */
 
 /*
- * Register defintions for the i8259A programmable interrupt controller.
+ * Register definitions for the i8259A programmable interrupt controller.
  */
 
 #ifndef _DEV_IC_I8259_H_

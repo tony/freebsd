@@ -130,7 +130,7 @@ GLOBAL agsaDeviceDesc_t *siPortSASDeviceAdd(
     pDevice->devInfo.sasDeviceInfo.target_ssp_stp_smp = sasIdentify.target_ssp_stp_smp;
     pDevice->devInfo.sasDeviceInfo.phyIdentifier = sasIdentify.phyIdentifier;
 
-    /* Add to discoverd device for the port */
+    /* Add to discovered device for the port */
     saLlistAdd(&(pPort->listSASATADevices), &(pDevice->linkNode));
 
     /* Release Device Lock */
@@ -298,7 +298,7 @@ GLOBAL agsaDeviceDesc_t *siPortSATADeviceAdd(
     pDevice->devInfo.sataDeviceInfo.stpPhyIdentifier = 0;
     pDevice->pPort = pPort;
 
-    /* Add to discoverd device for the port */
+    /* Add to discovered device for the port */
     saLlistAdd(&(pPort->listSASATADevices), &(pDevice->linkNode));
 
     /* Release Device Lock */
@@ -472,7 +472,7 @@ GLOBAL bit32 saPortControl(
     }
   }
 
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   if( using_reserved )
   {
     saLlistIORemove(&(saRoot->freeReservedRequests), &(pRequest->linkNode));

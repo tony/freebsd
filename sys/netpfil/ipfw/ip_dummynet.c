@@ -704,7 +704,7 @@ schk_match(void *obj, uintptr_t key, int flags, void *_arg)
 }
 
 /*
- * Create the entry and intialize with the sched hash if needed.
+ * Create the entry and initialize with the sched hash if needed.
  * Leave s->fp unset so we can tell whether a dn_ht_find() returns
  * a new object or a previously existing one.
  */
@@ -1629,7 +1629,7 @@ dummynet_flush(void)
  * with an oid which is at least a dn_id.
  * - the first object is the command (config, delete, flush, ...)
  * - config_link must be issued after the corresponding config_sched
- * - parameters (DN_TXT) for an object must preceed the object
+ * - parameters (DN_TXT) for an object must preced the object
  *   processed on a config_sched.
  */
 int

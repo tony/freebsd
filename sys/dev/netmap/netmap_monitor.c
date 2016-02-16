@@ -412,7 +412,7 @@ netmap_zmon_parent_sync(struct netmap_kring *kring, int flags, enum txrx tx)
 	mring = mkring->ring;
 	mlim = mkring->nkr_num_slots - 1;
 
-	/* get the relased slots (rel_slots) */
+	/* get the released slots (rel_slots) */
 	if (tx == NR_TX) {
 		beg = kring->nr_hwtail;
 		error = kring->mon_sync(kring, flags);

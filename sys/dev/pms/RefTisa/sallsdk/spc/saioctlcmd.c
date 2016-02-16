@@ -91,14 +91,14 @@ GLOBAL bit32 saFwProfile(
   ossaSingleThreadedEnter(agRoot, LL_IOREQ_LOCKEQ_LOCK);
   pRequest = (agsaIORequestDesc_t *)saLlistGetHead(&(saRoot->freeIORequests));
 
-  /* If no LL Control request entry avaliable */
+  /* If no LL Control request entry available */
   if ( agNULL == pRequest )
   {
     ossaSingleThreadedLeave(agRoot, LL_IOREQ_LOCKEQ_LOCK);
     SA_DBG1(("saFwProfile, No request from free list\n" ));
      return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Assign inbound and outbound Ring Buffer */
@@ -264,7 +264,7 @@ GLOBAL bit32 saFwFlashUpdate(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6a");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Assign inbound and outbound Ring Buffer */
@@ -399,7 +399,7 @@ GLOBAL bit32 saFlashExtExecute (
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "2R");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Assign inbound and outbound Ring Buffer */
@@ -1410,7 +1410,7 @@ GLOBAL bit32 saGpioEventSetup(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6h");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1502,7 +1502,7 @@ GLOBAL bit32 saGpioPinSetup(
     SA_DBG1(("saGpioPinSetup, No request from free list\n" ));
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1592,7 +1592,7 @@ GLOBAL bit32 saGpioRead(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6j");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1684,7 +1684,7 @@ GLOBAL bit32 saGpioWrite(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6k");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1787,7 +1787,7 @@ GLOBAL bit32 saSASDiagExecute(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6m");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -1921,7 +1921,7 @@ GLOBAL bit32 saSASDiagStartEnd(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6n");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -2022,7 +2022,7 @@ GLOBAL bit32 saGetTimeStamp(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6o");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   else
   {
     /* Remove the request from free list */
@@ -3419,7 +3419,7 @@ GLOBAL bit32 saSendSMPIoctl(
 	
 
 	
-	  /* If free IOMB avaliable */
+	  /* If free IOMB available */
 	  /* Remove the request from free list */
 	  if( using_reserved )
 	  {
@@ -3455,7 +3455,7 @@ GLOBAL bit32 saSendSMPIoctl(
 	  ossaSingleThreadedEnter(agRoot, LL_IOREQ_IBQ0_LOCK + inq);
 #endif /* SA_LL_IBQ_PROTECT */
 	
-	  /* If LL IO request entry avaliable */
+	  /* If LL IO request entry available */
 	  /* Get a free inbound queue entry */
 	  circularQ = &saRoot->inboundQueue[inq];
 	  retVal	= mpiMsgFreeGet(circularQ, IOMB_SIZE64, &pMessage);
@@ -3844,7 +3844,7 @@ bit32 saPCIeDiagExecute(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "6r");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   /* Remove the request from free list */
   saLlistIORemove(&(saRoot->freeIORequests), &(pRequest->linkNode));
   saRoot->IOMap[pRequest->HTag].Tag = pRequest->HTag;
@@ -3954,7 +3954,7 @@ bit32 saGetDFEData(
     smTraceFuncExit(hpDBG_VERY_LOUD, 'a', "2X");
     return AGSA_RC_BUSY;
   }
-  /* If LL Control request entry avaliable */
+  /* If LL Control request entry available */
   /* Remove the request from free list */
   saLlistIORemove(&(saRoot->freeIORequests), &(pRequest->linkNode));
   saRoot->IOMap[pRequest->HTag].Tag = pRequest->HTag;

@@ -173,7 +173,7 @@ LOCAL bit32 siFastSSPResAlloc(
   {
     size = IOMB_SIZE96;
   }
-  /* If LL IO request entry avaliable */
+  /* If LL IO request entry available */
   /* Get a free inbound queue entry */
   circularQ = &saRoot->inboundQueue[inq];
   retVal = mpiMsgFreeGet(circularQ, size, pPayload);
@@ -198,7 +198,7 @@ LOCAL bit32 siFastSSPResAlloc(
   }
 
   /* But add it to the pending queue during FastStart */
-  /* If free IOMB avaliable */
+  /* If free IOMB available */
   /* Remove the request from free list */
   saLlistIORemove(&saRoot->freeIORequests, &(*pRequest)->linkNode);
 
@@ -648,7 +648,7 @@ GLOBAL bit32 saSSPStart(
     ret = AGSA_RC_BUSY;
     goto ext;
   }
-  /* If LL IO request entry avaliable */
+  /* If LL IO request entry available */
   else
   {
     /* Remove the request from free list */
@@ -745,7 +745,7 @@ GLOBAL bit32 saSSPStart(
         break;
     }
 
-    /* If free IOMB avaliable,  set up pRequest*/
+    /* If free IOMB available,  set up pRequest*/
     pRequest->valid = agTRUE;
     pRequest->pIORequestContext = agIORequest;
     pRequest->pDevice = pDevice;
@@ -1819,7 +1819,7 @@ GLOBAL bit32 saSSPAbort(
     }
   }
 
-  /* If free IOMB avaliable */
+  /* If free IOMB available */
   /* Remove the request from free list */
   if( using_reserved )
   {
@@ -1857,7 +1857,7 @@ GLOBAL bit32 saSSPAbort(
   ossaSingleThreadedEnter(agRoot, LL_IOREQ_IBQ0_LOCK + inq);
 #endif /* SA_LL_IBQ_PROTECT */
 
-  /* If LL IO request entry avaliable */
+  /* If LL IO request entry available */
   /* Get a free inbound queue entry */
   circularQ = &saRoot->inboundQueue[inq];
   retVal    = mpiMsgFreeGet(circularQ, IOMB_SIZE64, &pMessage);

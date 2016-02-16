@@ -3739,7 +3739,7 @@ static elink_status_t elink_eee_initial_config(struct elink_params *params,
 {
 	vars->eee_status |= ((uint32_t) mode) << SHMEM_EEE_SUPPORTED_SHIFT;
 
-	/* Propogate params' bits --> vars (for migration exposure) */
+	/* Propagate params' bits --> vars (for migration exposure) */
 	if (params->eee_mode & ELINK_EEE_MODE_ENABLE_LPI)
 		vars->eee_status |= SHMEM_EEE_LPI_REQUESTED_BIT;
 	else
@@ -4375,7 +4375,7 @@ static uint8_t elink_ext_phy_resolve_fc(struct elink_phy *phy,
 	uint8_t ret = 0;
 	vars->flow_ctrl = ELINK_FLOW_CTRL_NONE;
 	if (phy->req_flow_ctrl != ELINK_FLOW_CTRL_AUTO) {
-		/* Update the advertised flow-controled of LD/LP in AN */
+		/* Update the advertised flow-controlled of LD/LP in AN */
 		if (phy->req_line_speed == ELINK_SPEED_AUTO_NEG)
 			elink_ext_phy_update_adv_fc(phy, params, vars);
 		/* But set the flow-control result as the requested one */
@@ -6173,7 +6173,7 @@ static void elink_flow_ctrl_resolve(struct elink_phy *phy,
 
 	/* Resolve from gp_status in case of AN complete and not sgmii */
 	if (phy->req_flow_ctrl != ELINK_FLOW_CTRL_AUTO) {
-		/* Update the advertised flow-controled of LD/LP in AN */
+		/* Update the advertised flow-controlled of LD/LP in AN */
 		if (phy->req_line_speed == ELINK_SPEED_AUTO_NEG)
 			elink_update_adv_fc(phy, params, vars, gp_status);
 		/* But set the flow-control result as the requested one */
@@ -14341,7 +14341,7 @@ static void elink_check_over_curr(struct elink_params *params,
 		vars->phy_flags &= ~PHY_OVER_CURRENT_FLAG;
 }
 
-/* Returns 0 if no change occured since last check; 1 otherwise. */
+/* Returns 0 if no change occurred since last check; 1 otherwise. */
 static uint8_t elink_analyze_link_error(struct elink_params *params,
 				    struct elink_vars *vars, uint32_t status,
 				    uint32_t phy_flag, uint32_t link_flag, uint8_t notify)

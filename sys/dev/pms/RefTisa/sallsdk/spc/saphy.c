@@ -113,7 +113,7 @@ GLOBAL bit32 saPhyStart(
     }
     SA_ASSERT((!pRequest->valid), "The pRequest is in use");
     pRequest->valid = agTRUE;
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     if( using_reserved )
     {
       saLlistIORemove(&(saRoot->freeReservedRequests), &(pRequest->linkNode));
@@ -1105,7 +1105,7 @@ GLOBAL bit32 saHwEventAck(
     }
     else
     {
-      /*  pPort is NULL - set PORT_ID to not intialized  */
+      /*  pPort is NULL - set PORT_ID to not initialized  */
       if(smIS_SPC(agRoot))
       {
         phyportid = 0xF;
@@ -1118,7 +1118,7 @@ GLOBAL bit32 saHwEventAck(
   }
   else
   {
-    /* agPortContext is NULL - set PORT_ID to not intialized  */
+    /* agPortContext is NULL - set PORT_ID to not initialized  */
     if(smIS_SPC(agRoot))
     {
       phyportid = 0xF;
@@ -1250,7 +1250,7 @@ GLOBAL bit32 saVhistCapture(
     }
     SA_ASSERT((!pRequest->valid), "The pRequest is in use");
     pRequest->valid = agTRUE;
-    /* If LL Control request entry avaliable */
+    /* If LL Control request entry available */
     if( using_reserved )
     {
       saLlistIORemove(&(saRoot->freeReservedRequests), &(pRequest->linkNode));

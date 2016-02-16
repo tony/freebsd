@@ -259,7 +259,7 @@ SFT_RST_RQST
 #define SCRATCH_PAD1_V_ILA_MASK                  0x0000000C   /* 2 3 also  ready */
 #define SCRATCH_PAD1_V_ILA_ERR                   0x00000008   /* 3  */
 #define SCRATCH_PAD1_V_BOOTSTATE_MASK            0x00000070   /* 456 */
-#define SCRATCH_PAD1_V_BOOTSTATE_SUCESS          0x00000000   /* Load successful */
+#define SCRATCH_PAD1_V_BOOTSTATE_SUCCESS          0x00000000   /* Load successful */
 #define SCRATCH_PAD1_V_BOOTSTATE_HDA_SEEPROM     0x00000010   /* HDA Mode SEEPROM Setting */
 #define SCRATCH_PAD1_V_BOOTSTATE_HDA_BOOTSTRAP   0x00000020   /* HDA Mode BootStrap Setting */
 #define SCRATCH_PAD1_V_BOOTSTATE_HDA_SOFTRESET   0x00000030   /* HDA Mode Soft Reset */
@@ -420,7 +420,7 @@ SFT_RST_RQST
 #define GSM_WRITE_ADDR_PARITY_CHECK              0x00000040
 #define GSM_WRITE_DATA_PARITY_CHECK              0x00000048
 
-/* signature defintion for host scratch pad0 register */
+/* signature definition for host scratch pad0 register */
 #define SPC_SOFT_RESET_SIGNATURE                 0x252acbcd   /* Signature for Soft Reset */
 #define SPC_HDASOFT_RESET_SIGNATURE              0xa5aa27d7   /* Signature for HDA Soft Reset without PCIe resetting */
 
@@ -673,10 +673,10 @@ typedef struct spcv_hda_rsp_s {
 /* PCIe Analyzer trigger */
 #define PCIE_TRIGGER_ON_REGISTER_READ          V_Host_Scratchpad_2_Register    /* PCI trigger on this offset */
 
-#define PCI_TRIGGER_INIT_TEST                 1 /* Setting adjustable paramater PciTrigger to match this value */
-#define PCI_TRIGGER_OFFSET_MISMATCH           2 /* Setting adjustable paramater PciTrigger to match this value */
-#define PCI_TRIGGER_COAL_IOMB_ERROR           4 /* Setting adjustable paramater PciTrigger to match this value */
-#define PCI_TRIGGER_COAL_INVALID              8 /* Setting adjustable paramater PciTrigger to match this value */
+#define PCI_TRIGGER_INIT_TEST                 1 /* Setting adjustable parameter PciTrigger to match this value */
+#define PCI_TRIGGER_OFFSET_MISMATCH           2 /* Setting adjustable parameter PciTrigger to match this value */
+#define PCI_TRIGGER_COAL_IOMB_ERROR           4 /* Setting adjustable parameter PciTrigger to match this value */
+#define PCI_TRIGGER_COAL_INVALID              8 /* Setting adjustable parameter PciTrigger to match this value */
 
 
 

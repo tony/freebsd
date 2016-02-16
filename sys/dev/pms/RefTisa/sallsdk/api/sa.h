@@ -1129,7 +1129,7 @@
 #define AGSA_MAX_SMPPAYLOAD_VIA_SFO                 40
 #define AGSA_MAX_SSPPAYLOAD_VIA_SFO                 36
 
-/* SATA Initiator Request option field defintion */
+/* SATA Initiator Request option field definition */
 #define AGSA_RETURN_D2H_FIS_GOOD_COMPLETION         0x000001
 #define AGSA_SATA_ENABLE_ENCRYPTION                 0x000004
 #define AGSA_SATA_ENABLE_DIF                        0x000008
@@ -2344,7 +2344,7 @@ typedef struct agsaSwConfig_s
   bit32   param1;                       /**< parameter1 */
   bit32   param2;                       /**< parameter2 */
   void    *param3;                      /**< parameter3 */
-  void    *param4;                      /**< paramater4 */
+  void    *param4;                      /**< parameter4 */
   bit32   stallUsec;
   bit32   FWConfig;
   bit32   PortRecoveryResetTimer;

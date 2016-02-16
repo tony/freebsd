@@ -894,11 +894,11 @@ atiixp_intr(void *p)
 #if 0
 	if (status & ATI_REG_ISR_IN_XRUN) {
 		device_printf(sc->dev,
-			"Recieve IN XRUN interrupt\n");
+			"Receive IN XRUN interrupt\n");
 	}
 	if (status & ATI_REG_ISR_OUT_XRUN) {
 		device_printf(sc->dev,
-			"Recieve OUT XRUN interrupt\n");
+			"Receive OUT XRUN interrupt\n");
 	}
 #endif
 
@@ -1040,7 +1040,7 @@ atiixp_chip_post_init(void *arg)
 	found = 0;
 
 	/*
-	 * ATI IXP can have upto 3 codecs, but single codec should be
+	 * ATI IXP can have up to 3 codecs, but single codec should be
 	 * suffice for now.
 	 */
 	if (!(sc->codec_not_ready_bits & ATI_REG_ISR_CODEC0_NOT_READY)) {

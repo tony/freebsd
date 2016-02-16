@@ -3934,7 +3934,7 @@ static void move(FICL_VM *pVM)
     if (u == 0) 
         return;
     /*
-    ** Do the copy carefully, so as to be
+    ** Do the copy carefuly, so as to be
     ** correct even if the two ranges overlap
     */
     if (addr1 >= addr2)

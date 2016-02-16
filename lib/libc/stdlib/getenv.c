@@ -332,7 +332,7 @@ __build_env(void)
 	int savedErrno;
 	size_t nameLen;
 
-	/* Check for non-existant environment. */
+	/* Check for non-existent environment. */
 	if (environ == NULL || environ[0] == NULL)
 		return (0);
 

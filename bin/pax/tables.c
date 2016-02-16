@@ -60,7 +60,7 @@ __FBSDID("$FreeBSD$");
  * As of this writing, the POSIX library functions were more complex than
  * needed for this application (pax databases have very short lifetimes and
  * do not survive after pax is finished). Pax is required to handle very
- * large archives. These database routines carefully combine memory usage and
+ * large archives. These database routines carefuly combine memory usage and
  * temporary file storage in ways which will not significantly impact runtime
  * performance while allowing the largest possible archives to be handled.
  * Trying to force the fit to the POSIX databases routines was not considered

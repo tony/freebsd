@@ -5657,7 +5657,7 @@ struct flow_control_configuration
 struct function_start_data
 {
 	uint8_t function_mode /* the function mode */;
-	uint8_t allow_npar_tx_switching /* If set, inter-pf tx switching is allowed in Switch Independant function mode. (E2/E3 Only) */;
+	uint8_t allow_npar_tx_switching /* If set, inter-pf tx switching is allowed in Switch Independent function mode. (E2/E3 Only) */;
 	uint16_t sd_vlan_tag /* value of Vlan in case of switch depended multi-function mode */;
 	uint16_t vif_id /* value of VIF id in case of NIV multi-function mode */;
 	uint8_t path_id;
@@ -5927,7 +5927,7 @@ enum malicious_vf_error_id
 	VF_PF_CHANNEL_NOT_READY /* Writing to VF/PF channel when it is not ready */,
 	ETH_ILLEGAL_BD_LENGTHS /* TX BD lengths error was detected */,
 	ETH_PACKET_TOO_SHORT /* TX packet is shorter then reported on BDs */,
-	ETH_PAYLOAD_TOO_BIG /* TX packet is greater then MTU */,
+	ETH_PAYLOAD_TOO_BIG /* TX packet is greater than MTU */,
 	ETH_ILLEGAL_ETH_TYPE /* TX packet reported without VLAN but eth type is 0x8100 */,
 	ETH_ILLEGAL_LSO_HDR_LEN /* LSO header length on BDs and on hdr_nbd do not match */,
 	ETH_TOO_MANY_BDS /* Tx packet has too many BDs */,

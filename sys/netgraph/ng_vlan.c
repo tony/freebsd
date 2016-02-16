@@ -565,7 +565,7 @@ ng_vlan_rcvdata(hook_p hook, item_p item)
 
 		if (priv->vlan_hook[vid] != NULL) {
 			/*
-			 * VLAN filter: allways remove vlan tags and
+			 * VLAN filter: always remove vlan tags and
 			 * decapsulate packet.
 			 */
 			dst_hook = priv->vlan_hook[vid];

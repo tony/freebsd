@@ -67,7 +67,7 @@
  *                                    -----
  *
  * As with the previous Siena structures, each structure here is laid out
- * carefully: values are aligned to their natural boundary, with explicit
+ * carefuly: values are aligned to their natural boundary, with explicit
  * padding fields added where necessary.  (No, technically this does not
  * absolutely guarantee portability.  But, in practice, compilers are generally
  * sensible enough not to introduce completely pointless padding, and it works
@@ -537,7 +537,7 @@ struct tlv_pcie_config_r2 {
  * number of externally visible ports (and, hence, PF to port mapping), so must
  * be done at boot time.
  *
- * This tag supercedes tlv_global_port_config.
+ * This tag supersedes tlv_global_port_config.
  */
 
 #define TLV_TAG_GLOBAL_PORT_MODE         (0x10110000)

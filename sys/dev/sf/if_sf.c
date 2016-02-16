@@ -71,7 +71,7 @@ __FBSDID("$FreeBSD$");
  * PHYs is done through a special register map rather than with the
  * usual bitbang MDIO method.
  *
- * Acesssing the registers on the Starfire is a little tricky. The
+ * Accesssing the registers on the Starfire is a little tricky. The
  * Starfire has a 512K internal register space. When programmed for
  * PCI memory mapped mode, the entire register space can be accessed
  * directly. However in I/O space mode, only 256 bytes are directly
@@ -720,7 +720,7 @@ sf_probe(device_t dev)
 	}
 
 	if (vid == AD_VENDORID && did == AD_DEVICEID_STARFIRE) {
-		/* unkown subdevice */
+		/* unknown subdevice */
 		device_set_desc(dev, sf_devs[0].sf_name);
 		return (BUS_PROBE_DEFAULT);
 	}
@@ -2112,7 +2112,7 @@ sf_init_locked(struct sf_softc *sc)
 	/* Load StarFire firmware. */
 	sf_download_fw(sc);
 
-	/* Intialize interrupt moderation. */
+	/* Initialize interrupt moderation. */
 	csr_write_4(sc, SF_TIMER_CTL, SF_TIMER_IMASK_MODE | SF_TIMER_TIMES_TEN |
 	    (sc->sf_int_mod & SF_TIMER_IMASK_INTERVAL));
 

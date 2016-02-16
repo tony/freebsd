@@ -110,7 +110,7 @@ struct mwl_descdma {
 
 /*
  * TX/RX ring definitions.  There are 4 tx rings, one
- * per AC, and 1 rx ring.  Note carefully that transmit
+ * per AC, and 1 rx ring.  Note carefuly that transmit
  * descriptors are treated as a contiguous chunk and the
  * firmware pre-fetches descriptors.  This means that we
  * must preserve order when moving descriptors between

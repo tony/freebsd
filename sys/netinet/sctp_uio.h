@@ -767,7 +767,7 @@ struct sctp_blk_args {
  * can specify more. You must do multiple resets if you want to reset more
  * than SCTP_MAX_EXPLICIT_STR_RESET.
  */
-#define SCTP_MAX_EXPLICT_STR_RESET   1000
+#define SCTP_MAX_EXPLICIT_STR_RESET   1000
 
 struct sctp_reset_streams {
 	sctp_assoc_t srs_assoc_id;

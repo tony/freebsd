@@ -56,7 +56,7 @@
 
 /**
  * @file
- * @brief This file contains the method declarations and type defintions
+ * @brief This file contains the method declarations and type definitions
  *        required to translate the SCSI REPORT LUNS command.
  */
 

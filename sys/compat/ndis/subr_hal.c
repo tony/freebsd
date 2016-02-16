@@ -253,7 +253,7 @@ READ_PORT_BUFFER_UCHAR(port, val, cnt)
  *
  * There's another commonly used IRQL in Windows, which is APC_LEVEL.
  * An APC is an Asynchronous Procedure Call, which differs from a DPC
- * (Defered Procedure Call) in that a DPC is queued up to run in
+ * (Deferred Procedure Call) in that a DPC is queued up to run in
  * another thread, while an APC runs in the thread that scheduled
  * it (similar to a signal handler in a UNIX process). We don't
  * actually support the notion of APCs in FreeBSD, so for now, the

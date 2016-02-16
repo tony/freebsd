@@ -325,7 +325,7 @@ struct option dhcp_options[256] = {
 
 /*
  * Default dhcp option priority list (this is ad hoc and should not be
- * mistaken for a carefully crafted and optimized list).
+ * mistaken for a carefuly crafted and optimized list).
  */
 unsigned char dhcp_option_default_priority_list[] = {
 	DHO_DHCP_REQUESTED_ADDRESS,

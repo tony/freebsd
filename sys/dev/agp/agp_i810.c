@@ -763,37 +763,37 @@ static const struct agp_i810_match {
 	},
 	{
 		.devid = 0x04028086,
-		.name = "Haswell desktop GT1",
+		.name = "Has well desktop GT1",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x04128086,
-		.name = "Haswell desktop GT2",
+		.name = "Has well desktop GT2",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x040a8086,
-		.name = "Haswell server GT1",
+		.name = "Has well server GT1",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x041a8086,
-		.name = "Haswell server GT2",
+		.name = "Has well server GT2",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x04068086,
-		.name = "Haswell mobile GT1",
+		.name = "Has well mobile GT1",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x04168086,
-		.name = "Haswell mobile GT2",
+		.name = "Has well mobile GT2",
 		.driver = &agp_i810_hsw_driver
 	},
 	{
 		.devid = 0x0c168086,
-		.name = "Haswell SDV",
+		.name = "Has well SDV",
 		.driver = &agp_i810_hsw_driver
 	},
 	{

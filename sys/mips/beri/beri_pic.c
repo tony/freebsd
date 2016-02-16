@@ -282,7 +282,7 @@ beripic_fdt_attach(device_t dev)
 
 	/*
 	 * FDT lists CONFIG, IP_READ, IP_SET, and IP_CLEAR registers as
-	 * seperate memory regions in that order.
+	 * separate memory regions in that order.
 	 */
 	sc->bp_cfg_rid = 0;
 	sc->bp_cfg_res = bus_alloc_resource_any(dev, SYS_RES_MEMORY,

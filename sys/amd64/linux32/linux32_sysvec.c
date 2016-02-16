@@ -538,7 +538,7 @@ linux_sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
  * has been taken.  Reset signal mask and
  * stack state from context left by sendsig (above).
  * Return to previous pc and psl as specified by
- * context left by sendsig. Check carefully to
+ * context left by sendsig. Check carefuly to
  * make sure that the user has not modified the
  * psl to gain improper privileges or to cause
  * a machine fault.
@@ -625,7 +625,7 @@ linux_sigreturn(struct thread *td, struct linux_sigreturn_args *args)
  * has been taken.  Reset signal mask and
  * stack state from context left by rt_sendsig (above).
  * Return to previous pc and psl as specified by
- * context left by sendsig. Check carefully to
+ * context left by sendsig. Check carefuly to
  * make sure that the user has not modified the
  * psl to gain improper privileges or to cause
  * a machine fault.

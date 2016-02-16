@@ -397,7 +397,7 @@ ar5212IsJapanChannelSpreadSupported(struct ath_hal *ah)
 }
 
 /*
- * Get the rssi of frame curently being received.
+ * Get the rssi of frame currently being received.
  */
 uint32_t
 ar5212GetCurRssi(struct ath_hal *ah)

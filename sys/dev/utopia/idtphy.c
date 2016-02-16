@@ -54,7 +54,7 @@ __FBSDID("$FreeBSD$");
 #include <dev/utopia/utopia_priv.h>
 
 /*
- * Reset IDT77105. There is really no way to reset this thing by acessing
+ * Reset IDT77105. There is really no way to reset this thing by accessing
  * the registers. Load the registers with default values.
  */
 static int

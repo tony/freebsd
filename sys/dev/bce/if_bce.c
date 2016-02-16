@@ -7957,7 +7957,7 @@ bce_intr(void *xsc)
 		goto bce_intr_exit;
 	}
 
-	/* Ack the interrupt and stop others from occuring. */
+	/* Ack the interrupt and stop others from occurring. */
 	REG_WR(sc, BCE_PCICFG_INT_ACK_CMD,
 	    BCE_PCICFG_INT_ACK_CMD_USE_INT_HC_PARAM |
 	    BCE_PCICFG_INT_ACK_CMD_MASK_INT);

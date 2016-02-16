@@ -1018,7 +1018,7 @@ nfsrpc_getattr(vnode_t vp, struct ucred *cred, NFSPROC_T *p,
 }
 
 /*
- * nfs getattr call with non-vnode arguemnts.
+ * nfs getattr call with non-vnode arguments.
  */
 APPLESTATIC int
 nfsrpc_getattrnovp(struct nfsmount *nmp, u_int8_t *fhp, int fhlen, int syscred,
@@ -1830,7 +1830,7 @@ nfsmout:
 
 /*
  * nfs file create call
- * Mostly just call the approriate routine. (I separated out v4, so that
+ * Mostly just call the appropriate routine. (I separated out v4, so that
  * error recovery wouldn't be as difficult.)
  */
 APPLESTATIC int

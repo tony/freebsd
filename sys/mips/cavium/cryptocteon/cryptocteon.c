@@ -101,7 +101,7 @@ cryptocteon_attach(device_t dev)
 }
 
 /*
- * Generate a new octo session.  We artifically limit it to a single
+ * Generate a new octo session.  We artificially limit it to a single
  * hash/cipher or hash-cipher combo just to make it easier, most callers
  * do not expect more than this anyway.
  */

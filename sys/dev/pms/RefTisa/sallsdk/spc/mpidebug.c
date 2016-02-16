@@ -132,7 +132,7 @@ void mpiTraceAdd( bit32 q,bit32 pici,bit32 ib, void *iomb, bit32 numBytes)
 /**
  * fiEnableTracing
  *
- *    This fucntion is called to initialize tracing of FC layer.
+ *    This function is called to initialize tracing of FC layer.
  *
  */
 void siEnableTracing (agsaRoot_t  *agRoot)

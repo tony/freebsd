@@ -130,7 +130,7 @@ do {										\
 #endif
 
 /*
- * PMC_SOFT_CALL_TF need to be used carefully.
+ * PMC_SOFT_CALL_TF need to be used carefuly.
  * Userland capture will be done during AST processing.
  */
 #define PMC_SOFT_CALL_TF(pr, mo, fu, na, tf)					\

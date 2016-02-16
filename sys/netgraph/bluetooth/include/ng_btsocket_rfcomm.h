@@ -69,7 +69,7 @@
 #define RFCOMM_MODEM_FC			0x02 /* Flow Control asserted */
 #define RFCOMM_MODEM_RTC		0x04 /* Ready To Communicate */
 #define RFCOMM_MODEM_RTR		0x08 /* Ready To Receive */
-#define RFCOMM_MODEM_IC			0x40 /* Incomming Call */
+#define RFCOMM_MODEM_IC			0x40 /* Incoming Call */
 #define RFCOMM_MODEM_DV			0x80 /* Data Valid */
 
 /* RPN parameters - baud rate */

@@ -40,7 +40,7 @@ __FBSDID("$FreeBSD$");
 #include "iicbus_if.h"
 
 /*
- * Translate IIC_Exxxxx status values to vaguely-equivelent errno values.
+ * Translate IIC_Exxxxx status values to vaguely-equivalent errno values.
  */
 int
 iic2errno(int iic_status)

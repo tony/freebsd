@@ -697,7 +697,7 @@ hatm_intr(void *p)
 		  case HE_REGM_ITYPE_INVALID:
 			/* this is the documented fix for the ISW bug 8.1.1
 			 * Note, that the documented fix is partly wrong:
-			 * the ISWs should be intialized to 0xf8 not 0xff */
+			 * the ISWs should be initialized to 0xf8 not 0xff */
 			sc->istats.bug_bad_isw++;
 			DBG(sc, INTR, ("hatm: invalid ISW bug triggered"));
 			he_intr_tbrq(sc, &sc->tbrq, 0);

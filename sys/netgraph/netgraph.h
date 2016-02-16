@@ -109,7 +109,7 @@ typedef	int	ng_rcvitem (node_p node, hook_p hook, item_p item);
  */
 struct ng_hook {
 	char	hk_name[NG_HOOKSIZ];	/* what this node knows this link as */
-	void   *hk_private;		/* node dependant ID for this hook */
+	void   *hk_private;		/* node dependent ID for this hook */
 	int	hk_flags;		/* info about this hook/link */
 	int	hk_type;		/* tbd: hook data link type */
 	struct	ng_hook *hk_peer;	/* the other end of this link */
@@ -362,7 +362,7 @@ struct ng_node {
 	struct	ng_type *nd_type;	/* the installed 'type' */
 	int	nd_flags;		/* see below for bit definitions */
 	int	nd_numhooks;		/* number of hooks */
-	void   *nd_private;		/* node type dependant node ID */
+	void   *nd_private;		/* node type dependent node ID */
 	ng_ID_t	nd_ID;			/* Unique per node */
 	LIST_HEAD(hooks, ng_hook) nd_hooks;	/* linked list of node hooks */
 	LIST_ENTRY(ng_node)	  nd_nodes;	/* name hash collision list */

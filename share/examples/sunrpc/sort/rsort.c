@@ -20,7 +20,7 @@ main(argc, argv)
 		exit(1);
 	}
 	machinename = argv[1];
-	args.ss.ss_len = argc - 2;     /* substract off progname, machinename */
+	args.ss.ss_len = argc - 2;     /* subtract off progname, machinename */
 	args.ss.ss_val = &argv[2];
 	res.ss.ss_val = (char **)NULL;
 

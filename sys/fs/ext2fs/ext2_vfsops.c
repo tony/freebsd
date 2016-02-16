@@ -546,7 +546,7 @@ ext2_mountfs(struct vnode *devvp, struct mount *mp)
 	int32_t e2fs_maxcontig;
 
 	ronly = vfs_flagopt(mp->mnt_optnew, "ro", NULL, 0);
-	/* XXX: use VOP_ACESS to check FS perms */
+	/* XXX: use VOP_ACCESS to check FS perms */
 	DROP_GIANT();
 	g_topology_lock();
 	error = g_vfs_open(devvp, &cp, "ext2fs", ronly ? 0 : 1);

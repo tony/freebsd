@@ -99,7 +99,7 @@ struct cpu_functions {
 	 *
 	 *	ID-cache Invalidate All:
 	 *		Unlike other functions, this one must never write back.
-	 *		It is used to intialize the MMU when it is in an unknown
+	 *		It is used to initialize the MMU when it is in an unknown
 	 *		state (such as when it may have lines tagged as valid
 	 *		that belong to a previous set of mappings).
 	 *

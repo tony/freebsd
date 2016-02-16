@@ -417,7 +417,7 @@ taskqueue_run_locked(struct taskqueue *queue)
 		TAILQ_INSERT_TAIL(&queue->tq_active, &tb, tb_link);
 
 		/*
-		 * Carefully remove the first task from the queue and
+		 * Carefuly remove the first task from the queue and
 		 * zero its pending count.
 		 */
 		task = STAILQ_FIRST(&queue->tq_queue);

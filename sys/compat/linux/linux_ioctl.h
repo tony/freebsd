@@ -35,7 +35,7 @@
  * ioctl
  *
  * XXX comments in Linux' <asm-generic/ioctl.h> indicate these
- * could be arch-dependant...
+ * could be arch-dependent...
  */
 #define LINUX_IOC_VOID		0
 #define LINUX_IOC_IN		0x40000000

@@ -195,7 +195,7 @@ opencontrol(void)
 
 /*
  * Print a usage message - this relies on U_DEBUG==0 and U_BOOT==1.
- * Don't print the DEBUG usage string unless explicity requested.
+ * Don't print the DEBUG usage string unless explicitly requested.
  */
 void
 prusage(int strn, int eflag)

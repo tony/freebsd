@@ -892,7 +892,7 @@ tryagain:
 }
 
 /*
- * Catagorise a RPC return status and error into an `enum tryret'
+ * Categorise a RPC return status and error into an `enum tryret'
  * return code.
  */
 static enum tryret

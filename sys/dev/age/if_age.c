@@ -508,7 +508,7 @@ age_attach(device_t dev)
 
 	/*
 	 * XXX
-	 * Unintialized hardware returns an invalid chip id/revision
+	 * Uninitialized hardware returns an invalid chip id/revision
 	 * as well as 0xFFFFFFFF for Tx/Rx fifo length. It seems that
 	 * unplugged cable results in putting hardware into automatic
 	 * power down mode which in turn returns invalld chip revision.

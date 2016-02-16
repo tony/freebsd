@@ -242,7 +242,7 @@ sctp_cwnd_update_after_fr(struct sctp_tcb *stcb,
 }
 
 /* Defines for instantaneous bw decisions */
-#define SCTP_INST_LOOSING 1	/* Loosing to other flows */
+#define SCTP_INST_LOOSING 1	/* Losing to other flows */
 #define SCTP_INST_NEUTRAL 2	/* Neutral, no indication */
 #define SCTP_INST_GAINING 3	/* Gaining, step down possible */
 
@@ -1110,7 +1110,7 @@ sctp_cwnd_update_after_ecn_echo_common(struct sctp_tcb *stcb, struct sctp_nets *
 		} else {
 			/*
 			 * Further tuning down required over the drastic
-			 * orginal cut
+			 * original cut
 			 */
 			net->ssthresh -= (net->mtu * num_pkt_lost);
 			net->cwnd -= (net->mtu * num_pkt_lost);

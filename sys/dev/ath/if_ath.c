@@ -2770,7 +2770,7 @@ ath_reset(struct ath_softc *sc, ATH_RESET_TYPE reset_type)
 	ATH_PCU_UNLOCK_ASSERT(sc);
 	ATH_UNLOCK_ASSERT(sc);
 
-	/* Try to (stop any further TX/RX from occuring */
+	/* Try to (stop any further TX/RX from occurring */
 	taskqueue_block(sc->sc_tq);
 
 	/*
@@ -2814,7 +2814,7 @@ ath_reset(struct ath_softc *sc, ATH_RESET_TYPE reset_type)
 
 	/*
 	 * Should now wait for pending TX/RX to complete
-	 * and block future ones from occuring. This needs to be
+	 * and block future ones from occurring. This needs to be
 	 * done before the TX queue is drained.
 	 */
 	ath_draintxq(sc, reset_type);	/* stop xmit side */
@@ -3664,7 +3664,7 @@ ath_bstuck_proc(void *arg, int pending)
 	sc->sc_stats.ast_bstuck++;
 	/*
 	 * This assumes that there's no simultaneous channel mode change
-	 * occuring.
+	 * occurring.
 	 */
 	ath_reset(sc, ATH_RESET_NOLOSS);
 }
@@ -4725,7 +4725,7 @@ ath_tx_freebuf(struct ath_softc *sc, struct ath_buf *bf, int status)
 	/*
 	 * Make sure that we only sync/unload if there's an mbuf.
 	 * If not (eg we cloned a buffer), the unload will have already
-	 * occured.
+	 * occurred.
 	 */
 	if (bf->bf_m != NULL) {
 		bus_dmamap_sync(sc->sc_dmat, bf->bf_dmamap,
@@ -5064,7 +5064,7 @@ ath_chan_set(struct ath_softc *sc, struct ieee80211_channel *chan)
 	ATH_PCU_UNLOCK_ASSERT(sc);
 	ATH_UNLOCK_ASSERT(sc);
 
-	/* (Try to) stop TX/RX from occuring */
+	/* (Try to) stop TX/RX from occurring */
 	taskqueue_block(sc->sc_tq);
 
 	ATH_PCU_LOCK(sc);

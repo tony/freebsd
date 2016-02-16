@@ -987,7 +987,7 @@ int ficlParseFloatNumber( FICL_VM *pVM, STRINGINFO si )
 
 /**************************************************************************
 ** Add float words to a system's dictionary.
-** pSys -- Pointer to the FICL sytem to add float words to.
+** pSys -- Pointer to the FICL system to add float words to.
 **************************************************************************/
 void ficlCompileFloat(FICL_SYSTEM *pSys)
 {

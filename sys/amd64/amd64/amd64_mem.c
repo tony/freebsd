@@ -129,7 +129,7 @@ amd64_mtrr2mrt(int val)
 }
 
 /*
- * amd64 MTRR conflicts. Writeback and uncachable may overlap.
+ * amd64 MTRR conflicts. Writeback and uncacheable may overlap.
  */
 static int
 amd64_mtrrconflict(int flag1, int flag2)

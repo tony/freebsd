@@ -582,7 +582,7 @@ em_attach(device_t dev)
 	}
 	/*
 	** In the new SPT device flash is not  a
-	** seperate BAR, rather it is also in BAR0,
+	** separate BAR, rather it is also in BAR0,
 	** so use the same tag and an offset handle for the
 	** FLASH read/write macros in the shared code.
 	*/
@@ -2595,7 +2595,7 @@ em_allocate_legacy(struct adapter *adapter)
  *
  *  Setup the MSIX Interrupt handlers
  *   This is not really Multiqueue, rather
- *   its just seperate interrupt vectors
+ *   its just separate interrupt vectors
  *   for TX, RX, and Link.
  *
  **********************************************************************/
@@ -3083,7 +3083,7 @@ em_reset(struct adapter *adapter)
 	 *   received after sending an XOFF.
 	 * - Low water mark works best when it is very near the high water mark.
 	 *   This allows the receiver to restart by sending XON when it has
-	 *   drained a bit. Here we use an arbitary value of 1500 which will
+	 *   drained a bit. Here we use an arbitrary value of 1500 which will
 	 *   restart after one full frame is pulled from the buffer. There
 	 *   could be several smaller frames in the buffer and if so they will
 	 *   not trigger the XON until their total number reduces the buffer

@@ -747,7 +747,7 @@ fire_attach(device_t dev)
 	FIRE_SYSCTL_ADD_UINT("tlu_oe_tx_err", &sc->sc_stats_tlu_oe_tx_err,
 	    "DLU/TLU transmit other event errors"),
 	FIRE_SYSCTL_ADD_UINT("ubc_dmardue", &sc->sc_stats_ubc_dmardue,
-	    "UBC DMARDUE erros");
+	    "UBC DMARDUE errors");
 
 #undef FIRE_SYSCTL_ADD_UINT
 

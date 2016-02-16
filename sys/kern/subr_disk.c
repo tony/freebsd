@@ -68,7 +68,7 @@ disk_err(struct bio *bp, const char *what, int blkdone, int nl)
 /*
  * BIO queue implementation
  *
- * Please read carefully the description below before making any change
+ * Please read carefuly the description below before making any change
  * to the code, or you might change the behaviour of the data structure
  * in undesirable ways.
  *

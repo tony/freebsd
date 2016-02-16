@@ -375,7 +375,7 @@ retry:
 			    ("lost root page table page %p", domain));
 			/*
 			 * Page table page does not exist, allocate
-			 * it and create a pte in the preceeding page level
+			 * it and create a pte in the preceding page level
 			 * to reference the allocated page table page.
 			 */
 			m = dmar_pgalloc(domain->pgtbl_obj, idx, flags |
@@ -397,7 +397,7 @@ retry:
 			    flags, &idx1, &sfp);
 			if (ptep == NULL) {
 				KASSERT(m->pindex != 0,
-				    ("loosing root page %p", domain));
+				    ("losing root page %p", domain));
 				m->wire_count--;
 				dmar_pgfree(domain->pgtbl_obj, m->pindex,
 				    flags);

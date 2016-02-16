@@ -3691,7 +3691,7 @@ mxge_open(mxge_softc_t *sc)
 	   MXGEFW_CMD_ALWAYS_USE_N_BIG_BUFFERS > 1 */
 	if (err && nbufs > 1) {
 		device_printf(sc->dev,
-			      "Failed to set alway-use-n to %d\n",
+			      "Failed to set always-use-n to %d\n",
 			      nbufs);
 		return EIO;
 	}

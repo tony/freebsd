@@ -58,7 +58,7 @@ typedef STAILQ_HEAD(, ciss_request)	cr_qhead_t;
 
 /*
  * Interrupt reduction can be controlled by tuning the interrupt
- * coalesce delay and count paramters.  The delay (in microseconds)
+ * coalesce delay and count parameters.  The delay (in microseconds)
  * defers delivery of interrupts to increase the chance of there being
  * more than one completed command ready when the interrupt is
  * delivered.  The count expedites the delivery of the interrupt when
@@ -223,7 +223,7 @@ struct ciss_softc
     bus_dmamap_t		ciss_command_map;	/* command DMA map */
     u_int32_t			ciss_command_phys;	/* command array base address */
     cr_qhead_t			ciss_free;		/* requests available for reuse */
-    cr_qhead_t			ciss_notify;		/* requests which are defered for processing */
+    cr_qhead_t			ciss_notify;		/* requests which are deferred for processing */
     struct proc			*ciss_notify_thread;
 
     struct callout		ciss_periodic;		/* periodic event handling */

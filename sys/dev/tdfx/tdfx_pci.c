@@ -599,7 +599,7 @@ tdfx_query_update(u_int cmd, struct tdfx_pio_data *piod)
 	tdfx_info = (struct tdfx_softc*)devclass_get_softc(tdfx_devclass, 
 			piod->device);
 	if(tdfx_info == NULL) return -ENXIO;
-	/* Code below this line in the fuction was taken from the 
+	/* Code below this line in the function was taken from the 
 	 * Linux driver and converted for freebsd. */
 
 	/* Check the size for all the ports, to make sure stuff doesn't get messed up

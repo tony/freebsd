@@ -77,7 +77,7 @@ typedef enum {
     CAM_RL_VALUES
 } cam_rl;
 /*
- * The generation number is incremented everytime a new entry is entered into
+ * The generation number is incremented every time a new entry is entered into
  * the queue giving round robin per priority level scheduling.
  */
 typedef struct {

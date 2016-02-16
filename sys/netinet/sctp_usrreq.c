@@ -1834,7 +1834,7 @@ flags_out:
 			SCTP_CHECK_AND_CAST(av, optval, struct sctp_stream_value, *optsize);
 			SCTP_FIND_STCB(inp, stcb, av->assoc_id);
 			if (stcb) {
-				if ((av->stream_id >= stcb->asoc.streamoutcnt) ||
+				if ((av->stream_id >= stcb->asoc.streamountcnt) ||
 				    (stcb->asoc.ss_functions.sctp_ss_get_value(stcb, &stcb->asoc, &stcb->asoc.strmout[av->stream_id],
 				    &av->stream_value) < 0)) {
 					SCTP_LTRACE_ERR_RET(inp, NULL, NULL, SCTP_FROM_SCTP_USRREQ, EINVAL);
@@ -2664,7 +2664,7 @@ flags_out:
 
 
 			sstat->sstat_instrms = stcb->asoc.streamincnt;
-			sstat->sstat_outstrms = stcb->asoc.streamoutcnt;
+			sstat->sstat_outstrms = stcb->asoc.streamountcnt;
 			sstat->sstat_fragmentation_point = sctp_get_frag_point(stcb, &stcb->asoc);
 			memcpy(&sstat->sstat_primary.spinfo_address,
 			    &stcb->asoc.primary_destination->ro._l_addr,
@@ -3654,7 +3654,7 @@ flags_out:
 			policy = sprstat->sprstat_policy;
 #if defined(SCTP_DETAILED_STR_STATS)
 			if ((stcb != NULL) &&
-			    (sid < stcb->asoc.streamoutcnt) &&
+			    (sid < stcb->asoc.streamountcnt) &&
 			    (policy != SCTP_PR_SCTP_NONE) &&
 			    ((policy <= SCTP_PR_SCTP_MAX) ||
 			    (policy == SCTP_PR_SCTP_ALL))) {
@@ -3667,7 +3667,7 @@ flags_out:
 				}
 #else
 			if ((stcb != NULL) &&
-			    (sid < stcb->asoc.streamoutcnt) &&
+			    (sid < stcb->asoc.streamountcnt) &&
 			    (policy == SCTP_PR_SCTP_ALL)) {
 				sprstat->sprstat_abandoned_unsent = stcb->asoc.strmout[sid].abandoned_unsent[0];
 				sprstat->sprstat_abandoned_sent = stcb->asoc.strmout[sid].abandoned_sent[0];
@@ -4074,7 +4074,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 			SCTP_CHECK_AND_CAST(av, optval, struct sctp_stream_value, optsize);
 			SCTP_FIND_STCB(inp, stcb, av->assoc_id);
 			if (stcb) {
-				if ((av->stream_id >= stcb->asoc.streamoutcnt) ||
+				if ((av->stream_id >= stcb->asoc.streamountcnt) ||
 				    (stcb->asoc.ss_functions.sctp_ss_set_value(stcb, &stcb->asoc, &stcb->asoc.strmout[av->stream_id],
 				    av->stream_value) < 0)) {
 					SCTP_LTRACE_ERR_RET(inp, NULL, NULL, SCTP_FROM_SCTP_USRREQ, EINVAL);
@@ -4086,7 +4086,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 					SCTP_INP_RLOCK(inp);
 					LIST_FOREACH(stcb, &inp->sctp_asoc_list, sctp_tcblist) {
 						SCTP_TCB_LOCK(stcb);
-						if (av->stream_id < stcb->asoc.streamoutcnt) {
+						if (av->stream_id < stcb->asoc.streamountcnt) {
 							stcb->asoc.ss_functions.sctp_ss_set_value(stcb,
 							    &stcb->asoc,
 							    &stcb->asoc.strmout[av->stream_id],
@@ -4630,7 +4630,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 					break;
 				}
 				if ((send_out) &&
-				    (strrst->srs_stream_list[i] > stcb->asoc.streamoutcnt)) {
+				    (strrst->srs_stream_list[i] > stcb->asoc.streamountcnt)) {
 					SCTP_LTRACE_ERR_RET(inp, NULL, NULL, SCTP_FROM_SCTP_USRREQ, EINVAL);
 					error = EINVAL;
 					break;
@@ -4654,7 +4654,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 					}
 				} else {
 					/* Its all */
-					for (i = 0, cnt = 0; i < stcb->asoc.streamoutcnt; i++) {
+					for (i = 0, cnt = 0; i < stcb->asoc.streamountcnt; i++) {
 						if (stcb->asoc.strmout[i].state == SCTP_STREAM_OPEN) {
 							stcb->asoc.strmout[i].state = SCTP_STREAM_RESET_PENDING;
 							cnt++;
@@ -4721,7 +4721,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 				addstream = 1;
 				/* We allocate here */
 				add_o_strmcnt = stradd->sas_outstrms;
-				if ((((int)add_o_strmcnt) + ((int)stcb->asoc.streamoutcnt)) > 0x0000ffff) {
+				if ((((int)add_o_strmcnt) + ((int)stcb->asoc.streamountcnt)) > 0x0000ffff) {
 					/* You can't have more than 64k */
 					error = EINVAL;
 					goto skip_stuff;
@@ -4795,7 +4795,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 				break;
 			}
 			/* Do any streams have data queued? */
-			for (i = 0; i < stcb->asoc.streamoutcnt; i++) {
+			for (i = 0; i < stcb->asoc.streamountcnt; i++) {
 				if (!TAILQ_EMPTY(&stcb->asoc.strmout[i].outqueue)) {
 					goto busy_out;
 				}
@@ -5130,7 +5130,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 			SCTP_FIND_STCB(inp, stcb, s_info->sinfo_assoc_id);
 
 			if (stcb) {
-				if (s_info->sinfo_stream < stcb->asoc.streamoutcnt) {
+				if (s_info->sinfo_stream < stcb->asoc.streamountcnt) {
 					memcpy(&stcb->asoc.def_send, s_info, min(optsize, sizeof(stcb->asoc.def_send)));
 				} else {
 					SCTP_LTRACE_ERR_RET(inp, NULL, NULL, SCTP_FROM_SCTP_USRREQ, EINVAL);
@@ -5151,7 +5151,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 					SCTP_INP_RLOCK(inp);
 					LIST_FOREACH(stcb, &inp->sctp_asoc_list, sctp_tcblist) {
 						SCTP_TCB_LOCK(stcb);
-						if (s_info->sinfo_stream < stcb->asoc.streamoutcnt) {
+						if (s_info->sinfo_stream < stcb->asoc.streamountcnt) {
 							memcpy(&stcb->asoc.def_send, s_info, min(optsize, sizeof(stcb->asoc.def_send)));
 						}
 						SCTP_TCB_UNLOCK(stcb);
@@ -6115,7 +6115,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 			SCTP_FIND_STCB(inp, stcb, info->snd_assoc_id);
 
 			if (stcb) {
-				if (info->snd_sid < stcb->asoc.streamoutcnt) {
+				if (info->snd_sid < stcb->asoc.streamountcnt) {
 					stcb->asoc.def_send.sinfo_stream = info->snd_sid;
 					policy = PR_SCTP_POLICY(stcb->asoc.def_send.sinfo_flags);
 					stcb->asoc.def_send.sinfo_flags = info->snd_flags;
@@ -6146,7 +6146,7 @@ sctp_setopt(struct socket *so, int optname, void *optval, size_t optsize,
 					SCTP_INP_RLOCK(inp);
 					LIST_FOREACH(stcb, &inp->sctp_asoc_list, sctp_tcblist) {
 						SCTP_TCB_LOCK(stcb);
-						if (info->snd_sid < stcb->asoc.streamoutcnt) {
+						if (info->snd_sid < stcb->asoc.streamountcnt) {
 							stcb->asoc.def_send.sinfo_stream = info->snd_sid;
 							policy = PR_SCTP_POLICY(stcb->asoc.def_send.sinfo_flags);
 							stcb->asoc.def_send.sinfo_flags = info->snd_flags;
@@ -7135,7 +7135,7 @@ sctp_listen(struct socket *so, int backlog, struct thread *p)
 	return (error);
 }
 
-static int sctp_defered_wakeup_cnt = 0;
+static int sctp_deferred_wakeup_cnt = 0;
 
 int
 sctp_accept(struct socket *so, struct sockaddr **addr)
@@ -7237,7 +7237,7 @@ sctp_accept(struct socket *so, struct sockaddr **addr)
 			SCTP_INP_WUNLOCK(inp);
 			SOCKBUF_LOCK(&inp->sctp_socket->so_rcv);
 			if (soreadable(inp->sctp_socket)) {
-				sctp_defered_wakeup_cnt++;
+				sctp_deferred_wakeup_cnt++;
 				sorwakeup_locked(inp->sctp_socket);
 			} else {
 				SOCKBUF_UNLOCK(&inp->sctp_socket->so_rcv);

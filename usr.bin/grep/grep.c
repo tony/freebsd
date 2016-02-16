@@ -349,7 +349,7 @@ main(int argc, char *argv[])
 #endif
 
 	/* Check what is the program name of the binary.  In this
-	   way we can have all the funcionalities in one binary
+	   way we can have all the functionalities in one binary
 	   without the need of scripting and using ugly hacks. */
 	pn = getprogname();
 	if (pn[0] == 'b' && pn[1] == 'z') {

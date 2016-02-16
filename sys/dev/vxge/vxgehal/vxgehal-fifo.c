@@ -678,7 +678,7 @@ __hal_fifo_delete(
 
 #if defined(VXGE_HAL_ALIGN_XMIT)
 /*
- * __hal_fifo_txdl_align_free_unmap - Unmap the alignement buffers
+ * __hal_fifo_txdl_align_free_unmap - Unmap the alignment buffers
  * @fifo: Fifo
  * @txdp: txdl
  *
@@ -722,7 +722,7 @@ __hal_fifo_txdl_align_free_unmap(
 }
 
 /*
- * __hal_fifo_txdl_align_alloc_map - Maps the alignement buffers
+ * __hal_fifo_txdl_align_alloc_map - Maps the alignment buffers
  * @fifo: Fifo
  * @txdp: txdl
  *
@@ -1191,7 +1191,7 @@ vxge_hal_fifo_txdl_buffer_append(
  * @txdlh: Descriptor handle.
  * @frag_idx: Index of the data buffer in the Txdl list.
  *
- * This API in conjuction with vxge_hal_fifo_txdl_buffer_append() prepares
+ * This API in conjunction with vxge_hal_fifo_txdl_buffer_append() prepares
  * a descriptor that consists of a single physically contiguous buffer
  * which inturn contains the contents of one or more virtually contiguous
  * buffers received from the upper layer.

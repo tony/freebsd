@@ -39,7 +39,7 @@
 #include <net/if_var.h>	/* XXX driver API temporary */
 
 /*
- * Media Independent Interface data structure defintions
+ * Media Independent Interface data structure definitions
  */
 
 struct mii_softc;

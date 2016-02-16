@@ -637,7 +637,7 @@ typedef struct _LINK_LIST
 {
   PLINK_NODE pHead;
   bit32   Count;
-  LINK_NODE  Head __cacheline_aligned; // allways one link to speed up insert&rm
+  LINK_NODE  Head __cacheline_aligned; // always one link to speed up insert&rm
 } LINK_LIST, * PLINK_LIST __cacheline_aligned;
 
 

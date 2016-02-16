@@ -86,7 +86,7 @@ struct bundle {
   struct iface *iface;        /* Interface information */
 
   int routing_seq;            /* The current routing sequence number */
-  u_int phase;                /* Curent phase */
+  u_int phase;                /* Current phase */
 
   struct {
     int all;                  /* Union of all physical::type's */

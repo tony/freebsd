@@ -36,7 +36,7 @@ Parameters:
   U32  *agPhysLower32 (IN_OUT)      Pointer to low 32 bit mem phys addr.
   U32  alignment (IN)               Alignment requirement
   U32  allocLength (IN)             Required memory length
-  agBOOLEAN isChacheable (IN)       Required memory type
+  agBOOLEAN isCacheable (IN)       Required memory type
 Return:
   tiSuccess - success
   tiMemoryTooLarge - requested memory size too large

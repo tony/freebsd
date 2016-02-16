@@ -1029,7 +1029,7 @@ void isp_prt_endcmd(ispsoftc_t *, XS_T *);
  *	XS_STSP(xs)		gets a pointer to the SCSI status byte ""
  *	XS_SNSP(xs)		gets a pointer to the associate sense data
  *	XS_TOT_SNSLEN(xs)	gets the total length of sense data storage
- *	XS_CUR_SNSLEN(xs)	gets the currently used lenght of sense data storage
+ *	XS_CUR_SNSLEN(xs)	gets the currently used length of sense data storage
  *	XS_SNSKEY(xs)		dereferences XS_SNSP to get the current stored Sense Key
  *	XS_SNSASC(xs)		dereferences XS_SNSP to get the current stored Additional Sense Code
  *	XS_SNSASCQ(xs)		dereferences XS_SNSP to get the current stored Additional Sense Code Qualifier
@@ -1037,7 +1037,7 @@ void isp_prt_endcmd(ispsoftc_t *, XS_T *);
  *	XS_TAG_TYPE(xs)		which type of tag to use
  *	XS_SETERR(xs)		set error state
  *
- *		HBA_NOERROR	command has no erros
+ *		HBA_NOERROR	command has no errors
  *		HBA_BOTCH	hba botched something
  *		HBA_CMDTIMEOUT	command timed out
  *		HBA_SELTIMEOUT	selection timed out (also port logouts for FC)
