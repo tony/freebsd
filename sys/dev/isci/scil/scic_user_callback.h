@@ -912,7 +912,7 @@ void scic_cb_port_invalid_link_up(
  *
  * @return none
  */
-void scic_cb_port_bc_change_primitive_received(
+void scic_cb_port_bc_change_primitive_recieved(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -933,7 +933,7 @@ void scic_cb_port_bc_change_primitive_received(
  *
  * @return none
  */
-void scic_cb_port_bc_ses_primitive_received(
+void scic_cb_port_bc_ses_primitive_recieved(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -954,7 +954,7 @@ void scic_cb_port_bc_ses_primitive_received(
  *
  * @return none
  */
-void scic_cb_port_bc_expander_primitive_received(
+void scic_cb_port_bc_expander_primitive_recieved(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy
@@ -975,7 +975,7 @@ void scic_cb_port_bc_expander_primitive_received(
  *
  * @return none
  */
-void scic_cb_port_bc_aen_primitive_received(
+void scic_cb_port_bc_aen_primitive_recieved(
    SCI_CONTROLLER_HANDLE_T  controller,
    SCI_PORT_HANDLE_T        port,
    SCI_PHY_HANDLE_T         phy

@@ -520,7 +520,7 @@ void sati_self_test_log_page_construct(
 *
 */
 static
-void sati_information_exception_log_page_construct(
+void sati_information_exception_log_page_contruct(
    SATI_TRANSLATOR_SEQUENCE_T  * sequence,
    void                        * scsi_io,
    void                        * ata_io
@@ -780,7 +780,7 @@ SATI_STATUS sati_log_sense_translate_response(
 
          case SATI_SEQUENCE_LOG_SENSE_INFO_EXCEPTION_LOG_PAGE:
             //This function needs a d->h register fis, not ata data
-            sati_information_exception_log_page_construct(
+            sati_information_exception_log_page_contruct(
                                  sequence, scsi_io, ata_io
             );
 

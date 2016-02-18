@@ -400,7 +400,7 @@ void sati_inquiry_device_id_translate_data(
     * identification descriptor using the WWN.
     */
 
-   if (identify->command_set_supported_extension
+   if (identify->command_set_supported_extention
        & ATA_IDENTIFY_COMMAND_SET_WWN_SUPPORT_ENABLE)
    {
 
